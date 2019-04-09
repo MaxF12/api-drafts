@@ -1,6 +1,893 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/310",
+    "id": 426987558,
+    "node_id": "MDU6SXNzdWU0MjY5ODc1NTg=",
+    "number": 310,
+    "title": "msgref is never specified ",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T13:31:36Z",
+    "updated_at": "2019-03-29T13:32:16Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "In the interface draft, msgref is part of 4 callbacks (RendezvousError, Sent, Expired and SendError), however it is never mentioned what msgref is. As the Send action does not have any return value it is also unclear how the application is actually supposed to know what msgref references to. "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/309",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/309/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/309/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/309/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/309",
+    "id": 426985636,
+    "node_id": "MDU6SXNzdWU0MjY5ODU2MzY=",
+    "number": 309,
+    "title": "Clarification on queued receives",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T13:27:02Z",
+    "updated_at": "2019-03-29T13:27:02Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "It should be made more clear in what order queued receives are considered, i.e. what happens if an application calls Receive(minIncompleteLength=20), then calls Receive(minIncompleteLength=1). What now happens if e.g. 10 bytes of data arrive? Will the second receive only be considered after the first has been fulfilled? "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/308",
+    "id": 426977069,
+    "node_id": "MDU6SXNzdWU0MjY5NzcwNjk=",
+    "number": 308,
+    "title": "Treatment of optional transport properties",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T13:06:27Z",
+    "updated_at": "2019-03-29T13:06:27Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "What is the expected treatment of protocols that provide certain properties but which are not a mandatory part of the protocol, e.g. multistreaming in SCTP. If the application prohibits multistreaming, will SCTP be discarded during the candidate selection process? Will the API simply set the max in- and outbound streams to 1 during initialization of the SCTP association? What happens in cases where the API is not able to reliably turn individual properties on and off? "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/307",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/307/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/307/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/307/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/307",
+    "id": 426970077,
+    "node_id": "MDU6SXNzdWU0MjY5NzAwNzc=",
+    "number": 307,
+    "title": "Differentiating between bad selection property configuration and connection issues",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T12:48:10Z",
+    "updated_at": "2019-03-29T12:48:10Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Per the interface draft, an InitiateError gets thrown both when the set of (protocol) candidates is empty as well as when it is not possible to establish a connection.\r\nThe distinction here is that an application can mend an error involving an empty candidate set while it does not necessarily have control over fixing issues related to the network. \r\nIt might be useful to divide this into distinct two errors, one that points to an empty candidate set and one that points to issues during an actual connection establishment attempt. "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/306",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/306/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/306/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/306/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/306",
+    "id": 426965583,
+    "node_id": "MDU6SXNzdWU0MjY5NjU1ODM=",
+    "number": 306,
+    "title": "Failure of unsatisfiable configurations",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T12:35:16Z",
+    "updated_at": "2019-03-29T12:35:16Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Make it clearer that the implementation should only check for unsatisfiable selection property configurations after initiate/listen/rendezvous has been called. "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/305",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/305/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/305/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/305/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/305",
+    "id": 426963080,
+    "node_id": "MDU6SXNzdWU0MjY5NjMwODA=",
+    "number": 305,
+    "title": "Protocol stacks that are not equivalent",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-29T12:28:23Z",
+    "updated_at": "2019-03-29T12:51:01Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Per the architecture draft, only protocol stacks that are equivalent can be safely raced. What is the expected behavior if selection properties are set in such a way that the resulting candidate set includes protocol stacks that are not equivalent? Would the selection properties simply be treated as invalid? "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/304",
+    "id": 426951474,
+    "node_id": "MDU6SXNzdWU0MjY5NTE0NzQ=",
+    "number": 304,
+    "title": "Clarify mapping of Connection to multiple flows",
+    "user": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781635,
+        "node_id": "MDU6TGFiZWw4MjM3ODE2MzU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Architecture",
+        "name": "Architecture",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 0,
+    "created_at": "2019-03-29T11:55:59Z",
+    "updated_at": "2019-03-29T11:56:12Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "The arch definition of connection should add a sentence to say that there may be multiple flows (MPTCP, MPQUIC, or even connection pooling) below the abstraction. This was assumed but not stated."
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/303",
+    "id": 425912511,
+    "node_id": "MDU6SXNzdWU0MjU5MTI1MTE=",
+    "number": 303,
+    "title": "More expressive multipath transport property",
+    "user": {
+      "login": "abrunstrom",
+      "id": 17362480,
+      "node_id": "MDQ6VXNlcjE3MzYyNDgw",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/17362480?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/abrunstrom",
+      "html_url": "https://github.com/abrunstrom",
+      "followers_url": "https://api.github.com/users/abrunstrom/followers",
+      "following_url": "https://api.github.com/users/abrunstrom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/abrunstrom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/abrunstrom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/abrunstrom/subscriptions",
+      "organizations_url": "https://api.github.com/users/abrunstrom/orgs",
+      "repos_url": "https://api.github.com/users/abrunstrom/repos",
+      "events_url": "https://api.github.com/users/abrunstrom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/abrunstrom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 835290366,
+        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
+        "name": "discuss",
+        "color": "b60205",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2019-03-27T11:45:19Z",
+    "updated_at": "2019-03-28T08:17:53Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "The current multipath selection property is an on/off selection.  We will eventually need something more expressive here to distinguish for instance between handover/back-up and aggregate multipath modes.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/302",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/302/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/302/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/302/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/302",
+    "id": 425343627,
+    "node_id": "MDU6SXNzdWU0MjUzNDM2Mjc=",
+    "number": 302,
+    "title": "UDP idempotence",
+    "user": {
+      "login": "mwelzl",
+      "id": 7081644,
+      "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mwelzl",
+      "html_url": "https://github.com/mwelzl",
+      "followers_url": "https://api.github.com/users/mwelzl/followers",
+      "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+      "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+      "repos_url": "https://api.github.com/users/mwelzl/repos",
+      "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "mwelzl",
+      "id": 7081644,
+      "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mwelzl",
+      "html_url": "https://github.com/mwelzl",
+      "followers_url": "https://api.github.com/users/mwelzl/followers",
+      "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+      "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+      "repos_url": "https://api.github.com/users/mwelzl/repos",
+      "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "mwelzl",
+        "id": 7081644,
+        "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mwelzl",
+        "html_url": "https://github.com/mwelzl",
+        "followers_url": "https://api.github.com/users/mwelzl/followers",
+        "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+        "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+        "repos_url": "https://api.github.com/users/mwelzl/repos",
+        "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-26T10:43:02Z",
+    "updated_at": "2019-03-26T10:43:02Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "This came up in a dinner among some of us yesterday: all UDP messages should be understood as being idempotent, because UDP doesn't protect the receiver against getting duplicates. This is different from unreliable transmission with, e.g., SCTP (or, probably, a future such extension of QUIC?), where you can be sure you're not getting a duplicate."
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/301",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/301/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/301/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/301/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/301",
+    "id": 424882961,
+    "node_id": "MDU6SXNzdWU0MjQ4ODI5NjE=",
+    "number": 301,
+    "title": "Add an explicit listener object to the API",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 0,
+    "created_at": "2019-03-25T12:46:16Z",
+    "updated_at": "2019-03-25T12:46:16Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "We talk about listen objects in architecture and implementation, but not in the API.\r\n\r\nChanges needed:\r\n - Let ```listen()``` return a Listener\r\n - Move the ```stop()``` the Listener\r\n - Allow Preconnection to be used multiple times."
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/300",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/300/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/300/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/300/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/300",
+    "id": 424875241,
+    "node_id": "MDU6SXNzdWU0MjQ4NzUyNDE=",
+    "number": 300,
+    "title": "Add property for address privacy",
+    "user": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 0,
+    "created_at": "2019-03-25T12:27:55Z",
+    "updated_at": "2019-03-25T12:27:59Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "API should allow a preconnection property to specify if a private (IPv6) address is preferred. Outbound connections should prefer this. Listeners should avoid this."
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/299",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/299/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/299/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/299/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/299",
+    "id": 424866572,
+    "node_id": "MDU6SXNzdWU0MjQ4NjY1NzI=",
+    "number": 299,
+    "title": "TAPS ARCH - Textual review to notes",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781635,
+        "node_id": "MDU6TGFiZWw4MjM3ODE2MzU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Architecture",
+        "name": "Architecture",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-03-25T12:06:05Z",
+    "updated_at": "2019-03-29T10:06:24Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "These are all comments on rev -03, and I think they can all be held to edit for the next revision.\r\n\r\n(1)  SHOULD be defined to apply to multiple transport\r\n- is this the same as:\r\n SHOULD apply to multiple transport\r\n\r\n(2) mechanisms which\r\n- should be:\r\nmechanisms which,\r\n\r\n(3) Connection Group:\r\n- is now renamed:\r\nTAPS Context: (or similar).\r\n\r\n(4) within the same Connection Group are allowed be multiplexed\r\n- is the /multiplexed/ the same as /cloned/ now?\r\n\r\n(5) Is this normative:\r\n  [I-D.ietf-taps-interface]\r\n\r\nThese are normative:\r\n [RFC8174] \r\n [RFC2119] "
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/298",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/298/labels{/name}",
@@ -102,9 +989,9 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 2,
     "created_at": "2019-03-20T17:25:32Z",
-    "updated_at": "2019-03-22T14:23:32Z",
+    "updated_at": "2019-03-25T10:54:59Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -113,7 +1000,7 @@
       "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/298.diff",
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/298.patch"
     },
-    "body": "This PR adds a first proposal for adding Pooled Connection support to TAPS as discussed in Issue #266 and is an alternative to #295.\r\n\r\nPooled Connections are only useful for request/response protocols like HTTP and serve the following purposes\r\n\r\nProvide a clean abstraction for HTTP/3 that is backward compatible to HTTP/0.9\r\nRemove the motivation to map QUIC streams to Messages (by removing the drawback of complication HTTP/3 mapping when they are mapped to TAPS connections)\r\nAllow Per-Request Path- and Endpoint Selection"
+    "body": "This PR adds a first proposal for adding Pooled Connection support to TAPS as discussed in Issue #266. \r\n\r\n**This is an alternative to PR #295.**\r\n\r\nPooled Connections are only useful for request/response protocols like HTTP and serve the following purposes:\r\n - Provide a clean abstraction for HTTP/3 that is backward compatible to HTTP/0.9\r\n - Remove the motivation to map QUIC streams to Messages (by removing the drawback of complication HTTP/3 mapping when they are mapped to TAPS connections)\r\n - Allow Per-Request Path- and Endpoint Selection\r\n\r\nSee [my post on the mailing list](https://mailarchive.ietf.org/arch/msg/taps/u4imn1IKFBeSxwJRJK_HNwEoT98) for a more detailed description of this topic."
   },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/297",
@@ -323,7 +1210,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "philsbln",
@@ -368,10 +1255,10 @@
       }
     ],
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2019-03-09T20:42:23Z",
-    "updated_at": "2019-03-20T13:22:28Z",
-    "closed_at": null,
+    "updated_at": "2019-04-01T12:09:44Z",
+    "closed_at": "2019-04-01T12:09:44Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/295",
@@ -379,7 +1266,7 @@
       "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/295.diff",
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/295.patch"
     },
-    "body": "This PR adds a first proposal for Connection Pools to TAPS as discussed in Issue #266.\r\n\r\nThese Connection pools are only useful for request/response protocols like HTTP and serve the following purposes\r\n - Provide a clean abstraction for HTTP/3 that is backward compatible to HTTP/0.9\r\n - Remove the motivation to map QUIC streams to Messages (by removing the drawback of complication HTTP/3 mapping when they are mapped to TAPS connections)\r\n - Allow Per-Request Path- and Endpoint Selection\r\n"
+    "body": "This PR adds a first proposal for Connection Pools to TAPS as discussed in Issue #266.\r\n\r\n**This is an alternative to PR #298.**\r\n\r\nPooled Connections are only useful for request/response protocols like HTTP and serve the following purposes:\r\n - Provide a clean abstraction for HTTP/3 that is backward compatible to HTTP/0.9\r\n - Remove the motivation to map QUIC streams to Messages (by removing the drawback of complication HTTP/3 mapping when they are mapped to TAPS connections)\r\n - Allow Per-Request Path- and Endpoint Selection\r\n\r\nSee [my post on the mailing list](https://mailarchive.ietf.org/arch/msg/taps/u4imn1IKFBeSxwJRJK_HNwEoT98) for a more detailed description of this topic."
   },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/294",
@@ -1170,7 +2057,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "mwelzl",
@@ -1215,10 +2102,10 @@
       }
     ],
     "milestone": null,
-    "comments": 10,
+    "comments": 11,
     "created_at": "2019-02-08T12:29:49Z",
-    "updated_at": "2019-02-12T08:26:11Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:51:02Z",
+    "closed_at": "2019-03-25T12:51:01Z",
     "author_association": "CONTRIBUTOR",
     "body": "Connections must, of course, have a group number. (It's just not written anywhere yet. A group number should be generic Connection property, in Section 9.1.)  Otherwise, how could one know which Connections are grouped and which are not? And they may be grouped in different ways - one can have a group of 2 Connections, and another group of 3, and then priorities apply only among the Connections in each respective group.\r\n\r\nSo far, not a big deal, I guess.... now comes the \"this really only existed in Michael's mind\" part:\r\n\r\nThese group numbers should not *only* be readable: on Preconnections, they should be writable as well. This, then, expresses a wish to have certain Connections automatically grouped and some not. The semantics should be: same number = they are regarded as \"grouped\", but there is no guarantee that they really are muxed, i.e. streams of one underlying transport connection (e.g. SCTP Association). Different number = they are NOT grouped and never will be.\r\n\r\nISTM that, with this construct, the only point of the Selection Property \"Multistream Connections in Group\" is to be able to tell this wish for stream muxing early, when only one Preconnection has been created. Else one could create multiple Preconnections and give them the same group number, and that would convey the same wish. But I guess requiring \"you want multi-streaming: you must create multiple Preconnections before calling init\" is a hassle."
   },
@@ -1429,26 +2316,46 @@
     "state": "open",
     "locked": false,
     "assignee": {
-      "login": "tfpauly",
-      "id": 1609964,
-      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "login": "adventureloop",
+      "id": 1138341,
+      "node_id": "MDQ6VXNlcjExMzgzNDE=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1138341?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/tfpauly",
-      "html_url": "https://github.com/tfpauly",
-      "followers_url": "https://api.github.com/users/tfpauly/followers",
-      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
-      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
-      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
-      "repos_url": "https://api.github.com/users/tfpauly/repos",
-      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "url": "https://api.github.com/users/adventureloop",
+      "html_url": "https://github.com/adventureloop",
+      "followers_url": "https://api.github.com/users/adventureloop/followers",
+      "following_url": "https://api.github.com/users/adventureloop/following{/other_user}",
+      "gists_url": "https://api.github.com/users/adventureloop/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/adventureloop/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/adventureloop/subscriptions",
+      "organizations_url": "https://api.github.com/users/adventureloop/orgs",
+      "repos_url": "https://api.github.com/users/adventureloop/repos",
+      "events_url": "https://api.github.com/users/adventureloop/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/adventureloop/received_events",
       "type": "User",
       "site_admin": false
     },
     "assignees": [
+      {
+        "login": "adventureloop",
+        "id": 1138341,
+        "node_id": "MDQ6VXNlcjExMzgzNDE=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/1138341?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/adventureloop",
+        "html_url": "https://github.com/adventureloop",
+        "followers_url": "https://api.github.com/users/adventureloop/followers",
+        "following_url": "https://api.github.com/users/adventureloop/following{/other_user}",
+        "gists_url": "https://api.github.com/users/adventureloop/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/adventureloop/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/adventureloop/subscriptions",
+        "organizations_url": "https://api.github.com/users/adventureloop/orgs",
+        "repos_url": "https://api.github.com/users/adventureloop/repos",
+        "events_url": "https://api.github.com/users/adventureloop/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/adventureloop/received_events",
+        "type": "User",
+        "site_admin": false
+      },
       {
         "login": "tfpauly",
         "id": 1609964,
@@ -1473,7 +2380,7 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2019-02-06T22:44:04Z",
-    "updated_at": "2019-02-07T08:17:24Z",
+    "updated_at": "2019-03-25T12:06:47Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Having proxies to go through on a system (SOCKS, HTTP Connect, etc) or a set of TOR endpoints requires the implementation to do some nested/recursive work, and pass down endpoints correctly to protocol instances. The implementation document should describe this."
@@ -1531,7 +2438,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/281.patch"
     },
     "body": "… establishment timeout into a parameter of init calls (it stood out strangely in the list of selection properties because it really isn't one); updated defaults for selection properties."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/280",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -1990,11 +2900,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 1,
     "created_at": "2019-01-11T16:29:52Z",
@@ -2286,11 +3196,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 1,
     "created_at": "2018-12-20T10:57:08Z",
@@ -2671,10 +3581,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "This issue popped up while discussing #266 and seem to be a wired QUIC multi-streaming issue, possible affecting SCTP too):\r\n\r\nWhen a multi-streaming protocol like QUIC allows both ends to open new streams (e.g. by cloning the QUIC connection representing the stream), the both side needs a way to get a ConnectionReceived event for a new stream. That might result in the following weird pattern:\r\n```\r\npc1 := NewPreconnection(…)\r\nc1 := pc1.Initiate()\r\n…\r\npc1 ->  ConnectionReceived<c1.1>\r\n…\r\npc1 ->  ConnectionReceived<c1.2>\r\n```\r\n\r\nI think this needs to be documented somehow and we may need to add a Selection Property do turn off this behaviour."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/268",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -3256,11 +4163,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 4,
     "created_at": "2018-11-30T13:43:40Z",
@@ -3448,11 +4355,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 9,
     "created_at": "2018-11-30T12:13:32Z",
@@ -3742,9 +4649,9 @@
       }
     ],
     "milestone": null,
-    "comments": 6,
+    "comments": 7,
     "created_at": "2018-11-30T11:40:16Z",
-    "updated_at": "2019-01-15T16:24:19Z",
+    "updated_at": "2019-03-25T12:49:16Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Should we add \"Connection Ready\", \"Message Sent\", and \"Path Properties Changed\" to the diagram? Actually I not sure why \"Path Properties Changed\" shows up in this doc at all. This seems to be rather specific and the section actually explicilty says \"The API may expand this list.\"."
@@ -4008,17 +4915,17 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 3,
+    "comments": 4,
     "created_at": "2018-11-30T11:05:27Z",
-    "updated_at": "2019-01-25T10:25:04Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:48:49Z",
+    "closed_at": "2019-03-25T12:48:49Z",
     "author_association": "CONTRIBUTOR",
     "body": "Or is a Listener just a Preconnection that is configured in a certain way? "
   },
@@ -4246,11 +5153,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 1,
     "created_at": "2018-11-30T10:32:00Z",
@@ -4258,7 +5165,10 @@
     "closed_at": "2018-12-01T22:36:23Z",
     "author_association": "NONE",
     "body": "Please can we add a MAMI Ack for the next rev of architecture.\r\nSuitable words are (taken from the API document):\r\n\r\n   This work has received funding from the European Union's Horizon 2020\r\n   research and innovation programme under grant agreements No. 644334\r\n   (NEAT) and No. 688421 (MAMI)."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/250",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -4375,11 +5285,11 @@
       },
       "open_issues": 0,
       "closed_issues": 6,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-11-08T10:37:58Z",
-      "updated_at": "2019-03-19T16:05:46Z",
+      "updated_at": "2019-03-25T11:53:48Z",
       "due_on": "2019-01-20T08:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:48Z"
     },
     "comments": 0,
     "created_at": "2018-11-14T20:50:59Z",
@@ -4588,10 +5498,46 @@
         "site_admin": false
       }
     ],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
     "comments": 4,
     "created_at": "2018-11-08T10:32:51Z",
-    "updated_at": "2018-11-15T17:29:04Z",
+    "updated_at": "2019-03-25T12:45:39Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Right now, there are protocol specific examples mixed into the generic flow description; then, later, there is a section that has some description for protocol specific considerations.\r\n\r\nPossible re-organizations:\r\n\r\n1.\r\n\r\nPer-protocol mappings for each API call + per-protocol specific options. This is a guide to each protocol, such as a section for UDP and how each call is implemented for UDP, and what options UDP offers specifically.\r\n\r\nGeneral discussion about Pre-Establishment, Establishment, Data Transfer, etc, that has less information about specific protocols.\r\n\r\n2.\r\n\r\nStructure everything with the general topics (Pre-Establishment, Establishment, Data Transfer, etc), and have a rigorous list of each protocol's mappings at the end of each section. So, for Establishment, we describe racing, etc; and then go through and explain what Initiate() does for TCP, UDP, UDP Lite, QUIC, SCTP."
@@ -5276,10 +6222,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/239.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/238",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5412,11 +6355,11 @@
       },
       "open_issues": 0,
       "closed_issues": 4,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-03-21T16:11:28Z",
-      "updated_at": "2018-10-22T08:22:03Z",
+      "updated_at": "2019-03-25T11:53:51Z",
       "due_on": "2018-10-22T07:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:51Z"
     },
     "comments": 0,
     "created_at": "2018-10-16T08:30:39Z",
@@ -5541,11 +6484,11 @@
       },
       "open_issues": 0,
       "closed_issues": 4,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-03-21T16:11:28Z",
-      "updated_at": "2018-10-22T08:22:03Z",
+      "updated_at": "2019-03-25T11:53:51Z",
       "due_on": "2018-10-22T07:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:51Z"
     },
     "comments": 0,
     "created_at": "2018-10-11T21:34:47Z",
@@ -6330,17 +7273,17 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 2,
+    "comments": 3,
     "created_at": "2018-09-06T10:52:35Z",
-    "updated_at": "2018-09-06T11:01:08Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:45:31Z",
+    "closed_at": "2019-03-25T12:45:31Z",
     "author_association": "CONTRIBUTOR",
     "body": "In commentary on #214, @mirjak asks: \r\n\r\nHowever, why do we need to have two different function. If we only have initiate and provide idempotent data as an optional input parameter that should be fine, right?\r\n\r\nThe argument here is that you *really* want to be explicit about the fact that the data you pass to `InitiateWithIdempotentData()` is idempotent, so you have to put it in the name. Another way to do this, though, would be to require a `MessageContext` with the `Idempotent` property to be passed when message data is passed to `Initiate()` on pain of an error."
   },
@@ -6454,9 +7397,9 @@
 
     ],
     "milestone": null,
-    "comments": 13,
+    "comments": 15,
     "created_at": "2018-09-06T03:36:19Z",
-    "updated_at": "2018-09-07T08:58:03Z",
+    "updated_at": "2019-03-25T12:50:06Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Regarding this text:\r\n\r\n```\r\nThe Initiate() Action consumes the Preconnection. Once Initiate() has\r\nbeen called, no further properties may be added to the Preconnection, and\r\nno subsequent establishment call may be made on the Preconnection.\r\n```\r\n\r\nThis seems to imply that the Preconnection object, which may be full of many carefully tuned settings that could be useful for another Connection, is no longer usable. While I understand that the specific Preconnection cannot change for a Connection, this is inconvenient to the application.\r\n\r\nI see two good options to solve this:\r\n\r\n- Make a deep copy of the Preconnection upon Initiate(), and say that a Preconnection may be used or changed but changes can no longer influence the Connection (this is what Network.framework currently does)\r\n- Allow a Preconnection.clone() method to let the applications do the deep copy themselves when and if they want to re-use."
@@ -6500,17 +7443,9 @@
         "name": "API",
         "color": "fbca04",
         "default": false
-      },
-      {
-        "id": 835290366,
-        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
-        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
-        "name": "discuss",
-        "color": "b60205",
-        "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
@@ -6519,11 +7454,14 @@
     "milestone": null,
     "comments": 6,
     "created_at": "2018-09-05T17:43:40Z",
-    "updated_at": "2019-01-25T12:45:23Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:35:47Z",
+    "closed_at": "2019-03-25T12:35:47Z",
     "author_association": "CONTRIBUTOR",
     "body": "I don't think having the receive parameter \"minIncompleteLength\" and \"maxLength\" is the right approach here. \r\n\r\n\"minIncompleteLength\" is rather a configuration for the transport layer to decide when to create a callback receive event, therefore providing it together with receive() is too late. It's probably a Connection P*. \r\n\r\n\"maxLength\" seems to superfluous because ideally receiving is a zero copy operation and as the transport as stored the data already somewhere it doesn't seem useful to set a limit here. Of course again there probably needs to be a system config and or connection P* somewhere. If at all this seems rather like an implementation detail to me (that may or may not be discussed somewhere  but should not be part of the actual API spec). "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/220",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -6565,17 +7503,17 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 47,
+    "comments": 48,
     "created_at": "2018-09-05T17:25:37Z",
-    "updated_at": "2018-10-15T22:13:59Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:34:26Z",
+    "closed_at": "2019-03-25T12:34:26Z",
     "author_association": "CONTRIBUTOR",
     "body": "I would like to discuss the message context parameters \"ordered\" and \"final\" a bit more. I've put this into the same issue because I think there might be some relationship here.\r\n\r\nFirst I find \"ordered\" confusing because if you send a first message that is ordered=false and then the next one that is order=true that actually means that both messages together have a defined order, so setting it to false on the first one seems confusing. In post socket we called this dependency (and probably left the exact implementation a bit more open). I think that is actually more want we want to say: This message has to be delivered before/after the other message, however, this does not imply that both messages have to be provided to the transport right after each other. Thinking further about this, and maybe similar as we have connection groups, we may want to have message groups which basically only say that all messages belonging to the same group should be delivered in the order they have been given to the transport layer. Just an idea for now; did think this completely thought yet but maybe others have thoughts...?\r\n\r\nHowever, at this point I got reminded of partial messages, which I think always imply in-order delivery...? But to be honest I have no idea why we need partial messages at the sender-side. I think what we want is the grouping as described above (to make sure we put on those messages on the same stream in the right order) and some indication at the receiver-side that the transport has no idea about the message boundaries and just delivers a random piece of data that it received. However, these seem to be two independent concepts which should be reflected by different parameters."
   },
@@ -7002,17 +7940,17 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2018-08-07T16:12:28Z",
-    "updated_at": "2018-08-07T16:12:28Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:28:42Z",
+    "closed_at": "2019-03-25T12:28:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "The discussion around ``draft-gont-taps-address-usage-problem-statement`` and ``draft-gont-taps-address-usage-analysis``suggests that it should be possible to request per-application / per-context / per-connection source addresses.\r\n\r\n - For the cases of per-application and per-connection source addresses, this can be tuning this can be accomplished by the addition of a property. This includes name-resolution issues.\r\n - For per-context source addresses, I am not sure whether our current architecture is fit to support this.\r\n\r\nConsider the following case: a browser wants to separate different tabs onto different source addresses. It needs some way to specify some kind of *context* to allow the transport API either to assign the right address to a new connection or request a new address for all upcoming connections and name resolutions done within this context.\r\nAs this is orthogonal to multi-streaming, simply cloning an existing connection is not sufficient.\r\n\r\nOne possible solution would be to introduce some new \"Taps Context\" that is used when creating pre-connections, but that looks like overkill for this feature…"
   },
@@ -7140,11 +8078,11 @@
       },
       "open_issues": 0,
       "closed_issues": 4,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-03-21T16:11:28Z",
-      "updated_at": "2018-10-22T08:22:03Z",
+      "updated_at": "2019-03-25T11:53:51Z",
       "due_on": "2018-10-22T07:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:51Z"
     },
     "comments": 3,
     "created_at": "2018-07-20T13:53:35Z",
@@ -7242,23 +8180,20 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2018-07-19T21:23:47Z",
-    "updated_at": "2018-07-19T21:23:47Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:25:03Z",
+    "closed_at": "2019-03-25T12:25:03Z",
     "author_association": "CONTRIBUTOR",
     "body": "We should add a few examples of TCP/UDP/SCTP specific properties to demonstrate how these work and have a guideline for additional mapping documents"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/208",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7475,26 +8410,46 @@
     "state": "open",
     "locked": false,
     "assignee": {
-      "login": "csperkins",
-      "id": 1638240,
-      "node_id": "MDQ6VXNlcjE2MzgyNDA=",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/1638240?v=4",
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/csperkins",
-      "html_url": "https://github.com/csperkins",
-      "followers_url": "https://api.github.com/users/csperkins/followers",
-      "following_url": "https://api.github.com/users/csperkins/following{/other_user}",
-      "gists_url": "https://api.github.com/users/csperkins/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/csperkins/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/csperkins/subscriptions",
-      "organizations_url": "https://api.github.com/users/csperkins/orgs",
-      "repos_url": "https://api.github.com/users/csperkins/repos",
-      "events_url": "https://api.github.com/users/csperkins/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/csperkins/received_events",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
       "type": "User",
       "site_admin": false
     },
     "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      },
       {
         "login": "csperkins",
         "id": 1638240,
@@ -7516,10 +8471,46 @@
         "site_admin": false
       }
     ],
-    "milestone": null,
-    "comments": 7,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 9,
     "created_at": "2018-07-17T12:31:52Z",
-    "updated_at": "2019-01-25T13:25:40Z",
+    "updated_at": "2019-03-25T12:19:12Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "When `Preconnection.Initiate()` is called, the stack picks candidates and races them, selecting the \"best\" one.\r\n\r\nWhen `Preconnection.Listen()` is called, does the stack listen on *all* non-prohibited candidates, or the first _n_ candidates in order of preference, or...?\r\n\r\nThis needs to be explicitly addressed both in -arch and -interface.\r\n\r\n(thanks Zahed for raising this at the TSV dinner)"
@@ -8854,7 +9845,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/191.patch"
     },
     "body": "This closed #170 \r\n\r\nAs we have no methods on a connection object that query properties, can_send/can_receive also became connection properties.\r\n\r\nAs with all the other connection properties, these are indeed a little underspecified. I want to keep it that way till we fix it for all connection properties with #153 and #190"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/190",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9064,11 +10058,11 @@
       },
       "open_issues": 0,
       "closed_issues": 4,
-      "state": "open",
+      "state": "closed",
       "created_at": "2018-03-21T16:11:28Z",
-      "updated_at": "2018-10-22T08:22:03Z",
+      "updated_at": "2019-03-25T11:53:51Z",
       "due_on": "2018-10-22T07:00:00Z",
-      "closed_at": null
+      "closed_at": "2019-03-25T11:53:51Z"
     },
     "comments": 3,
     "created_at": "2018-06-01T08:29:10Z",
@@ -9126,17 +10120,17 @@
         "default": true
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2018-06-01T08:22:53Z",
-    "updated_at": "2018-06-01T08:22:53Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:16:14Z",
+    "closed_at": "2019-03-25T12:16:14Z",
     "author_association": "NONE",
     "body": "- This subsection appears out-of sequence. (Actually this could really help the reader if made a little easier to read and placed ahead of discussing the details).\r\n- I would like to express a preference for a rewrite of this section to use a simpler style of English.\r\n- I also would like consideration whether to position (at least parts of) this subsection earlier to explain why messages are being considered. If I read the spec without knowing more, an app developer could wonder what happened to the concept of streams and what I had lost.\r\n----\r\n/for transports that care about timing/\r\n- Is this transports that care, or applications that care?\r\n---\r\n/choosing what messages to retransmit/\r\nperhaps should be:\r\n/choosing which messages may be retransmitted/\r\n---\r\n/such as SCTP/\r\n- expand abbreviation on first use, and provide reference.\r\n---\r\n/message oriented API/message-oriented API\r\n---\r\n- I don't agree with this text:\r\n/To support a message oriented API, while still being compatible with stream-based transport protocols, implementations of the transport services architecture should provide APIs for framing and de-framing messages. That is, we push message framing down into the transport services API, allowing applications to send and receive complete messages./\r\n- Maybe a rewrite could separate what it means to have minimal support for messages and what additional API functions you could have to allow more advanced support for messages.\r\n- I think we agreed an API **could** do this, and I think we have to say this is optional. Here is a start at what I suggest:\r\n/A message-oriented API, can remain compatible with a stream-based transport protocol. An implementation of the transport services architecture could provide additional API functions for framing and de-framing of the messages. That is, ..../\r\n---"
   },
@@ -9506,97 +10500,27 @@
         "name": "admin stuff",
         "color": "f9d0c4",
         "default": false
+      },
+      {
+        "id": 819875210,
+        "node_id": "MDU6TGFiZWw4MTk4NzUyMTA=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/wontfix",
+        "name": "wontfix",
+        "color": "ffffff",
+        "default": true
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
-    "assignee": {
-      "login": "tfpauly",
-      "id": 1609964,
-      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/tfpauly",
-      "html_url": "https://github.com/tfpauly",
-      "followers_url": "https://api.github.com/users/tfpauly/followers",
-      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
-      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
-      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
-      "repos_url": "https://api.github.com/users/tfpauly/repos",
-      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
-      "type": "User",
-      "site_admin": false
-    },
+    "assignee": null,
     "assignees": [
-      {
-        "login": "tfpauly",
-        "id": 1609964,
-        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
-        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/tfpauly",
-        "html_url": "https://github.com/tfpauly",
-        "followers_url": "https://api.github.com/users/tfpauly/followers",
-        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
-        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
-        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
-        "repos_url": "https://api.github.com/users/tfpauly/repos",
-        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
-        "type": "User",
-        "site_admin": false
-      },
-      {
-        "login": "britram",
-        "id": 1884116,
-        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
-        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/britram",
-        "html_url": "https://github.com/britram",
-        "followers_url": "https://api.github.com/users/britram/followers",
-        "following_url": "https://api.github.com/users/britram/following{/other_user}",
-        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
-        "organizations_url": "https://api.github.com/users/britram/orgs",
-        "repos_url": "https://api.github.com/users/britram/repos",
-        "events_url": "https://api.github.com/users/britram/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/britram/received_events",
-        "type": "User",
-        "site_admin": false
-      },
-      {
-        "login": "mwelzl",
-        "id": 7081644,
-        "node_id": "MDQ6VXNlcjcwODE2NDQ=",
-        "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/mwelzl",
-        "html_url": "https://github.com/mwelzl",
-        "followers_url": "https://api.github.com/users/mwelzl/followers",
-        "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
-        "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
-        "organizations_url": "https://api.github.com/users/mwelzl/orgs",
-        "repos_url": "https://api.github.com/users/mwelzl/repos",
-        "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/mwelzl/received_events",
-        "type": "User",
-        "site_admin": false
-      }
+
     ],
     "milestone": null,
     "comments": 7,
     "created_at": "2018-06-01T00:06:32Z",
-    "updated_at": "2019-03-05T21:58:44Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:15:20Z",
+    "closed_at": "2019-03-25T12:15:08Z",
     "author_association": "CONTRIBUTOR",
     "body": "The RFC Editor has become rather strict in implementing the 5 author limit for drafts:\r\n\r\nThis document has more than five authors listed, which is considered excessive under normal circumstances. If you plan to request publication as an RFC, this will require additional consideration by the stream manager (for example, the IESG), and publication may be declined unless sufficient justification is provided. See RFC 7322, section 4.1.1 for details.\r\n\r\nWe should update these for -01"
   },
@@ -10110,10 +11034,7 @@
     "closed_at": "2018-06-20T14:57:26Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/178",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -10152,6 +11073,14 @@
         "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Architecture",
         "name": "Architecture",
         "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
         "default": false
       }
     ],
@@ -10220,9 +11149,9 @@
       }
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2018-05-16T15:51:00Z",
-    "updated_at": "2018-05-16T15:54:52Z",
+    "updated_at": "2019-03-25T12:14:17Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Point to API and Implementation privacy considerations, and discuss security considerations behind architectural choices"
@@ -10328,10 +11257,46 @@
         "site_admin": false
       }
     ],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
     "comments": 4,
     "created_at": "2018-05-16T15:49:04Z",
-    "updated_at": "2019-02-07T15:33:03Z",
+    "updated_at": "2019-03-25T12:20:36Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Each document should have a privacy considerations section to discuss the tradeoffs inherent in the API."
@@ -11786,7 +12751,10 @@
     "closed_at": "2018-08-27T13:10:12Z",
     "author_association": "NONE",
     "body": "I forgot to upload these - but it would be helpful to fix these in the next rev (all textual):\r\n\r\n—\r\nThe phrase below appears a little ambiguous, please reword:\r\nOLD:\r\nin which the necessary protocol\r\nhandshakes are conducted in order to select which set to use\r\n\r\nDoes this mean:\r\nin which an order is specified for the necessary protocol\r\nhandshakes to be conducted to elect which to use\r\nOR;\r\nin which the necessary protocol\r\nhandshakes are conducted so that it can select which set to use\r\n—\r\nOLD:\r\ndelimeters\r\nNEW: \r\ndelimiters\r\n—\r\nOLD:\r\nover to the Tranport\r\nNEW:\r\nover to the Transport\r\n—\r\nOLD:\r\nAs explained in section Section 4.6,\r\nNEW:\r\nAs explained in Section 4.6,\r\n—\r\nI did not understand this text, please rephrase:\r\nGathering locals is primarily an endpoint local operation\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/160",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12446,14 +13414,88 @@
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "adventureloop",
+      "id": 1138341,
+      "node_id": "MDQ6VXNlcjExMzgzNDE=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1138341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adventureloop",
+      "html_url": "https://github.com/adventureloop",
+      "followers_url": "https://api.github.com/users/adventureloop/followers",
+      "following_url": "https://api.github.com/users/adventureloop/following{/other_user}",
+      "gists_url": "https://api.github.com/users/adventureloop/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/adventureloop/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/adventureloop/subscriptions",
+      "organizations_url": "https://api.github.com/users/adventureloop/orgs",
+      "repos_url": "https://api.github.com/users/adventureloop/repos",
+      "events_url": "https://api.github.com/users/adventureloop/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/adventureloop/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "assignees": [
-
+      {
+        "login": "adventureloop",
+        "id": 1138341,
+        "node_id": "MDQ6VXNlcjExMzgzNDE=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/1138341?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/adventureloop",
+        "html_url": "https://github.com/adventureloop",
+        "followers_url": "https://api.github.com/users/adventureloop/followers",
+        "following_url": "https://api.github.com/users/adventureloop/following{/other_user}",
+        "gists_url": "https://api.github.com/users/adventureloop/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/adventureloop/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/adventureloop/subscriptions",
+        "organizations_url": "https://api.github.com/users/adventureloop/orgs",
+        "repos_url": "https://api.github.com/users/adventureloop/repos",
+        "events_url": "https://api.github.com/users/adventureloop/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/adventureloop/received_events",
+        "type": "User",
+        "site_admin": false
+      }
     ],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
     "comments": 0,
     "created_at": "2018-03-21T16:31:55Z",
-    "updated_at": "2018-03-21T16:31:55Z",
+    "updated_at": "2019-03-25T12:11:47Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Review structure. What fits in pre-establishment. Relation system policy - cached state. Generalizes #127 "
@@ -12848,22 +13890,6 @@
         "default": false
       },
       {
-        "id": 835290366,
-        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
-        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
-        "name": "discuss",
-        "color": "b60205",
-        "default": false
-      },
-      {
-        "id": 819875206,
-        "node_id": "MDU6TGFiZWw4MTk4NzUyMDY=",
-        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/help%20wanted",
-        "name": "help wanted",
-        "color": "008672",
-        "default": true
-      },
-      {
         "id": 935169415,
         "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
         "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
@@ -12874,14 +13900,52 @@
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "GrumpyOldTroll",
+      "id": 361578,
+      "node_id": "MDQ6VXNlcjM2MTU3OA==",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/361578?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/GrumpyOldTroll",
+      "html_url": "https://github.com/GrumpyOldTroll",
+      "followers_url": "https://api.github.com/users/GrumpyOldTroll/followers",
+      "following_url": "https://api.github.com/users/GrumpyOldTroll/following{/other_user}",
+      "gists_url": "https://api.github.com/users/GrumpyOldTroll/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/GrumpyOldTroll/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/GrumpyOldTroll/subscriptions",
+      "organizations_url": "https://api.github.com/users/GrumpyOldTroll/orgs",
+      "repos_url": "https://api.github.com/users/GrumpyOldTroll/repos",
+      "events_url": "https://api.github.com/users/GrumpyOldTroll/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/GrumpyOldTroll/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "assignees": [
-
+      {
+        "login": "GrumpyOldTroll",
+        "id": 361578,
+        "node_id": "MDQ6VXNlcjM2MTU3OA==",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/361578?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/GrumpyOldTroll",
+        "html_url": "https://github.com/GrumpyOldTroll",
+        "followers_url": "https://api.github.com/users/GrumpyOldTroll/followers",
+        "following_url": "https://api.github.com/users/GrumpyOldTroll/following{/other_user}",
+        "gists_url": "https://api.github.com/users/GrumpyOldTroll/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/GrumpyOldTroll/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/GrumpyOldTroll/subscriptions",
+        "organizations_url": "https://api.github.com/users/GrumpyOldTroll/orgs",
+        "repos_url": "https://api.github.com/users/GrumpyOldTroll/repos",
+        "events_url": "https://api.github.com/users/GrumpyOldTroll/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/GrumpyOldTroll/received_events",
+        "type": "User",
+        "site_admin": false
+      }
     ],
     "milestone": null,
     "comments": 4,
     "created_at": "2018-03-21T15:47:13Z",
-    "updated_at": "2019-02-21T23:29:30Z",
+    "updated_at": "2019-03-25T12:12:30Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "We need unidirectional connections. You know, for multicast. And ICN. And unidirectional streaming protocols."
@@ -13042,10 +14106,7 @@
     "closed_at": "2018-04-20T13:45:37Z",
     "author_association": "CONTRIBUTOR",
     "body": "See thread at https://mailarchive.ietf.org/arch/msg/taps/i8Ax-WqOoOg4obYU8MgBzb0F3oc\r\n\r\nSuggested resolution: implementation must have a deterministic tiebreaker, current recommendation is that path properties take precedence. API should note expected behavior. There should be additional text on candidate selection and ordering."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/148",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -13217,7 +14278,7 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "chris-wood",
@@ -13262,10 +14323,10 @@
       }
     ],
     "milestone": null,
-    "comments": 6,
+    "comments": 7,
     "created_at": "2018-03-21T15:05:25Z",
-    "updated_at": "2019-01-15T15:50:52Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T12:03:14Z",
+    "closed_at": "2019-03-25T12:03:13Z",
     "author_association": "CONTRIBUTOR",
     "body": "Input from Mark Handley, distributed with permission:\r\n\r\n> Hi Aaron, Colin,\r\n> \r\n> As I mentioned, I'm playing with ideas for a new TCP-replacement transport protocol at the moment.  It doesn't really have a name right now, but lets call it NeoTCP.  Likely it won't go anywhere, but some of the ideas differ a bit from other transport protocols, so may serve as a useful test for the TAPS API.  \r\n> \r\n> 1.  Pre-authentication.  I want to put the ssh server on my home machine on the Internet without it being constantly attacked with password guessing attacks.  NeoTCP implements very simple pre-authentication, where my laptop and my home machine share a secret.  When connecting, the client sends the pair  (nonce, Hash(nonce, secret)).  The server won't send a syn/ack equivalent unless the secret match one of the secrets from its cache.    \r\n> \r\n> 2.  Source-spoofing protection.  NeoTCP supports the equivalent of SYN cookies, but with a 4-way handshake to avoid the potential deadlock associated with SYN cookies.  I'm also playing with the idea of allowing middleboxes to interpose a challenge in response to the SYN, and when the challenge response arrives from the client, only then is the packet passed through to the actual server, and the handshake continues.  I'm not clear yet if including middleboxes in some way impacts the API.\r\n> \r\n> 3.  Encryption.  Goal is to do tcpcrypt-like encryption, but provide hooks to higher layers so they can do whatever full authentication that particular application needs.\r\n> \r\n> 4.  Redirect.  Redirecting connections is a very common application-layer function, but really you would prefer to redirect before you've set up a connection.  Such redirection obviously needs some form of authentication (maybe this contradicts 3 - not clear where I'm going on this yet).   What would the API be for a redirect server? It's not a full server;  it listens, but simply sends stateless syn/ack redirects, rather than accept connections.   \r\n> \r\n> 5. Acking.  NeoTCP supports multi-path using two sequence spaces - subflow packet sequence numbers and data sequence numbers like MPTCP.  Unlike MPTCP, the data sequence number ack indicates the receiving application received the packet (with MPTCP, it only indicates reception by the receiving stack.\r\n> \r\n> 6. Pulling.  NeoTCP takes some lessons from NDP, and is a receiver-driven protocol.  When several senders are sending to one receiver, this allows the receiver to choose precisely which senders to pull packets from at any time.  This generalizes the QUIC/HTTP2 priorities to now support multiple different senders.  You can use this to do aggregate congestion control for incoming traffic, avoiding self-congestion.  It's up to the receiving application to determine priorities, and to the transport to decide how to use those priorities.\r\n> \r\n> 7.  Close is a total mess with TCP.  It's even worse with a user-space protocol - your application may quit when close returns; data may not have been received yet and needs retransmitting, but there's no-one left to do it.   By default, with NDP close won't return until the receiving application has received sent data.   Obviously you need some way to avoid deadlock when the receiver died; that timeout is application specific.\r\n> \r\n> 8. Finally, we've done a lot of work over the last couple of years on understanding MPTCP for web traffic.  It's ugly. You have a whole load of short objects, and the application has a priority order for them.  But the paths may have very different latency.  If you send any packet from the highest priority object on the high latency path, you can delay the object significantly, and it can really hurt the overall page load time, as other requests get stalled waiting for that object.  The best you can do is to run a per-packet scheduler, and ask the question \"if I send the next packet from this object on the higher latency path, will it arrive after the rest of the object sent on the lower latency path?\" If the answer is yes, you shouldn't send that packet on the higher latency path.  Next you have to consider the second highest priority object, and ask if you should instead send a packet from that object on the higher latency path.  You should, if will arrive before both the highest priority object and all the rest of the second highest priority object. If not, you shouldn't, and you should consider the third highest priority object, and so on.  Obviously, this is complicated.  At the very least, the transport protocol needs to know which packets are from which object, and what those object priorities are.  At the receiver, objects may arrive out of order, but packets within an object must be in-order.\r\n> \r\n> There are probably more things, but that's what comes to mind right now.\r\n> \r\n> Mark"
   },
@@ -13421,18 +14482,100 @@
         "name": "Implementation",
         "color": "fbca04",
         "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
+        "default": false
       }
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "mwelzl",
+      "id": 7081644,
+      "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mwelzl",
+      "html_url": "https://github.com/mwelzl",
+      "followers_url": "https://api.github.com/users/mwelzl/followers",
+      "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+      "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+      "repos_url": "https://api.github.com/users/mwelzl/repos",
+      "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "assignees": [
-
+      {
+        "login": "mwelzl",
+        "id": 7081644,
+        "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mwelzl",
+        "html_url": "https://github.com/mwelzl",
+        "followers_url": "https://api.github.com/users/mwelzl/followers",
+        "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+        "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+        "repos_url": "https://api.github.com/users/mwelzl/repos",
+        "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+        "type": "User",
+        "site_admin": false
+      }
     ],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
     "comments": 0,
     "created_at": "2018-03-21T10:40:02Z",
-    "updated_at": "2018-03-21T10:40:48Z",
+    "updated_at": "2019-03-25T12:13:02Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "I think it would be useful to somewhere (appendix?) include a sentence like: \"Many of the mechanisms described in this document are implemented by the open-source NEAT library, which is available from [NEAT github] and described in [NEAT commag paper]\".\r\n\r\nAnd, if there could also be more such statements (from Apple about Apple's implementation, from socket intents about their implementation, ..) that would be fantastic, I think.\r\n"
@@ -15003,7 +16146,10 @@
     "closed_at": "2018-03-04T00:21:19Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/130",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15344,17 +16490,17 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2018-03-01T13:05:54Z",
-    "updated_at": "2018-04-11T13:35:40Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T11:56:42Z",
+    "closed_at": "2019-03-25T11:56:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "The rendezvous and discovery steps described in Section 10 for peer-to-peer connection establishment are a generalisation of those in Section 4. Need to discuss in London how we can combine these as a single algorithm that works for both cases."
   },
@@ -15871,10 +17017,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/119.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/118",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -17316,7 +18459,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "csperkins",
@@ -17361,10 +18504,10 @@
       }
     ],
     "milestone": null,
-    "comments": 2,
+    "comments": 4,
     "created_at": "2018-02-27T09:59:14Z",
-    "updated_at": "2018-10-17T07:55:17Z",
-    "closed_at": null,
+    "updated_at": "2019-03-25T11:56:18Z",
+    "closed_at": "2019-03-25T11:55:44Z",
     "author_association": "CONTRIBUTOR",
     "body": "editor's note from pre-00:\r\n\r\n> This API is sufficient for TCP-style simultaneous open, but should be considered experimental for ICE-like protocols.\r\n\r\nThis didn't seem like something we need in -00, so opening this issue to make sure it doesn't get lost..."
   },
@@ -17589,7 +18732,10 @@
     "closed_at": "2018-02-27T14:20:30Z",
     "author_association": "CONTRIBUTOR",
     "body": "There are still a few `\\[EDITOR'S NOTE`s and similar scattered throughout the document. Find them and fix them, or move them to post-London issues."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/100",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18811,10 +19957,7 @@
     "closed_at": "2018-02-26T09:45:05Z",
     "author_association": "CONTRIBUTOR",
     "body": "In Figure 1 we use Protocol Stack Instance in Section 4.2 we use Protocol Stack. We should be consistent. So one place needs to be updated. Protocol Stack Instance seems right to me."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/88",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -20591,7 +21734,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/71.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/70",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21725,10 +22871,7 @@
     "closed_at": "2018-10-07T10:26:50Z",
     "author_association": "NONE",
     "body": "\r\nWhen we worked on the NEAT architecture, it was clear that this type of function could be communicated via the API from the App, but in some cases the App may not wish a detailed spec and simply indicate a profile (naming a collection of the things it needs), allowing a policy to be instantiated that implements the actual control over which candidate paths to allow. For example, “use my corporate network”, “do not bill me for this”, to give very high-level examples that may match to actual requirements about whether public wifi is acceptable. My point here is that I would like to see two things:\r\n** The ability to express abstractly what is needed. \r\n** The ability to make that concrete in a policy."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/58",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -23044,10 +24187,46 @@
         "site_admin": false
       }
     ],
-    "milestone": null,
-    "comments": 11,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 9,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-03-29T11:56:12Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 14,
     "created_at": "2018-02-14T14:07:32Z",
-    "updated_at": "2019-01-25T13:31:57Z",
+    "updated_at": "2019-03-25T11:54:25Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Post Sockets had an Association concept, which contained all the information about a pair of endpoints, including security parameters, cached security state, cached path state information, and so on. ISTM that we implicitly decided that this was implementation-specific in the Cambridge meeting (though it lived on in the architecture as Association Cache in §4.2).\r\n\r\nIt turns out that the Connectable proposed by @csperkins in #42 shares enough of its properties with the non-cacheable bits of an Association that we might want to make this an explicit object in the API again. \r\n\r\nDiscuss."
@@ -23563,7 +24742,10 @@
     "closed_at": "2018-02-13T15:39:02Z",
     "author_association": "CONTRIBUTOR",
     "body": "In section 3.3 of architecture \"all implementations should offer sufficient APIs to use basic transport protocols like TCP and UDP\", should this be \"...to use the distilled minimal set of features offered by transport protocols [I-D.ietf-taps-minset]\"?\r\n\r\nWe should be consistent about what's the base set of protocols (see also #40)"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/40",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24652,10 +25834,7 @@
     "closed_at": "2018-02-15T14:04:09Z",
     "author_association": "CONTRIBUTOR",
     "body": "Section 5.2 currently includes Connection.QueryProperties(), but it belongs to the Pre-Establishment Phase. At this point, most Protocol Properties are not available to be queried yet. So the current version of 5.2.2 only includes \"Maximum Message Size Before Connection Establishment\", as this clearly belongs in the Pre-Establishment phase.\r\nThere should probably be a \"Configuration\" section or similar that specifies what Protocol Properties can be queried (and set?) after establishment. Maybe the Protocol Properties should even be moved there altogether, but I like them in the Pre-Establishment section, because this makes it clear that applications should specify them as early as possible."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/28",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -26718,7 +27897,10 @@
     "closed_at": "2018-02-08T15:28:02Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/10",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
