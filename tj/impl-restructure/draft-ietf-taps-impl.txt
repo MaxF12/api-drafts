@@ -435,7 +435,7 @@ Internet-Draft             TAPS Implementation                April 2019
    locals, which are returned and form the candidate remote addresses
    for contacting that peer.
 
-   Resolving the remote is _not_ a local operation.  It will involve a
+   Resolving the remote is not a local operation.  It will involve a
    directory service, and can require communication with the remote to
    rendezvous and exchange peer addresses.  This can expose some or all
    of the candidate locals to the remote.
