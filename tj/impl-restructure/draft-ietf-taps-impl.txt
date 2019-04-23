@@ -322,8 +322,8 @@ Internet-Draft             TAPS Implementation                April 2019
    Candidate Gathering, to identify the paths, protocols, and endpoints
    to use, and Candidate Racing, in which the necessary protocol
    handshakes are conducted so that the transport system can select
-   which set to use.  This document structures canidates for racing as a
-   tree.
+   which set to use.  This document structures candidates for racing as
+   a tree.
 
    The most simple example of this process might involve identifying the
    single IP address to which the implementation wishes to connect,
