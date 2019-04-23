@@ -288,8 +288,9 @@ ul.toc li {
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Role of system policy">
 <link href="#rfc.section.4" rel="Chapter" title="4 Implementing Connection Establishment">
 <link href="#rfc.section.4.1" rel="Chapter" title="4.1 Candidate Gathering">
-<link href="#rfc.section.4.1.1" rel="Chapter" title="4.1.1 Structuring Options as a Tree">
-<link href="#rfc.section.4.1.2" rel="Chapter" title="4.1.2 Branch Types">
+<link href="#rfc.section.4.1.1" rel="Chapter" title="4.1.1 Gathering Endpoint Candidates">
+<link href="#rfc.section.4.1.2" rel="Chapter" title="4.1.2 Structuring Options as a Tree">
+<link href="#rfc.section.4.1.3" rel="Chapter" title="4.1.3 Branch Types">
 <link href="#rfc.section.4.2" rel="Chapter" title="4.2 Branching Order-of-Operations">
 <link href="#rfc.section.4.3" rel="Chapter" title="4.3 Sorting Branches">
 <link href="#rfc.section.4.4" rel="Chapter" title="4.4 Candidate Racing">
@@ -323,26 +324,25 @@ ul.toc li {
 <link href="#rfc.section.9.5" rel="Chapter" title="9.5 HTTP">
 <link href="#rfc.section.9.6" rel="Chapter" title="9.6 QUIC">
 <link href="#rfc.section.9.7" rel="Chapter" title="9.7 HTTP/2 transport">
-<link href="#rfc.section.10" rel="Chapter" title="10 Rendezvous and Environment Discovery">
-<link href="#rfc.section.11" rel="Chapter" title="11 IANA Considerations">
-<link href="#rfc.section.12" rel="Chapter" title="12 Security Considerations">
-<link href="#rfc.section.12.1" rel="Chapter" title="12.1 Considerations for Candidate Gathering">
-<link href="#rfc.section.12.2" rel="Chapter" title="12.2 Considerations for Candidate Racing">
-<link href="#rfc.section.13" rel="Chapter" title="13 Acknowledgements">
-<link href="#rfc.references" rel="Chapter" title="14 References">
-<link href="#rfc.references.1" rel="Chapter" title="14.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="14.2 Informative References">
+<link href="#rfc.section.10" rel="Chapter" title="10 IANA Considerations">
+<link href="#rfc.section.11" rel="Chapter" title="11 Security Considerations">
+<link href="#rfc.section.11.1" rel="Chapter" title="11.1 Considerations for Candidate Gathering">
+<link href="#rfc.section.11.2" rel="Chapter" title="11.2 Considerations for Candidate Racing">
+<link href="#rfc.section.12" rel="Chapter" title="12 Acknowledgements">
+<link href="#rfc.references" rel="Chapter" title="13 References">
+<link href="#rfc.references.1" rel="Chapter" title="13.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="13.2 Informative References">
 <link href="#rfc.appendix.A" rel="Chapter" title="A Additional Properties">
 <link href="#rfc.appendix.A.1" rel="Chapter" title="A.1 Properties Affecting Sorting of Branches">
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.19.1 - https://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.22.2 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Brunstrom, A., Ed., Pauly, T., Ed., Enghardt, T., Grinnemo, K-J., Jones, T., Tiesel, P., Perkins, C., and M. Welzl" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-taps-impl-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-03-22" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-04-23" />
   <meta name="dct.abstract" content="The Transport Services architecture  defines a system that allows applications to use transport networking protocols flexibly. This document serves as a guide to implementation on how to build such a system." />
   <meta name="description" content="The Transport Services architecture  defines a system that allows applications to use transport networking protocols flexibly. This document serves as a guide to implementation on how to build such a system." />
 
@@ -366,7 +366,7 @@ ul.toc li {
 <td class="right">T. Pauly, Ed.</td>
 </tr>
 <tr>
-<td class="left">Expires: September 23, 2019</td>
+<td class="left">Expires: October 25, 2019</td>
 <td class="right">Apple Inc.</td>
 </tr>
 <tr>
@@ -419,7 +419,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">March 22, 2019</td>
+<td class="right">April 23, 2019</td>
 </tr>
 
     	
@@ -435,7 +435,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 23, 2019.</p>
+<p>This Internet-Draft will expire on October 25, 2019.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -459,9 +459,11 @@ ul.toc li {
 </li>
 <ul><li>4.1.   <a href="#rfc.section.4.1">Candidate Gathering</a>
 </li>
-<ul><li>4.1.1.   <a href="#rfc.section.4.1.1">Structuring Options as a Tree</a>
+<ul><li>4.1.1.   <a href="#rfc.section.4.1.1">Gathering Endpoint Candidates</a>
 </li>
-<li>4.1.2.   <a href="#rfc.section.4.1.2">Branch Types</a>
+<li>4.1.2.   <a href="#rfc.section.4.1.2">Structuring Options as a Tree</a>
+</li>
+<li>4.1.3.   <a href="#rfc.section.4.1.3">Branch Types</a>
 </li>
 </ul><li>4.2.   <a href="#rfc.section.4.2">Branching Order-of-Operations</a>
 </li>
@@ -529,23 +531,21 @@ ul.toc li {
 </li>
 <li>9.7.   <a href="#rfc.section.9.7">HTTP/2 transport</a>
 </li>
-</ul><li>10.   <a href="#rfc.section.10">Rendezvous and Environment Discovery</a>
+</ul><li>10.   <a href="#rfc.section.10">IANA Considerations</a>
 </li>
-<li>11.   <a href="#rfc.section.11">IANA Considerations</a>
+<li>11.   <a href="#rfc.section.11">Security Considerations</a>
 </li>
-<li>12.   <a href="#rfc.section.12">Security Considerations</a>
+<ul><li>11.1.   <a href="#rfc.section.11.1">Considerations for Candidate Gathering</a>
 </li>
-<ul><li>12.1.   <a href="#rfc.section.12.1">Considerations for Candidate Gathering</a>
+<li>11.2.   <a href="#rfc.section.11.2">Considerations for Candidate Racing</a>
 </li>
-<li>12.2.   <a href="#rfc.section.12.2">Considerations for Candidate Racing</a>
+</ul><li>12.   <a href="#rfc.section.12">Acknowledgements</a>
 </li>
-</ul><li>13.   <a href="#rfc.section.13">Acknowledgements</a>
+<li>13.   <a href="#rfc.references">References</a>
 </li>
-<li>14.   <a href="#rfc.references">References</a>
+<ul><li>13.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<ul><li>14.1.   <a href="#rfc.references.1">Normative References</a>
-</li>
-<li>14.2.   <a href="#rfc.references.2">Informative References</a>
+<li>13.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
 </ul><li>Appendix A.   <a href="#rfc.appendix.A">Additional Properties</a>
 </li>
@@ -603,7 +603,7 @@ ul.toc li {
 <a href="#rfc.section.4">4.</a> <a href="#conn-establish" id="conn-establish">Implementing Connection Establishment</a>
 </h1>
 <p id="rfc.section.4.p.1">The process of establishing a network connection begins when an application expresses intent to communicate with a remote endpoint by calling Initiate. (At this point, any constraints or requirements the application may have on the connection are available from pre-establishment.) The process can be considered complete once there is at least one Protocol Stack that has completed any required setup to the point that it can transmit and receive the application&#8217;s data.</p>
-<p id="rfc.section.4.p.2">Connection establishment is divided into two top-level steps: Candidate Gathering, to identify the paths, protocols, and endpoints to use, and Candidate Racing, in which the necessary protocol handshakes are conducted so that the transport system can select which set to use.</p>
+<p id="rfc.section.4.p.2">Connection establishment is divided into two top-level steps: Candidate Gathering, to identify the paths, protocols, and endpoints to use, and Candidate Racing, in which the necessary protocol handshakes are conducted so that the transport system can select which set to use. This document structures candidates for racing as a tree.</p>
 <p id="rfc.section.4.p.3">The most simple example of this process might involve identifying the single IP address to which the implementation wishes to connect, using the system&#8217;s current default interface or path, and starting a TCP handshake to establish a stream to the specified IP address. However, each step may also vary depending on the requirements of the connection: if the endpoint is defined as a hostname and port, then there may be multiple resolved addresses that are available; there may also be multiple interfaces or paths available, other than the default system interface; and some protocols may not need any transport handshake to be considered &#8220;established&#8221; (such as UDP), while other connections may utilize layered protocol handshakes, such as TLS over TCP.</p>
 <p id="rfc.section.4.p.4">Whenever an implementation has multiple options for connection establishment, it can view the set of all individual connection establishment options as a single, aggregate connection establishment. The aggregate set conceptually includes every valid combination of endpoints, paths, and protocols. As an example, consider an implementation that initiates a TCP connection to a hostname + port endpoint, and has two valid interfaces available (Wi-Fi and LTE). The hostname resolves to a single IPv4 address on the Wi-Fi network, and resolves to the same IPv4 address on the LTE network, as well as a single IPv6 address. The aggregate set of connection establishment options can be viewed as follows:</p>
 <pre>
@@ -618,10 +618,26 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
 </h1>
 <p id="rfc.section.4.1.p.1">The step of gathering candidates involves identifying which paths, protocols, and endpoints may be used for a given Connection. This list is determined by the requirements, prohibitions, and preferences of the application as specified in the Selection Properties.</p>
 <h1 id="rfc.section.4.1.1">
-<a href="#rfc.section.4.1.1">4.1.1.</a> <a href="#structuring-options-as-a-tree" id="structuring-options-as-a-tree">Structuring Options as a Tree</a>
+<a href="#rfc.section.4.1.1">4.1.1.</a> <a href="#gathering-endpoint-candidates" id="gathering-endpoint-candidates">Gathering Endpoint Candidates</a>
 </h1>
-<p id="rfc.section.4.1.1.p.1">When an implementation responsible for connection establishment needs to consider multiple options, it should logically structure these options as a hierarchical tree. Each leaf node of the tree represents a single, coherent connection attempt, with an Endpoint, a Path, and a set of protocols that can directly negotiate and send data on the network. Each node in the tree that is not a leaf represents a connection attempt that is either underspecified, or else includes multiple distinct options. For example. when connecting on an IP network, a connection attempt to a hostname and port is underspecified, because the connection attempt requires a resolved IP address as its remote endpoint. In this case, the node represented by the connection attempt to the hostname is a parent node, with child nodes for each IP address. Similarly, an implementation that is allowed to connect using multiple interfaces will have a parent node of the tree for the decision between the paths, with a branch for each interface.</p>
-<p id="rfc.section.4.1.1.p.2">The example aggregate connection attempt above can be drawn as a tree by grouping the addresses resolved on the same interface into branches:</p>
+<p id="rfc.section.4.1.1.p.1">Both Local and Remote Endpoint Candidates must be discovered during connection establishment.  To support ICE, or similar protocols, that involve out-of-band indirect signalling to exchange candidates with the Remote Endpoint, it&#8217;s important to be able to query the set of candidate Local Endpoints, and give the protocol stack a set of candidate Remote Endpoints, before it attempts to establish connections.</p>
+<h1 id="rfc.section.4.1.1.1">
+<a href="#rfc.section.4.1.1.1">4.1.1.1.</a> <a href="#local-endpoint-candidates" id="local-endpoint-candidates">Local Endpoint candidates</a>
+</h1>
+<p id="rfc.section.4.1.1.1.p.1">The set of possible Local Endpoints is gathered.  In the simple case, this merely enumerates the local interfaces and protocols, allocates ephemeral source ports.  For example, a system that has WiFi and Ethernet and supports IPv4 and IPv6 might gather four candidate locals (IPv4 on Ethernet, IPv6 on Ethernet, IPv4 on WiFi, and IPv6 on WiFi) that can form the source for a transient.</p>
+<p id="rfc.section.4.1.1.1.p.2">If NAT traversal is required, the process of gathering Local Endpoints becomes broadly equivalent to the ICE candidate gathering phase <a href="#RFC5245" class="xref">[RFC5245]</a>.  The endpoint determines its server reflexive Local Endpoints (i.e., the translated address of a local, on the other side of a NAT) and relayed locals (e.g., via a TURN server or other relay), for each interface and network protocol.  These are added to the set of candidate Local Endpoints for this connection.</p>
+<p id="rfc.section.4.1.1.1.p.3">Gathering Local Endpoints is primarily a local operation, although it might involve exchanges with a STUN server to derive server reflexive locals, or with a TURN server or other relay to derive relayed locals.  It does not involve communication with the Remote Endpoint.</p>
+<h1 id="rfc.section.4.1.1.2">
+<a href="#rfc.section.4.1.1.2">4.1.1.2.</a> <a href="#remote-endpoint-candidates" id="remote-endpoint-candidates">Remote Endpoint Candidates</a>
+</h1>
+<p id="rfc.section.4.1.1.2.p.1">The Remote Endpoint is typically a name that needs to be resolved into a set of possible addresses that can be used for communication.  Resolving the Remote Endpoint is the process of recursively performing such name lookups, until fully resolved, to return the set of candidates for the remote of this connection.</p>
+<p id="rfc.section.4.1.1.2.p.2">How this is done will depend on the type of the Remote Endpoint, and can also be specific to each Local Endpoint.  A common case is when the Remote Endpoint is a DNS name, in which case it is resolved to give a set of IPv4 and IPv6 addresses representing that name.  Some types of remote might require more complex resolution.  Resolving the Remote Endpoint for a peer-to-peer connection might involve communication with a rendezvous server, which in turn contacts the peer to gain consent to communicate and retrieve its set of candidate locals, which are returned and form the candidate remote addresses for contacting that peer.</p>
+<p id="rfc.section.4.1.1.2.p.3">Resolving the remote is not a local operation.  It will involve a directory service, and can require communication with the remote to rendezvous and exchange peer addresses.  This can expose some or all of the candidate locals to the remote.</p>
+<h1 id="rfc.section.4.1.2">
+<a href="#rfc.section.4.1.2">4.1.2.</a> <a href="#structuring-options-as-a-tree" id="structuring-options-as-a-tree">Structuring Options as a Tree</a>
+</h1>
+<p id="rfc.section.4.1.2.p.1">When an implementation responsible for connection establishment needs to consider multiple options, it should logically structure these options as a hierarchical tree. Each leaf node of the tree represents a single, coherent connection attempt, with an Endpoint, a Path, and a set of protocols that can directly negotiate and send data on the network. Each node in the tree that is not a leaf represents a connection attempt that is either underspecified, or else includes multiple distinct options. For example. when connecting on an IP network, a connection attempt to a hostname and port is underspecified, because the connection attempt requires a resolved IP address as its remote endpoint. In this case, the node represented by the connection attempt to the hostname is a parent node, with child nodes for each IP address. Similarly, an implementation that is allowed to connect using multiple interfaces will have a parent node of the tree for the decision between the paths, with a branch for each interface.</p>
+<p id="rfc.section.4.1.2.p.2">The example aggregate connection attempt above can be drawn as a tree by grouping the addresses resolved on the same interface into branches:</p>
 <pre>
                              ||
                 +==========================+
@@ -636,7 +652,7 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
   | 192.0.2.1:80/Wi-Fi |  |  192.0.2.1:80/LTE  |  |  2001:DB8::1.80/LTE  |
   +====================+  +====================+  +======================+
 </pre>
-<p id="rfc.section.4.1.1.p.3">The rest of this section will use a notation scheme to represent this tree. The parent (or trunk) node of the tree will be represented by a single integer, such as &#8220;1&#8221;. Each child of that node will have an integer that identifies it, from 1 to the number of children. That child node will be uniquely identified by concatenating its integer to it&#8217;s parents identifier with a dot in between, such as &#8220;1.1&#8221; and &#8220;1.2&#8221;. Each node will be summarized by a tuple of three elements: Endpoint, Path, and Protocol. The above example can now be written more succinctly as:</p>
+<p id="rfc.section.4.1.2.p.3">The rest of this section will use a notation scheme to represent this tree. The parent (or trunk) node of the tree will be represented by a single integer, such as &#8220;1&#8221;. Each child of that node will have an integer that identifies it, from 1 to the number of children. That child node will be uniquely identified by concatenating its integer to it&#8217;s parents identifier with a dot in between, such as &#8220;1.1&#8221; and &#8220;1.2&#8221;. Each node will be summarized by a tuple of three elements: Endpoint, Path, and Protocol. The above example can now be written more succinctly as:</p>
 <pre>
 1 [www.example.com:80, Any, TCP]
   1.1 [www.example.com:80, Wi-Fi, TCP]
@@ -645,25 +661,25 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
     1.2.1 [192.0.2.1:80, LTE, TCP]
     1.2.2 [2001:DB8::1.80, LTE, TCP]
 </pre>
-<p id="rfc.section.4.1.1.p.4">When an implementation views this aggregate set of connection attempts as a single connection establishment, it only will use one of the leaf nodes to transfer data. Thus, when a single leaf node becomes ready to use, then the entire connection attempt is ready to use by the application. Another way to represent this is that every leaf node updates the state of its parent node when it becomes ready, until the trunk node of the tree is ready, which then notifies the application that the connection as a whole is ready to use.</p>
-<p id="rfc.section.4.1.1.p.5">A connection establishment tree may be degenerate, and only have a single leaf node, such as a connection attempt to an IP address over a single interface with a single protocol.</p>
+<p id="rfc.section.4.1.2.p.4">When an implementation views this aggregate set of connection attempts as a single connection establishment, it only will use one of the leaf nodes to transfer data. Thus, when a single leaf node becomes ready to use, then the entire connection attempt is ready to use by the application. Another way to represent this is that every leaf node updates the state of its parent node when it becomes ready, until the trunk node of the tree is ready, which then notifies the application that the connection as a whole is ready to use.</p>
+<p id="rfc.section.4.1.2.p.5">A connection establishment tree may be degenerate, and only have a single leaf node, such as a connection attempt to an IP address over a single interface with a single protocol.</p>
 <pre>
 1 [192.0.2.1:80, Wi-Fi, TCP]
 </pre>
-<p id="rfc.section.4.1.1.p.6">A parent node may also only have one child (or leaf) node, such as a when a hostname resolves to only a single IP address.</p>
+<p id="rfc.section.4.1.2.p.6">A parent node may also only have one child (or leaf) node, such as a when a hostname resolves to only a single IP address.</p>
 <pre>
 1 [www.example.com:80, Wi-Fi, TCP]
   1.1 [192.0.2.1:80, Wi-Fi, TCP]
 </pre>
-<h1 id="rfc.section.4.1.2">
-<a href="#rfc.section.4.1.2">4.1.2.</a> <a href="#branch-types" id="branch-types">Branch Types</a>
+<h1 id="rfc.section.4.1.3">
+<a href="#rfc.section.4.1.3">4.1.3.</a> <a href="#branch-types" id="branch-types">Branch Types</a>
 </h1>
-<p id="rfc.section.4.1.2.p.1">There are three types of branching from a parent node into one or more child nodes. Any parent node of the tree must only use one type of branching.</p>
-<h1 id="rfc.section.4.1.2.1">
-<a href="#rfc.section.4.1.2.1">4.1.2.1.</a> <a href="#derived-endpoints" id="derived-endpoints">Derived Endpoints</a>
+<p id="rfc.section.4.1.3.p.1">There are three types of branching from a parent node into one or more child nodes. Any parent node of the tree must only use one type of branching.</p>
+<h1 id="rfc.section.4.1.3.1">
+<a href="#rfc.section.4.1.3.1">4.1.3.1.</a> <a href="#derived-endpoints" id="derived-endpoints">Derived Endpoints</a>
 </h1>
-<p id="rfc.section.4.1.2.1.p.1">If a connection originally targets a single endpoint, there may be multiple endpoints of different types that can be derived from the original. The connection library should order the derived endpoints according to application preference, system policy and expected performance.</p>
-<p id="rfc.section.4.1.2.1.p.2">DNS hostname-to-address resolution is the most common method of endpoint derivation. When trying to connect to a hostname endpoint on a traditional IP network, the implementation should send DNS queries for both A (IPv4) and AAAA (IPv6) records if both are supported on the local link. The algorithm for ordering and racing these addresses should follow the recommendations in Happy Eyeballs <a href="#RFC8305" class="xref">[RFC8305]</a>.</p>
+<p id="rfc.section.4.1.3.1.p.1">If a connection originally targets a single endpoint, there may be multiple endpoints of different types that can be derived from the original. The connection library should order the derived endpoints according to application preference, system policy and expected performance.</p>
+<p id="rfc.section.4.1.3.1.p.2">DNS hostname-to-address resolution is the most common method of endpoint derivation. When trying to connect to a hostname endpoint on a traditional IP network, the implementation should send DNS queries for both A (IPv4) and AAAA (IPv6) records if both are supported on the local link. The algorithm for ordering and racing these addresses should follow the recommendations in Happy Eyeballs <a href="#RFC8305" class="xref">[RFC8305]</a>.</p>
 <pre>
 1 [www.example.com:80, Wi-Fi, TCP]
   1.1 [2001:DB8::1.80, Wi-Fi, TCP]
@@ -671,28 +687,28 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
   1.3 [2001:DB8::2.80, Wi-Fi, TCP]
   1.4 [2001:DB8::3.80, Wi-Fi, TCP]
 </pre>
-<p id="rfc.section.4.1.2.1.p.3">DNS-Based Service Discovery can also provide an endpoint derivation step. When trying to connect to a named service, the client may discover one or more hostname and port pairs on the local network using multicast DNS. These hostnames should each be treated as a branch which can be attempted independently from other hostnames. Each of these hostnames may also resolve to one or more addresses, thus creating multiple layers of branching.</p>
+<p id="rfc.section.4.1.3.1.p.3">DNS-Based Service Discovery can also provide an endpoint derivation step. When trying to connect to a named service, the client may discover one or more hostname and port pairs on the local network using multicast DNS. These hostnames should each be treated as a branch which can be attempted independently from other hostnames. Each of these hostnames may also resolve to one or more addresses, thus creating multiple layers of branching.</p>
 <pre>
 1 [term-printer._ipp._tcp.meeting.ietf.org, Wi-Fi, TCP]
   1.1 [term-printer.meeting.ietf.org:631, Wi-Fi, TCP]
     1.1.1 [31.133.160.18.631, Wi-Fi, TCP]
 </pre>
-<h1 id="rfc.section.4.1.2.2">
-<a href="#rfc.section.4.1.2.2">4.1.2.2.</a> <a href="#alternate-paths" id="alternate-paths">Alternate Paths</a>
+<h1 id="rfc.section.4.1.3.2">
+<a href="#rfc.section.4.1.3.2">4.1.3.2.</a> <a href="#alternate-paths" id="alternate-paths">Alternate Paths</a>
 </h1>
-<p id="rfc.section.4.1.2.2.p.1">If a client has multiple network interfaces available to it, such as mobile client with both Wi-Fi and Cellular connectivity, it can attempt a connection over either interface. This represents a branch point in the connection establishment. Like with derived endpoints, the interfaces should be ranked based on preference, system policy, and performance. Attempts should be started on one interface, and then on other interfaces successively after delays based on expected round-trip-time or other available metrics.</p>
+<p id="rfc.section.4.1.3.2.p.1">If a client has multiple network interfaces available to it, such as mobile client with both Wi-Fi and Cellular connectivity, it can attempt a connection over either interface. This represents a branch point in the connection establishment. Like with derived endpoints, the interfaces should be ranked based on preference, system policy, and performance. Attempts should be started on one interface, and then on other interfaces successively after delays based on expected round-trip-time or other available metrics.</p>
 <pre>
 1 [192.0.2.1:80, Any, TCP]
   1.1 [192.0.2.1:80, Wi-Fi, TCP]
   1.2 [192.0.2.1:80, LTE, TCP]
 </pre>
-<p id="rfc.section.4.1.2.2.p.2">This same approach applies to any situation in which the client is aware of multiple links or views of the network. Multiple Paths, each with a coherent set of addresses, routes, DNS server, and more, may share a single interface. A path may also represent a virtual interface service such as a Virtual Private Network (VPN).</p>
-<p id="rfc.section.4.1.2.2.p.3">The list of available paths should be constrained by any requirements or prohibitions the application sets, as well as system policy.</p>
-<h1 id="rfc.section.4.1.2.3">
-<a href="#rfc.section.4.1.2.3">4.1.2.3.</a> <a href="#protocol-options" id="protocol-options">Protocol Options</a>
+<p id="rfc.section.4.1.3.2.p.2">This same approach applies to any situation in which the client is aware of multiple links or views of the network. Multiple Paths, each with a coherent set of addresses, routes, DNS server, and more, may share a single interface. A path may also represent a virtual interface service such as a Virtual Private Network (VPN).</p>
+<p id="rfc.section.4.1.3.2.p.3">The list of available paths should be constrained by any requirements or prohibitions the application sets, as well as system policy.</p>
+<h1 id="rfc.section.4.1.3.3">
+<a href="#rfc.section.4.1.3.3">4.1.3.3.</a> <a href="#protocol-options" id="protocol-options">Protocol Options</a>
 </h1>
-<p id="rfc.section.4.1.2.3.p.1">Differences in possible protocol compositions and options can also provide a branching point in connection establishment. This allows clients to be resilient to situations in which a certain protocol is not functioning on a server or network.</p>
-<p id="rfc.section.4.1.2.3.p.2">This approach is commonly used for connections with optional proxy server configurations. A single connection may be allowed to use an HTTP-based proxy, a SOCKS-based proxy, or connect directly. These options should be ranked and attempted in succession.</p>
+<p id="rfc.section.4.1.3.3.p.1">Differences in possible protocol compositions and options can also provide a branching point in connection establishment. This allows clients to be resilient to situations in which a certain protocol is not functioning on a server or network.</p>
+<p id="rfc.section.4.1.3.3.p.2">This approach is commonly used for connections with optional proxy server configurations. A single connection may be allowed to use an HTTP-based proxy, a SOCKS-based proxy, or connect directly. These options should be ranked and attempted in succession.</p>
 <pre>
 1 [www.example.com:80, Any, HTTP/TCP]
   1.1 [192.0.2.8:80, Any, HTTP/HTTP Proxy/TCP]
@@ -700,7 +716,7 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
   1.3 [www.example.com:80, Any, HTTP/TCP]
     1.3.1 [192.0.2.1:80, Any, HTTP/TCP]
 </pre>
-<p id="rfc.section.4.1.2.3.p.3">This approach also allows a client to attempt different sets of application and transport protocols that may provide preferable characteristics when available. For example, the protocol options could involve QUIC <a href="#I-D.ietf-quic-transport" class="xref">[I-D.ietf-quic-transport]</a> over UDP on one branch, and HTTP/2 <a href="#RFC7540" class="xref">[RFC7540]</a> over TLS over TCP on the other:</p>
+<p id="rfc.section.4.1.3.3.p.3">This approach also allows a client to attempt different sets of application and transport protocols that may provide preferable characteristics when available. For example, the protocol options could involve QUIC <a href="#I-D.ietf-quic-transport" class="xref">[I-D.ietf-quic-transport]</a> over UDP on one branch, and HTTP/2 <a href="#RFC7540" class="xref">[RFC7540]</a> over TLS over TCP on the other:</p>
 <pre>
 1 [www.example.com:443, Any, Any HTTP]
   1.1 [www.example.com:443, Any, QUIC/UDP]
@@ -708,7 +724,7 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
   1.2 [www.example.com:443, Any, HTTP2/TLS/TCP]
     1.2.1 [192.0.2.1:443, Any, HTTP2/TLS/TCP]
 </pre>
-<p id="rfc.section.4.1.2.3.p.4">Another example is racing SCTP with TCP:</p>
+<p id="rfc.section.4.1.3.3.p.4">Another example is racing SCTP with TCP:</p>
 <pre>
 1 [www.example.com:80, Any, Any Stream]
   1.1 [www.example.com:80, Any, SCTP]
@@ -716,7 +732,7 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
   1.2 [www.example.com:80, Any, TCP]
     1.2.1 [192.0.2.1:80, Any, TCP]
 </pre>
-<p id="rfc.section.4.1.2.3.p.5">Implementations that support racing protocols and protocol options should maintain a history of which protocols and protocol options successfully established, on a per-network basis (see <a href="#performance-caches" class="xref">Section 8.2</a>). This information can influence future racing decisions to prioritize or prune branches.</p>
+<p id="rfc.section.4.1.3.3.p.5">Implementations that support racing protocols and protocol options should maintain a history of which protocols and protocol options successfully established, on a per-network basis (see <a href="#performance-caches" class="xref">Section 8.2</a>). This information can influence future racing decisions to prioritize or prune branches.</p>
 <h1 id="rfc.section.4.2">
 <a href="#rfc.section.4.2">4.2.</a> <a href="#branching-order-of-operations" id="branching-order-of-operations">Branching Order-of-Operations</a>
 </h1>
@@ -996,48 +1012,34 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
 <p id="rfc.section.9.7.p.1">Similar to QUIC (<a href="#quic" class="xref">Section 9.6</a>), HTTP/2 provides a multi-streaming interface. This will generally use HTTP as the unit of Messages over the streams, in which each stream can be represented as a transport Connection. The lifetime of streams and the HTTP/2 connection should be managed as described for QUIC.</p>
 <p id="rfc.section.9.7.p.2">It is possible to treat each HTTP/2 stream as a raw byte-stream instead of a carrier for HTTP messages, in which case the Messages over the streams can be represented similarly to the TCP stream (one Message per direction, see <a href="#tcp" class="xref">Section 9.1</a>).</p>
 <h1 id="rfc.section.10">
-<a href="#rfc.section.10">10.</a> <a href="#rendezvous-and-environment-discovery" id="rendezvous-and-environment-discovery">Rendezvous and Environment Discovery</a>
+<a href="#rfc.section.10">10.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a>
 </h1>
-<p id="rfc.section.10.p.1">The connection establishment process outlined in <a href="#conn-establish" class="xref">Section 4</a> is appropriate for client-server connections, but needs to be expanded in peer-to-peer Rendezvous scenarios, as follows:</p>
-<p></p>
-
-<ul>
-<li>Gathering Local Endpoint candidates  <br><br> The set of possible Local Endpoints is gathered.  In the simple case, this merely enumerates the local interfaces and protocols, allocates ephemeral source ports.  For example, a system that has WiFi and Ethernet and supports IPv4 and IPv6 might gather four candidate locals (IPv4 on Ethernet, IPv6 on Ethernet, IPv4 on WiFi, and IPv6 on WiFi) that can form the source for a transient.  <br><br> If NAT traversal is required, the process of gathering Local Endpoints becomes broadly equivalent to the ICE candidate gathering phase <a href="#RFC5245" class="xref">[RFC5245]</a>.  The endpoint determines its server reflexive Local Endpoints (i.e., the translated address of a local, on the other side of a NAT) and relayed locals (e.g., via a TURN server or other relay), for each interface and network protocol.  These are added to the set of candidate Local Endpoints for this connection.  <br><br> Gathering Local Endpoints is primarily a local operation, although it might involve exchanges with a STUN server to derive server reflexive locals, or with a TURN server or other relay to derive relayed locals.  It does not involve communication with the Remote Endpoint.</li>
-<li>Gathering Remote Endpoint Candidates  <br><br> The Remote Endpoint is typically a name that needs to be resolved into a set of possible addresses that can be used for communication.  Resolving the Remote Endpoint is the process of recursively performing such name lookups, until fully resolved, to return the set of candidates for the remote of this connection.  <br><br> How this is done will depend on the type of the Remote Endpoint, and can also be specific to each Local Endpoint.  A common case is when the Remote Endpoint is a DNS name, in which case it is resolved to give a set of IPv4 and IPv6 addresses representing that name.  Some types of remote might require more complex resolution.  Resolving the Remote Endpoint for a peer-to-peer connection might involve communication with a rendezvous server, which in turn contacts the peer to gain consent to communicate and retrieve its set of candidate locals, which are returned and form the candidate remote addresses for contacting that peer.  <br><br> Resolving the remote is <em>not</em> a local operation.  It will involve a directory service, and can require communication with the remote to rendezvous and exchange peer addresses.  This can expose some or all of the candidate locals to the remote.</li>
-<li>Establishing Connections  <br><br> The set of candidate Local Endpoints and the set of candidate Remote Endpoints are paired, to derive a priority ordered set of Candidate Paths that can potentially be used to establish a Connection.  <br><br> Then, communication is attempted over each candidate path, in priority order.  If there are multiple candidates with the same priority, then connection establishment proceeds simultaneously and uses the transient that wins the race to be established.  Otherwise, connection establishment is sequential, paced at a rate that should not congest the network.  Depending on the chosen transport, this phase might involve racing TCP connections to a server over IPv4 and IPv6 <a href="#RFC8305" class="xref">[RFC8305]</a>, or it could involve a STUN exchange to establish peer-to-peer UDP connectivity <a href="#RFC5245" class="xref">[RFC5245]</a>, or some other means.</li>
-<li>Confirming and Maintaining Connections  <br><br> Once connectivity has been established, unused resources can be released and the chosen path can be confirmed.  This is primarily required when establishing peer-to-peer connectivity, where connections supporting relayed locals that were not required can be closed, and where an associated signalling operation might be needed to inform middleboxes and proxies of the chosen path.  Keep-alive messages may also be sent, as appropriate, to ensure NAT and firewall state is maintained, so the Connection remains operational.</li>
-</ul>
-<p id="rfc.section.10.p.3">To support ICE, or similar protocols, that involve an out-of-band indirect signalling exchange to exchange candidates with the Remote Endpoint, it&#8217;s important to be able to query the set of candidate Local Endpoints, and give the protocol stack a set of candidate Remote Endpoints, before it attempts to establish connections.</p>
-<p id="rfc.section.10.p.4">(TO-DO: It is expected that a single abstract algorithm can be identified that supports both the peer-to-peer and client-server connection racing, allowing this text to be merged with <a href="#conn-establish" class="xref">Section 4</a>)</p>
+<p id="rfc.section.10.p.1">RFC-EDITOR: Please remove this section before publication.</p>
+<p id="rfc.section.10.p.2">This document has no actions for IANA.</p>
 <h1 id="rfc.section.11">
-<a href="#rfc.section.11">11.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a>
+<a href="#rfc.section.11">11.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a>
 </h1>
-<p id="rfc.section.11.p.1">RFC-EDITOR: Please remove this section before publication.</p>
-<p id="rfc.section.11.p.2">This document has no actions for IANA.</p>
+<h1 id="rfc.section.11.1">
+<a href="#rfc.section.11.1">11.1.</a> <a href="#considerations-for-candidate-gathering" id="considerations-for-candidate-gathering">Considerations for Candidate Gathering</a>
+</h1>
+<p id="rfc.section.11.1.p.1">Implementations should avoid downgrade attacks that allow network interference to cause the implementation to select less secure, or entirely insecure, combinations of paths and protocols.</p>
+<h1 id="rfc.section.11.2">
+<a href="#rfc.section.11.2">11.2.</a> <a href="#considerations-for-candidate-racing" id="considerations-for-candidate-racing">Considerations for Candidate Racing</a>
+</h1>
+<p id="rfc.section.11.2.p.1">See <a href="#fastopen" class="xref">Section 5.2</a> for security considerations around racing with 0-RTT data.</p>
+<p id="rfc.section.11.2.p.2">An attacker that knows a particular device is racing several options during connection establishment may be able to block packets for the first connection attempt, thus inducing the device to fall back to a secondary attempt. This is a problem if the secondary attempts have worse security properties that enable further attacks. Implementations should ensure that all options have equivalent security properties to avoid incentivizing attacks.</p>
+<p id="rfc.section.11.2.p.3">Since results from the network can determine how a connection attempt tree is built, such as when DNS returns a list of resolved endpoints, it is possible for the network to cause an implementation to consume significant on-device resources. Implementations should limit the maximum amount of state allowed for any given node, including the number of child nodes, especially when the state is based on results from the network.</p>
 <h1 id="rfc.section.12">
-<a href="#rfc.section.12">12.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a>
+<a href="#rfc.section.12">12.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
 </h1>
-<h1 id="rfc.section.12.1">
-<a href="#rfc.section.12.1">12.1.</a> <a href="#considerations-for-candidate-gathering" id="considerations-for-candidate-gathering">Considerations for Candidate Gathering</a>
-</h1>
-<p id="rfc.section.12.1.p.1">Implementations should avoid downgrade attacks that allow network interference to cause the implementation to select less secure, or entirely insecure, combinations of paths and protocols.</p>
-<h1 id="rfc.section.12.2">
-<a href="#rfc.section.12.2">12.2.</a> <a href="#considerations-for-candidate-racing" id="considerations-for-candidate-racing">Considerations for Candidate Racing</a>
-</h1>
-<p id="rfc.section.12.2.p.1">See <a href="#fastopen" class="xref">Section 5.2</a> for security considerations around racing with 0-RTT data.</p>
-<p id="rfc.section.12.2.p.2">An attacker that knows a particular device is racing several options during connection establishment may be able to block packets for the first connection attempt, thus inducing the device to fall back to a secondary attempt. This is a problem if the secondary attempts have worse security properties that enable further attacks. Implementations should ensure that all options have equivalent security properties to avoid incentivizing attacks.</p>
-<p id="rfc.section.12.2.p.3">Since results from the network can determine how a connection attempt tree is built, such as when DNS returns a list of resolved endpoints, it is possible for the network to cause an implementation to consume significant on-device resources. Implementations should limit the maximum amount of state allowed for any given node, including the number of child nodes, especially when the state is based on results from the network.</p>
-<h1 id="rfc.section.13">
-<a href="#rfc.section.13">13.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
-</h1>
-<p id="rfc.section.13.p.1">This work has received funding from the European Union&#8217;s Horizon 2020 research and innovation programme under grant agreement No. 644334 (NEAT).</p>
-<p id="rfc.section.13.p.2">This work has been supported by Leibniz Prize project funds of DFG - German Research Foundation: Gottfried Wilhelm Leibniz-Preis 2011 (FKZ FE 570/4-1).</p>
-<p id="rfc.section.13.p.3">This work has been supported by the UK Engineering and Physical Sciences Research Council under grant EP/R04144X/1.</p>
-<p id="rfc.section.13.p.4">Thanks to Stuart Cheshire, Josh Graessley, David Schinazi, and Eric Kinnear for their implementation and design efforts, including Happy Eyeballs, that heavily influenced this work.</p>
+<p id="rfc.section.12.p.1">This work has received funding from the European Union&#8217;s Horizon 2020 research and innovation programme under grant agreement No. 644334 (NEAT).</p>
+<p id="rfc.section.12.p.2">This work has been supported by Leibniz Prize project funds of DFG - German Research Foundation: Gottfried Wilhelm Leibniz-Preis 2011 (FKZ FE 570/4-1).</p>
+<p id="rfc.section.12.p.3">This work has been supported by the UK Engineering and Physical Sciences Research Council under grant EP/R04144X/1.</p>
+<p id="rfc.section.12.p.4">Thanks to Stuart Cheshire, Josh Graessley, David Schinazi, and Eric Kinnear for their implementation and design efforts, including Happy Eyeballs, that heavily influenced this work.</p>
 <h1 id="rfc.references">
-<a href="#rfc.references">14.</a> References</h1>
+<a href="#rfc.references">13.</a> References</h1>
 <h1 id="rfc.references.1">
-<a href="#rfc.references.1">14.1.</a> Normative References</h1>
+<a href="#rfc.references.1">13.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="I-D.ietf-taps-arch">[I-D.ietf-taps-arch]</b></td>
@@ -1096,7 +1098,7 @@ Aggregate [Endpoint: www.example.com:80] [Interface: Any]   [Protocol: TCP]
 </tr>
 </tbody></table>
 <h1 id="rfc.references.2">
-<a href="#rfc.references.2">14.2.</a> Informative References</h1>
+<a href="#rfc.references.2">13.2.</a> Informative References</h1>
 <table><tbody>
 <tr>
 <td class="reference"><b id="I-D.ietf-quic-transport">[I-D.ietf-quic-transport]</b></td>
