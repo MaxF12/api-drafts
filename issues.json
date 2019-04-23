@@ -1,6 +1,60 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/311",
+    "id": 430893859,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MjY4Njc5ODI4",
+    "number": 311,
+    "title": "Restructure to include nat traversal in connection establishment",
+    "user": {
+      "login": "adventureloop",
+      "id": 1138341,
+      "node_id": "MDQ6VXNlcjExMzgzNDE=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1138341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/adventureloop",
+      "html_url": "https://github.com/adventureloop",
+      "followers_url": "https://api.github.com/users/adventureloop/followers",
+      "following_url": "https://api.github.com/users/adventureloop/following{/other_user}",
+      "gists_url": "https://api.github.com/users/adventureloop/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/adventureloop/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/adventureloop/subscriptions",
+      "organizations_url": "https://api.github.com/users/adventureloop/orgs",
+      "repos_url": "https://api.github.com/users/adventureloop/repos",
+      "events_url": "https://api.github.com/users/adventureloop/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/adventureloop/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-09T10:35:31Z",
+    "updated_at": "2019-04-23T11:59:22Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/311",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/311",
+      "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/311.diff",
+      "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/311.patch"
+    },
+    "body": "Restructure to address #154 \r\nRearrange to include Rendezvous and Environment Discovery text in connection establishment. Remove that previous section. \r\n\r\n#154 was intended to check the ordering of sections against the other drafts and to merge #127. \r\n\r\nI have merged the Rendezvous text into Connection Establishment, but I haven't changed any of the text yet. I am a little concerned about creating an interdependancy in the text between derriving endpoints (name lookup) and the ICE/TURN stuff.\r\n\r\nMore generally, I am not sure what to say about name resolution and proxies (ala #282). TOR opens a can of privacy worms for name lookup and racing paths that I am not sure how to address. \r\n\r\n\r\n"
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310/labels{/name}",
@@ -2384,7 +2438,10 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Having proxies to go through on a system (SOCKS, HTTP Connect, etc) or a set of TOR endpoints requires the implementation to do some nested/recursive work, and pass down endpoints correctly to protocol instances. The implementation document should describe this."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/281",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2438,10 +2495,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/281.patch"
     },
     "body": "… establishment timeout into a parameter of init calls (it stood out strangely in the list of selection properties because it really isn't one); updated defaults for selection properties."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/280",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5036,7 +5090,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/252.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/251",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5165,10 +5222,7 @@
     "closed_at": "2018-12-01T22:36:23Z",
     "author_association": "NONE",
     "body": "Please can we add a MAMI Ack for the next rev of architecture.\r\nSuitable words are (taken from the API document):\r\n\r\n   This work has received funding from the European Union's Horizon 2020\r\n   research and innovation programme under grant agreements No. 644334\r\n   (NEAT) and No. 688421 (MAMI)."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/250",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7403,7 +7457,10 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Regarding this text:\r\n\r\n```\r\nThe Initiate() Action consumes the Preconnection. Once Initiate() has\r\nbeen called, no further properties may be added to the Preconnection, and\r\nno subsequent establishment call may be made on the Preconnection.\r\n```\r\n\r\nThis seems to imply that the Preconnection object, which may be full of many carefully tuned settings that could be useful for another Connection, is no longer usable. While I understand that the specific Preconnection cannot change for a Connection, this is inconvenient to the application.\r\n\r\nI see two good options to solve this:\r\n\r\n- Make a deep copy of the Preconnection upon Initiate(), and say that a Preconnection may be used or changed but changes can no longer influence the Connection (this is what Network.framework currently does)\r\n- Allow a Preconnection.clone() method to let the applications do the deep copy themselves when and if they want to re-use."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/221",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7458,10 +7515,7 @@
     "closed_at": "2019-03-25T12:35:47Z",
     "author_association": "CONTRIBUTOR",
     "body": "I don't think having the receive parameter \"minIncompleteLength\" and \"maxLength\" is the right approach here. \r\n\r\n\"minIncompleteLength\" is rather a configuration for the transport layer to decide when to create a callback receive event, therefore providing it together with receive() is too late. It's probably a Connection P*. \r\n\r\n\"maxLength\" seems to superfluous because ideally receiving is a zero copy operation and as the transport as stored the data already somewhere it doesn't seem useful to set a limit here. Of course again there probably needs to be a system config and or connection P* somewhere. If at all this seems rather like an implementation detail to me (that may or may not be discussed somewhere  but should not be part of the actual API spec). "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/220",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9753,7 +9807,10 @@
     "closed_at": "2018-08-31T14:04:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "currently it's Informational"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/191",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9845,10 +9902,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/191.patch"
     },
     "body": "This closed #170 \r\n\r\nAs we have no methods on a connection object that query properties, can_send/can_receive also became connection properties.\r\n\r\nAs with all the other connection properties, these are indeed a little underspecified. I want to keep it that way till we fix it for all connection properties with #153 and #190"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/190",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12696,7 +12750,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/162.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/161",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12751,10 +12808,7 @@
     "closed_at": "2018-08-27T13:10:12Z",
     "author_association": "NONE",
     "body": "I forgot to upload these - but it would be helpful to fix these in the next rev (all textual):\r\n\r\n—\r\nThe phrase below appears a little ambiguous, please reword:\r\nOLD:\r\nin which the necessary protocol\r\nhandshakes are conducted in order to select which set to use\r\n\r\nDoes this mean:\r\nin which an order is specified for the necessary protocol\r\nhandshakes to be conducted to elect which to use\r\nOR;\r\nin which the necessary protocol\r\nhandshakes are conducted so that it can select which set to use\r\n—\r\nOLD:\r\ndelimeters\r\nNEW: \r\ndelimiters\r\n—\r\nOLD:\r\nover to the Tranport\r\nNEW:\r\nover to the Transport\r\n—\r\nOLD:\r\nAs explained in section Section 4.6,\r\nNEW:\r\nAs explained in Section 4.6,\r\n—\r\nI did not understand this text, please rephrase:\r\nGathering locals is primarily an endpoint local operation\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/160",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -16053,7 +16107,10 @@
     "closed_at": "2018-03-04T23:24:57Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/131",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -16146,10 +16203,7 @@
     "closed_at": "2018-03-04T00:21:19Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/130",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18603,7 +18657,10 @@
     "closed_at": "2018-09-03T15:03:56Z",
     "author_association": "CONTRIBUTOR",
     "body": "Since the initiation of name resolution may leak information about the interests of an application's user, which may be privacy-sensitive, applications should have explicit control over when name resolution occurs. At the same time, a lot of the latency savings of an API that splits Connection and Preconnection comes from being aggressive about early resolution. We should find a consistent and predictable way to reconcile this."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/101",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18732,10 +18789,7 @@
     "closed_at": "2018-02-27T14:20:30Z",
     "author_association": "CONTRIBUTOR",
     "body": "There are still a few `\\[EDITOR'S NOTE`s and similar scattered throughout the document. Find them and fix them, or move them to post-London issues."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/100",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21644,7 +21698,10 @@
     "closed_at": "2018-02-23T09:42:58Z",
     "author_association": "CONTRIBUTOR",
     "body": "I have not been involved in the discussions than precedes the transport API, however, I still wonder if this api is only to be applicable to object-based and -oriented  programming languages such as Go, C++, C# etc. and not procedural such as C. When reading the architecture and interface I-Ds, it seems as a not altogether straightforward task to realize this in a procedural language."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/71",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21734,10 +21791,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/71.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/70",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24649,7 +24703,10 @@
     "closed_at": "2018-02-16T23:46:19Z",
     "author_association": "CONTRIBUTOR",
     "body": "The API and architecture conflate the concepts of a Connection and a Connectable. These are distinct, and the allowable operations on each are different. They should be represented by two different types in the API and architecture. This is a problem with BSD Sockets, and something we should avoid in the transport services architecture.\r\n\r\nA `Connection` is something on which you can send data; something that has active protocol state. It supports operations such as `send()` and `close()`, and generates events such as `Received<>`. \r\n\r\nA `Connectable` is something that can be used to generate a `Connection`. It doesn't have an active transport protocol. It supports operations such as `setParameters()` or `connect()` (the latter being a method that consumes a `Connectable` and returns a `Connection` object). \r\n\r\nThese are logically different types, and should be represented as such. It doesn't make sense to call `send()` on a `Connectable` or `setParemeters()` on a `Connection`, for example. \r\n\r\nIn pre-establishment, we work with `Connectable` objects. Establishment then becomes the process of generating a `Connection` from a `Connectable`. Once we have a `Connection`, we're in the data transfer phase. \r\n\r\nDiscuss."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/41",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24742,10 +24799,7 @@
     "closed_at": "2018-02-13T15:39:02Z",
     "author_association": "CONTRIBUTOR",
     "body": "In section 3.3 of architecture \"all implementations should offer sufficient APIs to use basic transport protocols like TCP and UDP\", should this be \"...to use the distilled minimal set of features offered by transport protocols [I-D.ietf-taps-minset]\"?\r\n\r\nWe should be consistent about what's the base set of protocols (see also #40)"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/40",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27768,7 +27822,10 @@
     "closed_at": "2018-03-01T12:16:58Z",
     "author_association": "CONTRIBUTOR",
     "body": "Validate that peer-to-peer use cases are sufficiently treated in the API concepts"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/11",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27897,10 +27954,7 @@
     "closed_at": "2018-02-08T15:28:02Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/10",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
