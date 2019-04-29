@@ -1,6 +1,508 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/319",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/319/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/319/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/319/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/319",
+    "id": 438293629,
+    "node_id": "MDU6SXNzdWU0MzgyOTM2Mjk=",
+    "number": 319,
+    "title": "Section 7 default",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T12:35:44Z",
+    "updated_at": "2019-04-29T12:35:44Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Section 7.3.1:\r\n- The word “lifetime” appears several times in the architecture document. I am unsure whether any of these uses are the same as the use here. This would be helped (of course) a little, if this section were renamed as “Message Lifetime”\r\n- What is the default? if any?\r\n——\r\nSection 7.3.2 \r\n- What is the default priority?\r\n- Interesting question, but I suggest it could be useful to still have a default even if the meaning and range are varying. If the default were, say, “100” then anything less than 100 is less priority and anything more is more than default priority. That’s useful if I supply no param in one connection and then supply a param in other connections.\r\n—\r\nSection 7.3.3. Ordered\r\n- I think this needs to default to safety: i.e. TRUE - Required.\r\n—\r\nSection 7.3.4. Idempotent\r\n-I think this needs to default to safety: i.e.  “FALSE”.\r\n—\r\nSection 7.3.5. Final\r\n- I think this should default to the most common: i.e.  “FALSE”.\r\n—\r\n7.3.7. Reliable Data Transfer (Message)\r\n- this should default to something.\r\n—\r\n7.3.9. Singular Transmission\r\n- What is the default?\r\n—\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/318",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/318/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/318/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/318/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/318",
+    "id": 438293120,
+    "node_id": "MDU6SXNzdWU0MzgyOTMxMjA=",
+    "number": 318,
+    "title": "More editorial author comments on API",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T12:34:27Z",
+    "updated_at": "2019-04-29T12:34:27Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "In section 6.4:\r\nThis para opens with the words “Groups of Connections”\r\n- Please check which letter groups should be capitalised in this section, I think it should be “Connection Group”, so this should be “Groups of connections”.\r\n—\r\nIn Section 7:\r\n“Data is sent in terms of Messages,”\r\n- Is it true that “blocks of data supplied by the application are sent as Messages” \r\n- or what does “in terms of” refer to?\r\n—\r\nIn Section 7.1:\r\n“Message data is created as an array of octets”\r\n- even I have a a hard time remembering 6-bit bytes, can we declare “octet”as historic and use “bytes”.\r\n- is the data “created” or “transferred”\r\n—\r\nIn Section 7.1:\r\n“Applications can query the protocol property Maximum Message Size on Send to determine the maximum size allowed for a single Message.”\r\n- I don’t know how the app does this across the API, can we be more clear? (It could be the example below seeks to explain this, in which case maybe a little wording change would help me?)\r\n—\r\nSection 7.2:\r\n“There are several events” - should this be “Events”?\r\n—\r\nSection 7.2.1:\r\n“and is no longer the responsibility of the implementation of this interface”:\r\n- why use the words “the implementation of”, is there something more subtle that needs explained, or can these words be deleted?\r\n—\r\nSection 7.3:\r\n“The simpler form of Send that does not take any messageContext is equivalent to passing a default MessageContext with not values added.”\r\n- These read wrong: /not/ /is equivalent/, could this be better?\r\n“The simpler form of Send, which does not take any messageContext, is equivalent to passing a default MessageContext without adding any values.”\r\n- Also, what are values here: properties or something else?\r\n—\r\nSection 7.5:\r\n“In order to reduce the overhead”\r\n- please remove /In order/ to avoid any misunderstanding about ordering.\r\n—\r\nSection 9.1.2. Required minimum coverage of the Corruption Protection for receiving\r\n- The default needs to be protect the entire message.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/317",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/317/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/317/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/317/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/317",
+    "id": 438270245,
+    "node_id": "MDU6SXNzdWU0MzgyNzAyNDU=",
+    "number": 317,
+    "title": "The recommended default and can we specify rather than recommend?",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 835290366,
+        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
+        "name": "discuss",
+        "color": "b60205",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2019-04-29T11:31:10Z",
+    "updated_at": "2019-04-29T13:34:22Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Section 5.2: “The recommended default”\r\n\r\nThsi may sound radical for TAPS, however, I have trouble understanding why we do not simply not specify the defaults, rather than recommend them.  \r\n\r\nI think we provide plenty of ways that an app can using a system can over-ride defaults, but if we do not agree on the meaning of a default, there are real dangers in interior problems between systems - we say common language helps, in this case it hinders. I propose that we make all the default recomendations as requirements for the default case?\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/316",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/316/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/316/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/316/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/316",
+    "id": 438269301,
+    "node_id": "MDU6SXNzdWU0MzgyNjkzMDE=",
+    "number": 316,
+    "title": " Section 4.2.1 - Transport Properties",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2019-04-29T11:28:29Z",
+    "updated_at": "2019-04-29T13:21:43Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "\r\n Section 4.2.1: “Allow different components of a TAPS implementation to pass Transport Properties, e.g., between a language frontend and a policy manager.”\r\n- Question??? : Would it also be OK to include a suggestion that these could also be retrieved from storage, e.g. “Allow different components of a TAPS implementation to pass Transport Properties, e.g., between a language frontend and a policy manager, or to retrieve a list of properties from a file or other storage.”\r\n\r\n Section 4.2.1.:\r\nAre the definitions of “should” actually “SHOULD”, I don’t otherwise understand the meaning of the lower case should. Actually, why is it SHOULD not MUST for the IETF-specified class?\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/315",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/315/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/315/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/315/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/315",
+    "id": 438268698,
+    "node_id": "MDU6SXNzdWU0MzgyNjg2OTg=",
+    "number": 315,
+    "title": "Default for Control checksum coverage",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T11:26:50Z",
+    "updated_at": "2019-04-29T11:26:50Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "In Section 5.2.7 Control checksum coverage on sending\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n\r\n—\r\nIn Section, 5.2.8. Control checksum coverage on receiving\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/314",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/314/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/314/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/314/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/314",
+    "id": 438268548,
+    "node_id": "MDU6SXNzdWU0MzgyNjg1NDg=",
+    "number": 314,
+    "title": "Default for Use 0-RTT session establishment",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T11:26:24Z",
+    "updated_at": "2019-04-29T11:26:24Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "In Section 5.2.5: Use 0-RTT session establishment with an idempotent Message\r\n\r\n“The recommended default is to Prefer this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present. Once could argue the same for QUIC, but the TCP-basis for this feature was determined, based - as I recall - on the need for idempotent data *and* the need to provide server-side support that was not specified. The safe option is to not enable this as a default, requiring Apps to explicitly say their data is idempotent.\r\n\r\n“potentially multiple times” - probably should be explicitly explained that “the transport does not provide idempotency, which could result in multiple copies of the message data being passed to the Receiving Endpoint.”"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/313",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/313/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/313/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/313/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/313",
+    "id": 438268016,
+    "node_id": "MDU6SXNzdWU0MzgyNjgwMTY=",
+    "number": 313,
+    "title": "API Draft author editorial comments",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T11:24:59Z",
+    "updated_at": "2019-04-29T11:25:24Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "“The simplicity of this API is a key reason the Internet won the protocol wars of the 1980s. “\r\n- Reference needed (some may be too young to remember):-0.\r\n—\r\n“As a first step to realizing this design, [I-D.ietf-taps-arch] describes a high-level architecture for transport services.”\r\n- I’d much prefer to remove “As a first step to” from the start of the final para of introduction. Once that is published as a PS we do not need to be so “tentative”, and perhaps unintended but still seems to potentially devalue the arch\r\n—\r\n“The method for dispatching and handling Events is left as an”\r\n- I’m unsure what “left as” intends, is it just that this is an implementation detail, or was something not done? Would the sentence read the same without /left as/?\r\n—\r\n“Message- as opposed to stream-orientation,”\r\n-could this be:\r\n“Message-orientation as opposed to stream-orientation,”\r\n—\r\n“An application primarily interacts with this interface through two Objects, Preconnections and Connections.”\r\nCould we use a colon instead of a comma after objects?\r\n—\r\n“defined in [I-D.ietf-taps-arch].|\r\n- could be: “defined in the TAPS Architecture [I-D.ietf-taps-arch].””\r\n—\r\n“following the phases described in [I-D.ietf-taps-arch].”\r\n- could be:\r\n“following the phases defined in the TAPS Architecture [I-D.ietf-taps-arch].”\r\n—\r\n“endpoint” is capitalised in the architecture Spec, when used as a TAPS term.\r\n—\r\n“but there is a transport protocol which provides “\r\n- please change /which/ to /that/.\r\n—\r\n“this octet stream”\r\n- do we still with in 2019 to talk about “octet” streams?\r\n—\r\nIn 4.2 at the end of para 2. we seem to have a list delimited by inline minus symbols, could these be translated to bullets to make this easier to read?\r\n—\r\nIn 4.2 para 2. \r\n- The setting of parameters is now well-described in detail in the architecture - please can we cross-ref here?\r\n—\r\nIn 4.2 final para:\r\n“Connection Properties specified early on may be used”\r\n- could be better as:\r\n“Early specification of Connection Properties allows their use”\r\n—\r\n“Also note that Protocol Specific Properties”\r\n- I’d prefer to not diminish this to a note, cam we simply state:\r\n“Protocol Specific Properties”\r\n—\r\nIn 4.2.1.:\r\n“for properties defined by an RFC which are not protocol specific..”\r\n- should be:\r\n- “for properties that are not specific to a protocol and are defined by an RFC.”\r\n—\r\nIn Section 4.3:\r\n“While there is no interoperability benefit to tightly defining how the interface be presented to application programmers in diverse platforms, maintaining the “shape” of the abstract interface across these platforms reduces the effort for programmers who learn the transport services interface to apply their knowledge in multiple platforms.”\r\n- This sentence is unduly hard to parse:\r\n“There is no interoperability benefit in tightly defining how the interface is presented to application programmers across diverse platforms. However, maintaining the “shape” of the abstract interface across these platforms reduces the effort for programmers who learn the transport services interface to then apply their knowledge across multiple platforms.”\r\n—\r\n“SHOULD carry the names given for them in the document, “ - could we change /carry/ to /use/ or /specify/ or /employ/ or something?\r\n—\r\n“, even if said implementation is a non-operation, e.g. because transport protocols implementing a given Property are not available on the platform.”\r\nCould we break the sentence and explain as:\r\n“. The interface should be implemented even when this results in no-operation, e.g. there is no action when the API specifies a Property that is not available in a transport protocol implemented on a specific platform.“\r\n—\r\n“static singleton objects” \r\n- probably should be explained.\r\n—\r\n“Pre-Establishment” is capitalised in the architecture.\r\n—\r\n“for the Connections they are about to make, or to query the API about potential connections they could make.”\r\n- why is connections capitalised once and not the second time?\r\n—\r\n“Selection Properties which select paths”\r\n- change /which/ to /that/.\r\n—\r\n“Also note that reliability is usually combined with congestion control in protocol implementations, rendering “reliable but not congestion controlled” a request that is unlikely to succeed. “\r\n- Agree, but useful to add a parenthesis that the converse is not necessarily true.\r\n—\r\n“Note that marking a specific interface”\r\n- In the next para the note is incorporated as the final line of the para in which the note applies, can we change this to also be in the same place?\r\n—\r\n“Implementations should provide all types that are supported on some system to all systems, in order to allow applications to write generic code.”\r\n- I think this could be improved by:\r\n“An implementation should provide all types that are supported on the local system to all remote systems, to allow applications to write generic code.”\r\n- but what does /all/ imply?\r\n—\r\n“Note that marking a specific interface type as Required limits path selection to a small set of interfaces, and leads to less flexible and resilient connection establishment.”\r\n- Is that ALWAYS the case? I think this is a case of “could lead to” or at best “may often lead to”\r\n—\r\nIn 5.2.12:\r\n“One possible side-effect is increased jitter, which may be problematic for delay-sensitive applications. The recommended default is to Prefer this option.”\r\n- If this only leads to increase jitter, then this default may be OK. Are we sure this can not lead to duplication or reordering of data? If it did, then I’m concerned this becomes a default.\r\n—\r\nIn 5.2.13:\r\n“In case a unidirectional connection is requested, but unidirectional connections are not supported by the transport protocol, the system should fall back to bidirectional transport.\r\n“\r\n- please explain “fall back” in terms of the TAPS language.\r\n- What is the default if not specified - I think the default should be bidirectional.\r\n—\r\nIn section 5.3.2:\r\n“Once configured, parameters may also be supplied during connection establishment. These are best handled as client-provided callbacks. “\r\n- Is a callback what the TAPS architecture refers to as an Event?\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/312",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/312/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/312/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/312/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/312",
+    "id": 438238652,
+    "node_id": "MDU6SXNzdWU0MzgyMzg2NTI=",
+    "number": 312,
+    "title": "Detailed author review of Arch text for -03 to prepare -04",
+    "user": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781635,
+        "node_id": "MDU6TGFiZWw4MjM3ODE2MzU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Architecture",
+        "name": "Architecture",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-04-29T10:03:44Z",
+    "updated_at": "2019-04-29T10:03:44Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "TAPS Architecture - Additional comments on rev -03 (detailed read-through).\r\n\r\nNote: This adds to my previous set of review issues - these could be handled at the same time.\r\n\r\nSection 1 :\r\n- Can we make reading easier:\r\n“This flexibility does not only enable\r\n   faster deployment of new feature and protocols, but it can also\r\n   support applications with racing and fallback mechanisms which\r\n   otherwise need to be implemented in each application separately.”\r\n- suggest:\r\n“This flexibility enables\r\n   faster deployment of new feature and protocols,. It can also\r\n   support applications with racing and fallback mechanisms, which\r\n   otherwise need to be implemented in each application separately.””\r\n—\r\n“Although following the Transport\r\n   Services Architecture does of course not mean that “\r\n- do we need /of course/ (this reads oddly).\r\n—\r\n“from one system to the another”\r\n- should be:\r\n“from one system to another”\r\n==========\r\nSection 1.1 :\r\n“The model of using sockets for networking can be represented as\r\n   follows”\r\n- could we insert “traditional” or “existing” or something like that before “model”, since a new reader may not realise this is the description of what exists rather what this document develops?\r\n—\r\n“, which provides the interface to the implementations of\r\n   UDP and TCP (typically implemented in the system's kernel), which in\r\n   turn send data over the available network layer interfaces.”\r\n- Two “, which” in a long sentence, could we write:\r\n- “. This API provides the interface to the implementations of\r\n   UDP and TCP (typically implemented in the system's kernel), which in\r\n   turn send data over the available network layer interfaces.”\r\n—\r\n“The Implementation”\r\n- Is capitalised “I” needed?\r\n—\r\n“for mapping the API into the various available transport”\r\n- Is this “into” or “to”  - I think the interface maps to these?\r\n—\r\n“There are a few key departures that Transport Services makes from the\r\n   sockets API:”\r\n- a “few key” seems odd to me in a spec.\r\n“There are key differences between the architecture of the Transport Services system and the architecture of the sockets API:” - or something like that?\r\n==========\r\nSection 1.2 :\r\n“and changes to available network links”:\r\n- insert “the” and “to” so it does not mean that it makes the change:\r\n- “and changes in the available network links”\r\n—\r\nSection 1.3 :\r\n“HTTP/1.1 uses character delimiters to segment messages\r\n   over a stream; TLS record headers carry a version, content type, and\r\n   length; and HTTP/2 uses”\r\n- I think this needs text needs several references to the specs?\r\n==========\r\nSection 3 :\r\n“   The following considerations were used in the design of this\r\n   architecture.”\r\n- If these were only a list of considerations, then we we do not need “RFC2119” language after all in this section. If they are actually the basis of the architecture, then we need to change the words “considerations” to “requirements” or something. I actually think it is helpful for the basis for the design should be expressed in RFC2119 language.\r\n-  I suggest the best option could be simply to omit the sentence?\r\n—\r\n“that include some transport security\r\n   protocol are eligible to be used.”\r\n- The word “some” is wrong, and also “protocol”.\r\n- I think this should be “a transport security function”? \r\n—\r\nSection 3.3 :\r\n“The abstract API definition\r\n   [I-D.ietf-taps-interface] describes this interface and is aimed at\r\n   application developers.”\r\n- “aimed at” seems odd because of “and” and “aimed”.\r\n“The abstract API definition\r\n   [I-D.ietf-taps-interface] describes this interface. This is expected to be utilised by\r\n   application developers.”\r\n—\r\n“It is expected that all\r\n   implementations of Transport Services will offer the entire mandatory\r\n   API, but that some features will not be functional in certain\r\n   implementations.”\r\n- This seems to me to still be possible to read the “mandatory” part os optional, which can’t be. Is it also OK to say this instead:\r\n“It is expected that all\r\n   implementations of Transport Services system will offer the entire mandatory\r\n   API. However, some features provided below the API may not be functional in certain\r\n   implementations.”\r\n—\r\n“All implementations are REQUIRED to offer\r\n   sufficient APIs to use the distilled minimal set of features offered\r\n   by transport protocols  ...“\r\n- What does the plural “APIs” mean?\r\n- I suggest we write:\r\n“All implementations are REQUIRED to offer\r\n   an API that is sufficient to provide the distilled minimal set of features offered\r\n   by transport protocols …”\r\n—\r\n“, but it is possible that some very\r\n   constrained devices might not have, for example, a full TCP\r\n   implementation beneath the API.”\r\n- I’m not fond of RFC2119 constructs that include an exception clause. Could we write this instead?\r\n“For example, it is possible that some very\r\n   constrained devices might not have, for example, a full TCP\r\n   implementation beneath the API [I.D.ietf-lwig-tcp-constrained-node-networks-07].”\r\n- This ref is I believe in cross-WG WGLC and should now be stable.\r\n—\r\n“It is expected that this document will be\r\n   updated and supplemented as new protocols and protocol features are\r\n   developed.”\r\n- could we replace “this document” by the [REF], to avoid the possibility of misreading/misquoting it as the architecture document itself?\r\n—\r\n“defines new protocols that require any changes\r\n   to a remote system.”\r\n- to me the first part here is that there is no implementation work required at the RECEIVER. I think that should be clear. \r\n—\r\n“ The Transport Services system MUST be deployable\r\n   on one side only.”\r\n- I think the second point is that it can be deployed in this way which places design constraints on the system, specifically that the SENDER is a one-sided system. Is it possible we could put this in a separate para instead, e.g.\r\n“The Transport Services system MUST be deployable\r\n   on one side only. A Transport Services system implemented at the sending endpoint can communicate with a remote endpoint on any existing system that implements the transport protocol(s) selected by the TAPS System. Similarly a Transport Services system at a listening endpoint can communicate using a using a transport protocol at a sending endpoint implemented in an existing system.”\r\n==========\r\nSection 4.1 :\r\n“establish\r\n   communication and send and receive data.”\r\n- insert comma after “communication” or “then” after first “and”\r\n—\r\n“A Preconnection can be fully specified and\r\n      represent a single possible Connection”\r\n- is this /represents/?\r\n—\r\n“The Remote Endpoint MUST be specified in the\r\n      Preconnection is used to Initiate connections.”\r\n- seems broken English, Is this:\r\n“The Remote Endpoint MUST be specified if a\r\n      Preconnection is used to Initiate connections.”\r\n—\r\nin 4.1.2:\r\n“Changes made\r\n      to Connection Properties after establishment take effect on a\r\n      best-effort basis.”\r\n- My understanding was that this does **not** change the protocol selection, but can change the way the protocol uses the path. If I was correct, then it would be good to add a sentence to say this.\r\n—\r\nIn 4.1.3:\r\n“prepare any required\r\n      local or remote state to be able to send and/or receive Messages.”\r\n- what becomes able? \r\n“prepare any required\r\n      local or remote state to enable the endpoint to send and/or receive Messages.”\r\n—\r\nIn 4.1.4:\r\n“If a received Message is incomplete or corrupted, it\r\n      might or might not be usable by certain applications.”\r\n- I agree this is possible, but I’d like to assert this really must **not** be the default and it is important to highlight that. Is it possible to say: “If a received Message is incomplete or corrupted, the default action is to not pass the data to the application. A certain application can override this default and the data might or might not be usable by that application.” \r\n—\r\n“Message Properties can be used to annotate specific Messages.  “\r\n- I agree, however I think it is really  important to say that these annotations for sending exist only within the Local Endpoint and doe not cause additional bytes to be communicated to the Remote Endpoint. For example, they could change the DSCP, for instance. [[We need to choose words carefully, because the the DSCP is actually communicated across the path and could be sent end-to-end, but it is **not** additional data added to the message on the wire .]]\r\n—\r\n“When receiving Messages, Message\r\n      Properties can contain per-protocol properties.”\r\n- Again, I think it is important to say the Remote Endpoint can add per-protocol properties to the messages it receives.\r\n—\r\n“properties specific to how the Message's content\r\n      is to be sent. “\r\n- I think we should delete the apostrophe,  or alternatively we could write “content of the message”.\r\n—\r\n“Status of the Send operation can be delivered back\r\n      to the application in an event (Section 4.1.5).”\r\n- could be :\r\n“The Status of the Send operation can be delivered back\r\n      to the sending application in an event (Section 4.1.5).“\r\n—\r\nIn 4.1.5:\r\n“This list of events that can be delivered to an application is not\r\n   exhaustive, but gives the top-level categories of events.”\r\nCould be:\r\n“This section provides the top-level categories of events events that can be delivered to an application. This list is not\r\n   exhaustive.”\r\n—\r\nIn 4.2:\r\n“The Transport System Implementation Concepts”\r\n- We do not need to define this as a capitalised term.\r\n—\r\n“are allowed be multiplexed”\r\n- insert /to/ before /be/.\r\n—\r\n“Applications can use can use their explicitly defined”\r\n- please rephrase:\r\n“An application can explicitly define “\r\n—\r\n“including\r\n      any state it has necessary”\r\n- please remove /it has/\r\n—\r\n“and a Transport Services system's policies and\r\n      heuristics.”\r\n- could we instead write:\r\n“and the heuristics or policies of the Transport Services system.”\r\n—\r\nIn 4.2.3:\r\n“Transitioning between different Protocol Stacks is in some\r\n   cases controlled by properties that only change when application code\r\n   is updated.  “ - is this statement about the present case, or the case with TAPS, this is not clear, but I think the former?\r\n—\r\n“This functionality\r\n   can be a powerful driver of new protocol adoption, but needs to”\r\n- I agree - is it protocol or stack functionality, I think this could be better as:\r\n“This functionality in the API\r\n   can be a powerful driver of new protocol adoption, but needs to”\r\n—\r\n“Both stacks MUST offer the same transport services”\r\n- this could use a reference to mindset perhaps? \r\n—\r\n1.\r\nCould better with a reference. We could use  [RFC8303] and [RFC8304] to contrast the two?\r\n—\r\n2.\r\n“However, if the\r\n       application does not require reliability, then a Protocol Stack\r\n       that adds unnecessary reliability might be allowed as an\r\n       equivalent Protocol Stack as long as it does not conflict with\r\n       any other application-requested properties.”\r\n- allowing or not allowing seems odd, could we write:\r\n3.\r\n“However, if the\r\n       application does not require reliability, then a Protocol Stack\r\n       that adds reliability could be regarded as an\r\n       equivalent Protocol Stack providing this would not conflict with\r\n       other application-requested properties.”\r\n—\r\nIn 4.2.4:\r\n“properties of the Implementation”\r\n- implementation should not be capitalised.\r\n—\r\n“Transport System Implementation”\r\n- implementation should not be capitalised.\r\n—\r\n“The interface to specify these Groups”\r\n-groups should not be capitalised.\r\n—\r\nNormative references:\r\n[I-D.ietf-taps-interface]\r\n[RFC8174]\r\n[RFC2119]"
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/311/labels{/name}",
@@ -34,17 +536,17 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 1,
     "created_at": "2019-04-09T10:35:31Z",
-    "updated_at": "2019-04-23T11:59:22Z",
-    "closed_at": null,
+    "updated_at": "2019-04-23T15:27:55Z",
+    "closed_at": "2019-04-23T15:27:55Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/311",
@@ -1758,7 +2260,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/290.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/289",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -1940,7 +2445,7 @@
     "created_at": "2019-02-08T16:14:53Z",
     "updated_at": "2019-02-08T16:14:53Z",
     "closed_at": null,
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "body": "NewSessionTickets, for example, will arrive after TLS connections are ready. We should describe how the implementation deals with these messages, what state is updated, etc."
   },
   {
@@ -1988,7 +2493,7 @@
     "created_at": "2019-02-08T16:13:11Z",
     "updated_at": "2019-02-08T16:13:11Z",
     "closed_at": null,
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "body": ""
   },
   {
@@ -2059,7 +2564,7 @@
     "created_at": "2019-02-08T16:10:11Z",
     "updated_at": "2019-02-08T16:10:26Z",
     "closed_at": null,
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "body": "This could expressed as a property on outgoing messages. Should it then also be expressed as metadata for received messages?"
   },
   {
@@ -2438,10 +2943,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Having proxies to go through on a system (SOCKS, HTTP Connect, etc) or a set of TOR endpoints requires the implementation to do some nested/recursive work, and pass down endpoints correctly to protocol instances. The implementation document should describe this."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/281",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -4421,7 +4923,10 @@
     "closed_at": "2019-03-19T16:05:45Z",
     "author_association": "CONTRIBUTOR",
     "body": "as I would think a path is an association of a remote and local enpoint...?\r\n\r\nAt least based on the definition we have in the arch doc, I don't really understand the difference."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/259",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5090,10 +5595,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/252.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/251",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -6928,7 +7430,10 @@
     "closed_at": "2019-01-18T22:11:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "As discussed in #227"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/229",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7457,10 +7962,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Regarding this text:\r\n\r\n```\r\nThe Initiate() Action consumes the Preconnection. Once Initiate() has\r\nbeen called, no further properties may be added to the Preconnection, and\r\nno subsequent establishment call may be made on the Preconnection.\r\n```\r\n\r\nThis seems to imply that the Preconnection object, which may be full of many carefully tuned settings that could be useful for another Connection, is no longer usable. While I understand that the specific Preconnection cannot change for a Connection, this is inconvenient to the application.\r\n\r\nI see two good options to solve this:\r\n\r\n- Make a deep copy of the Preconnection upon Initiate(), and say that a Preconnection may be used or changed but changes can no longer influence the Connection (this is what Network.framework currently does)\r\n- Allow a Preconnection.clone() method to let the applications do the deep copy themselves when and if they want to re-use."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/221",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9145,7 +9647,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/200.patch"
     },
     "body": "Satisfies #148 \r\n\r\n- Support partial sends more naturally by splitting out into Message, messageData, and endOfMessage flag.\r\n- Do the same for Receive\r\n- Receive should also take minIncompleteLength to specify how partial receives are treated (or not, by default)"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/199",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9319,7 +9824,7 @@
     "created_at": "2018-06-19T20:30:10Z",
     "updated_at": "2018-06-20T14:51:48Z",
     "closed_at": "2018-06-20T14:51:47Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/198",
       "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/198",
@@ -9373,7 +9878,7 @@
     "created_at": "2018-06-19T16:14:54Z",
     "updated_at": "2018-06-20T20:14:32Z",
     "closed_at": "2018-06-20T20:14:32Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/197",
       "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/197",
@@ -9609,7 +10114,7 @@
     "created_at": "2018-06-06T23:57:59Z",
     "updated_at": "2018-06-22T04:03:36Z",
     "closed_at": "2018-06-22T04:03:36Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/194",
       "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/194",
@@ -9807,10 +10312,7 @@
     "closed_at": "2018-08-31T14:04:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "currently it's Informational"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/191",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -11839,7 +12341,7 @@
     "created_at": "2018-04-18T17:01:36Z",
     "updated_at": "2018-06-27T13:21:04Z",
     "closed_at": "2018-06-27T13:21:04Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "body": "And add a subsection specifically for security protocols. Determining what security protocols (and configurations) are equivalent is nontrivial and incredibly important if we are to race, e.g., TLS and gQUIC. "
   },
   {
@@ -12099,7 +12601,10 @@
     "closed_at": "2018-06-06T11:01:18Z",
     "author_association": "CONTRIBUTOR",
     "body": "As QUIC has unidirectional streams, we might want to be able to accommodate them in our transport API. Do we want to handle them fundamentally different from a half-closed connection?\r\nThis should match the decisions made in #53."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/169",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12750,10 +13255,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/162.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/161",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15211,7 +15713,10 @@
     "closed_at": "2018-04-11T12:37:10Z",
     "author_association": "NONE",
     "body": "If somone agrees with these please add, otherwise let's discuss:-).\r\n\r\n---\r\n- a hard to parse sentence\r\nOLD:\r\nsimilarly, as errors, just as any other Events,\r\nNEW:\r\nsimilarly. Errors, just as any other Events,\r\nor\r\n/similarly, because Errors, just as any other Events,/\r\n---\r\n- To me this seems like an odd style for a RFC.\r\nOLD:\r\n   We begin with the architectural design principles defined in\r\n   [TAPS-ARCH]; from these, we derive and elaborate a set of principles\r\n   on which the design of the interface is based.\r\nNEW\r\n   This section begins with the architectural \r\n    design principles defined in\r\n   [TAPS-ARCH]; these are used to derive the elaborate \r\n   a set of principles\r\n   on which the design of the interface is based.\r\n- Question is /elaborate/ the best word really? Is /complete/ or /detailed/\r\n  or /concrete/ more commonly understood?\r\n---\r\nSection does not contain an RFC2119 boilerplate para, yet the ID uses RFC2119 language later. (did we plan not to use RFC2119 keywords in section 5 - wand 5.3)\r\n---\r\nOLD:\r\ncan be cloned, in order to establish\r\nNEW:\r\ncan be cloned to establish\r\n- Rationale, because a reader COULD read this as implying ordering and the phrase /in order/ is not necessary to comprehend the sentence.\r\n---\r\nOLD:\r\n   developers should reduce inconsistency by only using the most\r\nNEW:\r\n   developers ought to reduce inconsistency by only using the most\r\n- I’d prefer to avoid using /should/ at all here to remove any chance\r\nof misunderstanding as a requirement.\r\n---\r\nOLD:\r\n   The multiple identifiers\r\n   refer to the same endpoint.\r\nNEW:\r\n   The multiple identifiers\r\n   refer to the same transport endpoint.\r\n- actually this is a little confusing, since they are actually different network layer endpoints. I think we need to say transport explicitly.\r\n---\r\nTEXT:\r\n  Note that it is possible for a set\r\n- To me this should be a new para, it is a new thought.\r\n---\r\nOLD:\r\n   Implementations of this interface should also raise\r\n   errors in configuration as early as possible, to help ensure these\r\n   inconsistencies are caught early in the development process.\r\nNEW:\r\n   Implementations of this interface should also raise any\r\n   errors in configuration as early as possible, to help ensure these\r\n   inconsistencies are caught early in the development process.\r\n- add “any”, because the implementations aren’t intended just to make errors.\r\n---\r\nOLD:\r\n   An implementation of this interface must provide sensible defaults\r\nNEW:\r\n   An implementation of this interface needs provide sensible defaults\r\n---\r\nOLD:\r\n      Reliable Data Transfer: This boolean property specifies whether\r\n      the application needs the transport protocol to ensure that data\r\n      that data is received completely and without corruption on the other side\r\nNEW:\r\n      Reliable Data Transfer: This boolean property specifies whether\r\n      the application wishes to use a transport protocol that provides\r\n      mechanisms to help ensure that all data is received and without \r\n      corruption on the other side\r\n- I’ll argue that /needs/ is actually misleading and wrong. An Internet transport can not make such promises, and we shouldn’t encourage it to think so - the app is responsible for the data. I’d be even happier with better text that avoids saying the transport is solely responsible for correctness."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/139",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -16107,10 +16612,7 @@
     "closed_at": "2018-03-04T23:24:57Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/131",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -17952,7 +18454,10 @@
     "closed_at": "2018-02-28T09:54:20Z",
     "author_association": "CONTRIBUTOR",
     "body": "What makes these errors \"special\"? It seems a strange term to use, and the meaning is unclear."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/109",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18657,10 +19162,7 @@
     "closed_at": "2018-09-03T15:03:56Z",
     "author_association": "CONTRIBUTOR",
     "body": "Since the initiation of name resolution may leak information about the interests of an application's user, which may be privacy-sensitive, applications should have explicit control over when name resolution occurs. At the same time, a lot of the latency savings of an API that splits Connection and Preconnection comes from being aggressive about early resolution. We should find a consistent and predictable way to reconcile this."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/101",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -20922,7 +21424,10 @@
     "closed_at": "2018-02-23T19:23:19Z",
     "author_association": "NONE",
     "body": "/This should deliver a useful error to the application./\r\n- I understand what was intended, but errors are not usually useful in a sense. Should this be:\r\n/This should deliver an error that the application is able to utilise./\r\n---\r\n/Content Received: A Content Received event delivers received content to the application, based on a Receive action. This may include an error if the action failed./\r\n- I don't yet understand the error part to this. "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/79",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21698,10 +22203,7 @@
     "closed_at": "2018-02-23T09:42:58Z",
     "author_association": "CONTRIBUTOR",
     "body": "I have not been involved in the discussions than precedes the transport API, however, I still wonder if this api is only to be applicable to object-based and -oriented  programming languages such as Go, C++, C# etc. and not procedural such as C. When reading the architecture and interface I-Ds, it seems as a not altogether straightforward task to realize this in a procedural language."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/71",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -23733,7 +24235,7 @@
     "created_at": "2018-02-18T15:39:23Z",
     "updated_at": "2018-02-18T15:39:29Z",
     "closed_at": "2018-02-18T15:39:29Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/51",
       "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/51",
@@ -23795,7 +24297,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/50.patch"
     },
     "body": "This ends my promised pass - I hope that in particular the app intents people can take a look at some of my comments (I wrote them inline as \\[MICHAEL: blabla])"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/49",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24703,10 +25208,7 @@
     "closed_at": "2018-02-16T23:46:19Z",
     "author_association": "CONTRIBUTOR",
     "body": "The API and architecture conflate the concepts of a Connection and a Connectable. These are distinct, and the allowable operations on each are different. They should be represented by two different types in the API and architecture. This is a problem with BSD Sockets, and something we should avoid in the transport services architecture.\r\n\r\nA `Connection` is something on which you can send data; something that has active protocol state. It supports operations such as `send()` and `close()`, and generates events such as `Received<>`. \r\n\r\nA `Connectable` is something that can be used to generate a `Connection`. It doesn't have an active transport protocol. It supports operations such as `setParameters()` or `connect()` (the latter being a method that consumes a `Connectable` and returns a `Connection` object). \r\n\r\nThese are logically different types, and should be represented as such. It doesn't make sense to call `send()` on a `Connectable` or `setParemeters()` on a `Connection`, for example. \r\n\r\nIn pre-establishment, we work with `Connectable` objects. Establishment then becomes the process of generating a `Connection` from a `Connectable`. Once we have a `Connection`, we're in the data transfer phase. \r\n\r\nDiscuss."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/41",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -25586,7 +26088,7 @@
     "created_at": "2018-02-08T15:17:47Z",
     "updated_at": "2018-02-09T20:33:38Z",
     "closed_at": "2018-02-09T20:33:34Z",
-    "author_association": "CONTRIBUTOR",
+    "author_association": "NONE",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/33",
       "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/33",
@@ -26820,7 +27322,10 @@
     "closed_at": "2018-02-24T19:37:46Z",
     "author_association": "CONTRIBUTOR",
     "body": "Describe how to map sending and receiving into various kinds of protocols (streams, datagrams, and framed messages)"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/19",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27822,10 +28327,7 @@
     "closed_at": "2018-03-01T12:16:58Z",
     "author_association": "CONTRIBUTOR",
     "body": "Validate that peer-to-peer use cases are sufficiently treated in the API concepts"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/11",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
