@@ -392,7 +392,7 @@ ul.toc li {
 
   <meta name="dct.creator" content="Trammell, B., Ed., Welzl, M., Ed., Enghardt, T., Fairhurst, G., Kuehlewind, M., Perkins, C., Tiesel, P., Wood, C., and T. Pauly, Ed." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-taps-interface-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-05-06" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-05-07" />
   <meta name="dct.abstract" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
   <meta name="description" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
 
@@ -416,7 +416,7 @@ ul.toc li {
 <td class="right">M. Welzl, Ed.</td>
 </tr>
 <tr>
-<td class="left">Expires: November 7, 2019</td>
+<td class="left">Expires: November 8, 2019</td>
 <td class="right">University of Oslo</td>
 </tr>
 <tr>
@@ -473,7 +473,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">May 06, 2019</td>
+<td class="right">May 07, 2019</td>
 </tr>
 
     	
@@ -489,7 +489,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 7, 2019.</p>
+<p>This Internet-Draft will expire on November 8, 2019.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -1681,7 +1681,7 @@ Connection -&gt; ReceiveError&lt;messageContext&gt;
 <h1 id="rfc.section.9.1">
 <a href="#rfc.section.9.1">9.1.</a> <a href="#defining-message-framers" id="defining-message-framers">Defining Message Framers</a>
 </h1>
-<p id="rfc.section.9.1.p.1">Applications can define a Message Framer by creating a object to represent a unique definition of a framing protocol. Event handlers for inbound and outbound data are registered on this object.</p>
+<p id="rfc.section.9.1.p.1">Applications can define a Message Framer by creating an object to represent a unique definition of a framing protocol. Event handlers for inbound and outbound data are registered on this object.</p>
 <pre>
 framer := NewMessageFramer()
 framer.setEventHandlers()
@@ -1713,11 +1713,17 @@ FramerInstance -&gt; Stop()
 </pre>
 <p id="rfc.section.9.3.p.2">When Message Framer gets a start message, it sets up its state and then indicates to the connection that it is ready to handle sending Messages by calling <samp>ready</samp> on the FramerInstance. This call can be delayed in case the protocol needs to do some simple handshake exchange before handling application Messages.</p>
 <pre>
+// instance is a FramerInstance reference
 instance.ready()
 </pre>
 <p id="rfc.section.9.3.p.3">At any time if the Message Framer encounters a fatal error, it can also cause the Connection to fail and provide an error.</p>
 <pre>
 instance.failed(Error)
+</pre>
+<p id="rfc.section.9.3.p.4">Before a Message Framer marks itself as ready, it can also dynamically add a protocol or framer above it in the stack. This allows protocols like STARTTLS, that need to add TLS conditionally, to modify the Protocol Stack based on a handshake result.</p>
+<pre>
+otherFramer := NewMessageFramer()
+instance.prependProtocol(otherFramer)
 </pre>
 <h1 id="rfc.section.9.4">
 <a href="#rfc.section.9.4">9.4.</a> <a href="#send-framing" id="send-framing">Sender-side Message Framing</a>
@@ -1730,7 +1736,7 @@ FramerInstance -&gt; NewSentMessage&lt;messageData, messageContext, endOfMessage
 <pre>
 instance.send(Data)
 </pre>
-<p id="rfc.section.9.4.p.3">To provide an example, a simple protocol that adds a length as a header would receive the <samp>NewOutputMessage</samp> event, create a data representation of the length of the Message data, and then send a data that is the concatenation of the length header and the original Message data.</p>
+<p id="rfc.section.9.4.p.3">To provide an example, a simple protocol that adds a length as a header would receive the <samp>NewOutputMessage</samp> event, create a data representation of the length of the Message data, and then send a block of data that is the concatenation of the length header and the original Message data.</p>
 <h1 id="rfc.section.9.5">
 <a href="#rfc.section.9.5">9.5.</a> <a href="#receive-framing" id="receive-framing">Receiver-side Message Framing</a>
 </h1>
@@ -1738,7 +1744,7 @@ instance.send(Data)
 <pre>
 FramerInstance -&gt; HandleReceivedData&lt;&gt;
 </pre>
-<p id="rfc.section.9.5.p.2">Upon receiving this even, a Message Framer can inspect the inbound data. The data is parsed from a particular cursor representing the unprocessed data. The Framer requests a specific amount of data it needs to have available in order to parse.  If the data is not available, the parse fails.</p>
+<p id="rfc.section.9.5.p.2">Upon receiving this event, a Message Framer can inspect the inbound data. The data is parsed from a particular cursor representing the unprocessed data. The Framer requests a specific amount of data it needs to have available in order to parse.  If the data is not available, the parse fails.</p>
 <pre>
 instance.parse(minIncompleteLength, maxLength) -&gt; (Data?, endOfMessage?)
 </pre>
