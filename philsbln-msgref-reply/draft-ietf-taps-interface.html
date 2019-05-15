@@ -1570,11 +1570,11 @@ messageContext.add(parameter, value)
 
 messageData := "hel".octets()
 endOfMessage := false
-Connection.Send(messageData, messageContext, reqRef?, endOfMessage)
+Connection.Send(messageData, messageContext, endOfMessage)
 
 messageData := "lo".octets()
 endOfMessage := true
-Connection.Send(messageData, messageContext, reqRef?, endOfMessage)
+Connection.Send(messageData, messageContext, endOfMessage)
 </pre>
 <p id="rfc.section.7.5.p.4">All data sent with the same MessageContext object will be treated as belonging to the same Message, and will constitute an in-order series until the endOfMessage is marked. Once the end of the Message is marked, the MessageContext object may be re-used as a new Message with identical parameters.</p>
 <h1 id="rfc.section.7.6">
@@ -2133,38 +2133,38 @@ Connection -&gt; ConnectionError&lt;&gt;
 <p></p>
 
 <ul>
-<li>Connect: &#8220;Initiate&#8221; Action.</li>
-<li>Listen: &#8220;Listen&#8221; Action.</li>
-<li>Specify number of attempts and/or timeout for the first establishment message: &#8220;Timeout for aborting Connection Establishment&#8221; Property, using a time value.</li>
-<li>Disable MPTCP: &#8220;Parallel Use of Multiple Paths&#8221; Property.</li>
-<li>Hand over a message to reliably transfer (possibly multiple times) before connection establishment: &#8220;InitiateWithSend&#8221; Action.</li>
-<li>Hand over a message to reliably transfer during connection establishment: &#8220;InitiateWithSend&#8221; Action.</li>
-<li>Change timeout for aborting connection (using retransmit limit or time value): &#8220;Timeout for aborting Connection&#8221; property, using a time value.</li>
-<li>Timeout event when data could not be delivered for too long: &#8220;ConnectionError&#8221; Event.</li>
-<li>Suggest timeout to the peer: TCP-specific Property: User Timeout.</li>
-<li>Notification of Excessive Retransmissions (early warning below abortion threshold): &#8220;Notification of excessive retransmissions&#8221; property.</li>
-<li>Notification of ICMP error message arrival: &#8220;Notification of ICMP soft error message arrival&#8221; property.</li>
-<li>Choose a scheduler to operate between streams of an association: &#8220;Connection group transmission scheduler&#8221; property.</li>
-<li>Configure priority or weight for a scheduler: &#8220;Priority (Connection)&#8221; property.</li>
-<li>&#8220;Specify checksum coverage used by the sender&#8221; and &#8220;Disable checksum when sending&#8221;: &#8220;Corruption Protection Length&#8221; property (value 0 to disable).</li>
-<li>&#8220;Specify minimum checksum coverage required by receiver&#8221; and &#8220;Disable checksum requirement when receiving&#8221;: &#8220;Required minimum coverage of the checksum for receiving&#8221; property (value 0 to disable).</li>
-<li>&#8220;Specify DF&#8221; field and &#8220;Request not to bundle messages:&#8221; The &#8220;Singular Transmission&#8221; Message property combines both of these requests, i.e. if a request not to bundle messages is made, this also turns off DF in case of protocols that allow this (only UDP and UDP-Lite, which cannot bundle messages anyway).</li>
-<li>Get max. transport-message size that may be sent using a non-fragmented IP packet from the configured interface: &#8220;Maximum Message size before fragmentation or segmentation&#8221; property.</li>
-<li>Get max. transport-message size that may be received from the configured interface: &#8220;Maximum Message size on receive&#8221; property.</li>
-<li>Obtain ECN field: &#8220;ECN&#8221; is a defined metadata value as part of the Message Receive Context.</li>
-<li>&#8220;Specify DSCP field&#8221;, &#8220;Disable Nagle algorithm&#8221;, &#8220;Enable and configure a &#8216;Low Extra Delay Background Transfer&#8217;&#8221;: As suggested in Section 5.5 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>, these transport features are collectively offered via the &#8220;Capacity profile&#8221; property.</li>
-<li>Close after reliably delivering all remaining data, causing an event informing the application on the other side: This is offered by the &#8220;Close&#8221; Action with slightly changed semantics in line with the discussion in Section 5.2 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>.</li>
-<li>&#8220;Abort without delivering remaining data, causing an event informing the application on the other side&#8221; and &#8220;Abort without delivering remaining data, not causing an event informing the application on the other side&#8221;: This is offered by the &#8220;Abort&#8221; action without promising that this is signaled to the other side. If it is, a &#8220;ConnectionError&#8221; Event will fire at the peer.</li>
-<li>&#8220;Reliably transfer data, with congestion control&#8221;, &#8220;Reliably transfer a message, with congestion control&#8221; and &#8220;Unreliably transfer a message&#8221;: Reliability is controlled via the &#8220;Reliable Data Transfer (Message)&#8221; Message property. Transmitting data without delimiters is done by not using a Framer. The choice of congestion control is provided via the &#8220;Congestion control&#8221; property.</li>
-<li>Configurable Message Reliability: The &#8220;Lifetime&#8221; Message Property implements a time-based way to configure message reliability.</li>
-<li>&#8220;Ordered message delivery (potentially slower than unordered)&#8221; and &#8220;Unordered message delivery (potentially faster than ordered)&#8221;: The two transport features are controlled via the Message property &#8220;Ordered&#8221;.</li>
-<li>Request not to delay the acknowledgement (SACK) of a message: Should the protocol support it, this is one of the transport features the transport system can use when an application uses the Capacity Profile Property with value &#8220;Low Latency/Interactive&#8221;.</li>
-<li>Receive data (with no message delimiting): &#8220;Received&#8221; Event without using a Deframer.</li>
-<li>Receive a message: &#8220;Received&#8221; Event. Section 5.1 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a> discusses how messages can be obtained from a bytestream in case of implementation over TCP. Here, this is dealt with by Framers and Deframers.</li>
-<li>Information about partial message arrival: &#8220;ReceivedPartial&#8221; Event.</li>
-<li>Notification of send failures: &#8220;Expired&#8221; and &#8220;SendError&#8221; Events.</li>
-<li>Notification that the stack has no more user data to send: Applications can obtain this information via the &#8220;Sent&#8221; Event.</li>
-<li>Notification to a receiver that a partial message delivery has been aborted: &#8220;ReceiveError&#8221; Event.</li>
+<li>Connect:<br> &#8220;Initiate&#8221; Action.</li>
+<li>Listen:<br> &#8220;Listen&#8221; Action.</li>
+<li>Specify number of attempts and/or timeout for the first establishment message:<br> &#8220;Timeout for aborting Connection Establishment&#8221; Property, using a time value.</li>
+<li>Disable MPTCP:<br> &#8220;Parallel Use of Multiple Paths&#8221; Property.</li>
+<li>Hand over a message to reliably transfer (possibly multiple times) before connection establishment:<br> &#8220;InitiateWithSend&#8221; Action.</li>
+<li>Hand over a message to reliably transfer during connection establishment:<br> &#8220;InitiateWithSend&#8221; Action.</li>
+<li>Change timeout for aborting connection (using retransmit limit or time value):<br> &#8220;Timeout for aborting Connection&#8221; property, using a time value.</li>
+<li>Timeout event when data could not be delivered for too long:<br> &#8220;ConnectionError&#8221; Event.</li>
+<li>Suggest timeout to the peer:<br> TCP-specific Property: User Timeout.</li>
+<li>Notification of Excessive Retransmissions (early warning below abortion threshold):<br> &#8220;Notification of excessive retransmissions&#8221; property.</li>
+<li>Notification of ICMP error message arrival:<br> &#8220;Notification of ICMP soft error message arrival&#8221; property.</li>
+<li>Choose a scheduler to operate between streams of an association:<br> &#8220;Connection group transmission scheduler&#8221; property.</li>
+<li>Configure priority or weight for a scheduler:<br> &#8220;Priority (Connection)&#8221; property.</li>
+<li>&#8220;Specify checksum coverage used by the sender&#8221; and &#8220;Disable checksum when sending&#8221;:<br> &#8220;Corruption Protection Length&#8221; property (value 0 to disable).</li>
+<li>&#8220;Specify minimum checksum coverage required by receiver&#8221; and &#8220;Disable checksum requirement when receiving&#8221;:<br> &#8220;Required minimum coverage of the checksum for receiving&#8221; property (value 0 to disable).</li>
+<li>&#8220;Specify DF&#8221; field and &#8220;Request not to bundle messages:&#8221;<br> The &#8220;Singular Transmission&#8221; Message property combines both of these requests, i.e. if a request not to bundle messages is made, this also turns off DF in case of protocols that allow this (only UDP and UDP-Lite, which cannot bundle messages anyway).</li>
+<li>Get max. transport-message size that may be sent using a non-fragmented IP packet from the configured interface:<br> &#8220;Maximum Message size before fragmentation or segmentation&#8221; property.</li>
+<li>Get max. transport-message size that may be received from the configured interface:<br> &#8220;Maximum Message size on receive&#8221; property.</li>
+<li>Obtain ECN field:<br> &#8220;ECN&#8221; is a defined metadata value as part of the Message Receive Context.</li>
+<li>&#8220;Specify DSCP field&#8221;, &#8220;Disable Nagle algorithm&#8221;, &#8220;Enable and configure a &#8216;Low Extra Delay Background Transfer&#8217;&#8221;:<br> As suggested in Section 5.5 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>, these transport features are collectively offered via the &#8220;Capacity profile&#8221; property.</li>
+<li>Close after reliably delivering all remaining data, causing an event informing the application on the other side:<br> This is offered by the &#8220;Close&#8221; Action with slightly changed semantics in line with the discussion in Section 5.2 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>.</li>
+<li>&#8220;Abort without delivering remaining data, causing an event informing the application on the other side&#8221; and &#8220;Abort without delivering remaining data, not causing an event informing the application on the other side&#8221;:<br> This is offered by the &#8220;Abort&#8221; action without promising that this is signaled to the other side. If it is, a &#8220;ConnectionError&#8221; Event will fire at the peer.</li>
+<li>&#8220;Reliably transfer data, with congestion control&#8221;, &#8220;Reliably transfer a message, with congestion control&#8221; and &#8220;Unreliably transfer a message&#8221;:<br> Reliability is controlled via the &#8220;Reliable Data Transfer (Message)&#8221; Message property. Transmitting data without delimiters is done by not using a Framer. The choice of congestion control is provided via the &#8220;Congestion control&#8221; property.</li>
+<li>Configurable Message Reliability:<br> The &#8220;Lifetime&#8221; Message Property implements a time-based way to configure message reliability.</li>
+<li>&#8220;Ordered message delivery (potentially slower than unordered)&#8221; and &#8220;Unordered message delivery (potentially faster than ordered)&#8221;:<br> The two transport features are controlled via the Message property &#8220;Ordered&#8221;.</li>
+<li>Request not to delay the acknowledgement (SACK) of a message:<br> Should the protocol support it, this is one of the transport features the transport system can use when an application uses the Capacity Profile Property with value &#8220;Low Latency/Interactive&#8221;.</li>
+<li>Receive data (with no message delimiting):<br> &#8220;Received&#8221; Event without using a Deframer.</li>
+<li>Receive a message:<br> &#8220;Received&#8221; Event. Section 5.1 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a> discusses how messages can be obtained from a bytestream in case of implementation over TCP. Here, this is dealt with by Framers and Deframers.</li>
+<li>Information about partial message arrival:<br> &#8220;ReceivedPartial&#8221; Event.</li>
+<li>Notification of send failures:<br> &#8220;Expired&#8221; and &#8220;SendError&#8221; Events.</li>
+<li>Notification that the stack has no more user data to send:<br> Applications can obtain this information via the &#8220;Sent&#8221; Event.</li>
+<li>Notification to a receiver that a partial message delivery has been aborted:<br> &#8220;ReceiveError&#8221; Event.</li>
 </ul>
 <h1 id="rfc.authors"><a href="#rfc.authors">Authors' Addresses</a></h1>
 <div class="avoidbreak">
