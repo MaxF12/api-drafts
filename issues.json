@@ -1,6 +1,298 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/326",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/326/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/326/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/326/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/326",
+    "id": 444453920,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc5MTEwMDE1",
+    "number": 326,
+    "title": "Note that Idempotent is needed for UDP like protocols",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-05-15T13:56:03Z",
+    "updated_at": "2019-05-16T08:07:00Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/326",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/326",
+      "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/326.diff",
+      "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/326.patch"
+    },
+    "body": "closes #302 "
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/325",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/325/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/325/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/325/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/325",
+    "id": 444429553,
+    "node_id": "MDU6SXNzdWU0NDQ0Mjk1NTM=",
+    "number": 325,
+    "title": "Add support for Property Profiles",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 835290366,
+        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
+        "name": "discuss",
+        "color": "b60205",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "gorryfair",
+      "id": 7386514,
+      "node_id": "MDQ6VXNlcjczODY1MTQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gorryfair",
+      "html_url": "https://github.com/gorryfair",
+      "followers_url": "https://api.github.com/users/gorryfair/followers",
+      "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+      "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+      "repos_url": "https://api.github.com/users/gorryfair/repos",
+      "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "gorryfair",
+        "id": 7386514,
+        "node_id": "MDQ6VXNlcjczODY1MTQ=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/7386514?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/gorryfair",
+        "html_url": "https://github.com/gorryfair",
+        "followers_url": "https://api.github.com/users/gorryfair/followers",
+        "following_url": "https://api.github.com/users/gorryfair/following{/other_user}",
+        "gists_url": "https://api.github.com/users/gorryfair/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/gorryfair/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/gorryfair/subscriptions",
+        "organizations_url": "https://api.github.com/users/gorryfair/orgs",
+        "repos_url": "https://api.github.com/users/gorryfair/repos",
+        "events_url": "https://api.github.com/users/gorryfair/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/gorryfair/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2019-05-15T13:09:31Z",
+    "updated_at": "2019-05-15T13:13:51Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "This issue was discussed in the May 2019 interim.\r\n\r\nAfter fist implementation experiences, we feel that we should add a convenient way to express common Transport Parameter combinations as some kind of profile, e.g. \"TCP like\" meaning \"Reliable, in-order, non-message preserving\""
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/324",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/324/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/324/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/324/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/324",
+    "id": 444403648,
+    "node_id": "MDU6SXNzdWU0NDQ0MDM2NDg=",
+    "number": 324,
+    "title": "Add explicit protocol selection.",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 835290366,
+        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
+        "name": "discuss",
+        "color": "b60205",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "philsbln",
+        "id": 11421499,
+        "node_id": "MDQ6VXNlcjExNDIxNDk5",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/philsbln",
+        "html_url": "https://github.com/philsbln",
+        "followers_url": "https://api.github.com/users/philsbln/followers",
+        "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+        "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+        "organizations_url": "https://api.github.com/users/philsbln/orgs",
+        "repos_url": "https://api.github.com/users/philsbln/repos",
+        "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/philsbln/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/9",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/9/labels",
+      "id": 4169097,
+      "node_id": "MDk6TWlsZXN0b25lNDE2OTA5Nw==",
+      "number": 9,
+      "title": "before ietf-105 Montreal",
+      "description": "",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 12,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-03-25T11:53:41Z",
+      "updated_at": "2019-05-15T12:13:03Z",
+      "due_on": "2019-07-01T07:00:00Z",
+      "closed_at": null
+    },
+    "comments": 2,
+    "created_at": "2019-05-15T12:13:03Z",
+    "updated_at": "2019-05-15T13:14:33Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "This issue was discussed in the May 2019 interim.\r\n\r\nSome Applications may really need a specific protocol and can not rely on the transport system  to choose an appropriate one. "
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/323",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/323/labels{/name}",
@@ -107,11 +399,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -231,7 +523,7 @@
     "id": 438373720,
     "node_id": "MDExOlB1bGxSZXF1ZXN0Mjc0NDE4NjEx",
     "number": 321,
-    "title": "Clarify Message References and enable their use for Requests/Response protocols",
+    "title": "Merge Message References and Message Contexts and enable their use for Requests/Response protocols",
     "user": {
       "login": "philsbln",
       "id": 11421499,
@@ -264,14 +556,52 @@
     ],
     "state": "open",
     "locked": false,
-    "assignee": null,
+    "assignee": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
     "assignees": [
-
+      {
+        "login": "philsbln",
+        "id": 11421499,
+        "node_id": "MDQ6VXNlcjExNDIxNDk5",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/philsbln",
+        "html_url": "https://github.com/philsbln",
+        "followers_url": "https://api.github.com/users/philsbln/followers",
+        "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+        "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+        "organizations_url": "https://api.github.com/users/philsbln/orgs",
+        "repos_url": "https://api.github.com/users/philsbln/repos",
+        "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/philsbln/received_events",
+        "type": "User",
+        "site_admin": false
+      }
     ],
     "milestone": null,
-    "comments": 2,
+    "comments": 3,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-05-15T09:53:03Z",
+    "updated_at": "2019-05-15T12:18:11Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -280,7 +610,7 @@
       "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/321.diff",
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/321.patch"
     },
-    "body": "This clarifies what Message References are (closes #310) and adds an optional message reference ```reqRef``` to the send call to enable the transport system to assign a response to the same underlying transport the request was received on.\r\n\r\nThis is another result of the discussion around PR #298."
+    "body": "This merges Message References with the Message Context (closes #310) and adds a reply call to the Message Context to enable the transport system to assign a response to the same underlying transport the request was received on.\r\n\r\nThis is another result of the discussion around PR #298 and implements most o the API part for #266"
   },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/320",
@@ -1481,11 +1811,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1618,11 +1948,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1868,11 +2198,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1990,11 +2320,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2155,7 +2485,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "philsbln",
@@ -2200,10 +2530,10 @@
       }
     ],
     "milestone": null,
-    "comments": 2,
+    "comments": 3,
     "created_at": "2019-03-20T17:25:32Z",
-    "updated_at": "2019-03-25T10:54:59Z",
-    "closed_at": null,
+    "updated_at": "2019-05-15T12:17:48Z",
+    "closed_at": "2019-05-15T12:17:48Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/298",
@@ -2266,7 +2596,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/297.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/296",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2613,10 +2946,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/294.patch"
     },
     "body": "Alternate proposal to address #45 (old PR was \"Add CacheContext to architecture and API\", #244)\r\n\r\n- Define explicit Connection Groups as a way to define caching boundaries\r\n- Update TLS 1.3 references to RFC 8446"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/293",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -3206,10 +3536,46 @@
     "assignees": [
 
     ],
-    "milestone": null,
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/4",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/4",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/4/labels",
+      "id": 3206678,
+      "node_id": "MDk6TWlsZXN0b25lMzIwNjY3OA==",
+      "number": 4,
+      "title": "Science Fiction",
+      "description": "Things we need to discuss for the far future.",
+      "creator": {
+        "login": "britram",
+        "id": 1884116,
+        "node_id": "MDQ6VXNlcjE4ODQxMTY=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/1884116?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/britram",
+        "html_url": "https://github.com/britram",
+        "followers_url": "https://api.github.com/users/britram/followers",
+        "following_url": "https://api.github.com/users/britram/following{/other_user}",
+        "gists_url": "https://api.github.com/users/britram/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/britram/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/britram/subscriptions",
+        "organizations_url": "https://api.github.com/users/britram/orgs",
+        "repos_url": "https://api.github.com/users/britram/repos",
+        "events_url": "https://api.github.com/users/britram/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/britram/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 1,
+      "closed_issues": 3,
+      "state": "open",
+      "created_at": "2018-03-21T15:43:32Z",
+      "updated_at": "2019-05-15T13:18:38Z",
+      "due_on": "2061-01-01T08:00:00Z",
+      "closed_at": null
+    },
     "comments": 5,
     "created_at": "2019-02-08T16:10:11Z",
-    "updated_at": "2019-05-09T21:48:18Z",
+    "updated_at": "2019-05-15T13:18:38Z",
     "closed_at": "2019-05-08T16:53:35Z",
     "author_association": "NONE",
     "body": "This could expressed as a property on outgoing messages. Should it then also be expressed as metadata for received messages?"
@@ -4656,10 +5022,10 @@
         "site_admin": false
       },
       "open_issues": 1,
-      "closed_issues": 2,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2018-03-21T15:43:32Z",
-      "updated_at": "2019-01-29T20:46:05Z",
+      "updated_at": "2019-05-15T13:18:38Z",
       "due_on": "2061-01-01T08:00:00Z",
       "closed_at": null
     },
@@ -4879,7 +5245,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/267.patch"
     },
     "body": "Notable changes:\r\n- added control over using multipath (which was a late addition to minset)\r\n- added a timeout for conn. establishment, separate from the other conn. abort timeout (see #109)\r\n- renamed InitiateWithIdempotentSend into InitiateWithSend, and adjusted the text to recommend declaring idempotence. This addresses the minset function that goes back to TCP's send-with-SYN."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/266",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -4980,9 +5349,9 @@
       "due_on": "2019-03-23T07:00:00Z",
       "closed_at": null
     },
-    "comments": 18,
+    "comments": 19,
     "created_at": "2018-12-05T13:40:25Z",
-    "updated_at": "2019-03-21T08:56:44Z",
+    "updated_at": "2019-05-15T12:08:49Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "During the discussion of possible QUIC mappings for TAPS in Bangkok, we have seen that there might be two ways to map QUIC Streams / Connections to TAPS Messages / Connections / Connection groups – Mapping QUIC Streams to TAPS Message is more convenient for HTTP style applications, mapping QUIC streams to TAPS Connections looks more natural. \r\n\r\nOne way to solve this tussle is to introduce a new kind of object – a Connection Pool:\r\n- An application can send a message using a connection pool and get events for a reply without touching a connection object\r\n- A connection pool can represent things like a multi-streaming QUIC connection or a bunch of TCP connections between equivalent endpoints.\r\n- To make this logic happen, a Connection Pool needs to be stuffed with framers to make this work\r\n- A Send on a connection pool may take Selection Properties to aid selection between multiple connections within a pool.\r\n\r\nDo we want to add Connection Pools to the Architecture / API ?"
@@ -5094,10 +5463,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/264.patch"
     },
     "body": "Re-based #250 to avoid build issue/conflict"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/263",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -6678,11 +7044,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -7518,7 +7884,10 @@
     "closed_at": "2018-10-16T13:05:12Z",
     "author_association": "NONE",
     "body": "From /Introudction/\r\nPlease define/API/ in  /Many APIs to perform/.\r\n---\r\nFirst Para mentions TCP, but not UDP - some people could draw conclusions (very silly perhaps) that this is about TCP. It would be super nice to include an e.g. with Datagrams mentioning QUIC and UDP. ...\r\n\r\n\r\n---\r\nFrom /Design principles/\r\nCurent text:\r\n/and it can communicate with different Remote Endpoints to optimize performance./\r\nMy new proposed text:\r\n/and it can communicate with different Remote Endpoints to optimize performance, robustness to failure, or some other metric/.\r\n\r\n---\r\nFrom /Access to Specialized Features/\r\nThis says:\r\n/Since applications will often need to control fine-grained details of transport protocols to optimize their behavior and ensure compatibility with remote peers, a Transport Services system also needs to allow more specialized protocol features to be used./\r\nI quibble. I don’t believe this is /often/, and anyway I do not think this is the most prevalent case, just and important usage, so I would suggest we write something:\r\n/There are applications that will need to control fine-grained details of transport protocols to optimize their behavior and ensure compatibility with remote peers,. A Transport Services system will therefore also needsto allow more specialized protocol features to be used./\r\n---\r\nFrom /Access to Specialized Features/\r\nThis says:\r\n/A specialized feature may be required by an application only when using a specific protocol, /\r\nI suggest:\r\n/A specialized feature could be required by an application only when it uses a specific transport protocol, /\r\nand change:\r\n/For example, if an application is using UDP, it may require/\r\nto:\r\n/For example, if an application is using UDP, it could require/\r\n---\r\nPlease remove /In order to preserve flexibility and compatibility .../\r\nSuggest:\r\n/To preserve flexibility and compatibility .../\r\n---\r\nPlease change:\r\n/Mappings of these API features in the Implementation document, on the other hand, must explain the ramifications of each feature on existing protocols. It is expected that the Implementation document will be updated and supplemented as new protocols and protocol features are developed./\r\nto this:\r\n/The mappings of these API features is explained in the TAPS Implementation [REF], which also explain the implications of the feature provided by existing protocols. It is expected that this documentation will be updated and supplemented as new protocols and protocol features are developed./\r\n---\r\nPlease change:\r\n/require any changes on remote hosts./\r\nsuggest:\r\n/require any changes to a remote host./\r\n---\r\nPlease change:\r\n/Transport protocols such as SCTP provide/\r\nadd commas:\r\n/Transport protocols, such as SCTP, provide/\r\n---\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/236",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7761,10 +8130,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/234.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/233",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9500,7 +9866,10 @@
     "closed_at": "2019-02-20T08:17:29Z",
     "author_association": "CONTRIBUTOR",
     "body": "Just realized that during Tommy's Presentation"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/206",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9651,11 +10020,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -9767,10 +10136,7 @@
     "closed_at": "2018-07-02T07:55:15Z",
     "author_association": "NONE",
     "body": "\r\nText:\r\nInternally, the transport system will first exclude all protocols and paths that match a Prohibit, then only keep candidates that match a Require, then sort candidates according to Preferred properties, and then use Avoided properties as a tiebreaker. \r\n- does not read correct for me... I understand excluding prohibit, but the action on require seems wrong. I expected to remove candidates with prohibit and remove candidates that do NOT have require. What is written is different.\r\n—-\r\nI would prefer a para break before:\r\nThe Rendezvous() Action causes the\r\n- to show the change of topic.\r\n—\r\nRefs needed:\r\nSIP or WebRTC\r\n—\r\nmaximum Message size\r\n- should this be capitalised? What is maxlen? The same value? Of different?\r\n—-\r\nI could not finally understand what is intended by this text;\r\nThe exact disposition of the Message when the Sent Event occurs is specific to the implementation and the constraints on the Protocol Stacks implied by the Connection's Transport Properties."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/203",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12437,11 +12803,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -12451,7 +12817,10 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Each document should have a privacy considerations section to discuss the tradeoffs inherent in the API."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/176",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12728,10 +13097,10 @@
         "site_admin": false
       },
       "open_issues": 1,
-      "closed_issues": 2,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2018-03-21T15:43:32Z",
-      "updated_at": "2019-01-29T20:46:05Z",
+      "updated_at": "2019-05-15T13:18:38Z",
       "due_on": "2061-01-01T08:00:00Z",
       "closed_at": null
     },
@@ -12741,10 +13110,7 @@
     "closed_at": "2018-05-02T12:02:25Z",
     "author_association": "CONTRIBUTOR",
     "body": "The discussion about the \"immediate ACK\" in SCPT (issue #90) raises the question whether the application should be notified about the message being acknowledged.\r\nI guess this has to get along with a protocol selection property (require/prefer/ignore) but is hard to implement for protocols like TCP."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/173",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -14636,11 +15002,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -15480,7 +15846,10 @@
     "closed_at": "2019-03-25T12:03:13Z",
     "author_association": "CONTRIBUTOR",
     "body": "Input from Mark Handley, distributed with permission:\r\n\r\n> Hi Aaron, Colin,\r\n> \r\n> As I mentioned, I'm playing with ideas for a new TCP-replacement transport protocol at the moment.  It doesn't really have a name right now, but lets call it NeoTCP.  Likely it won't go anywhere, but some of the ideas differ a bit from other transport protocols, so may serve as a useful test for the TAPS API.  \r\n> \r\n> 1.  Pre-authentication.  I want to put the ssh server on my home machine on the Internet without it being constantly attacked with password guessing attacks.  NeoTCP implements very simple pre-authentication, where my laptop and my home machine share a secret.  When connecting, the client sends the pair  (nonce, Hash(nonce, secret)).  The server won't send a syn/ack equivalent unless the secret match one of the secrets from its cache.    \r\n> \r\n> 2.  Source-spoofing protection.  NeoTCP supports the equivalent of SYN cookies, but with a 4-way handshake to avoid the potential deadlock associated with SYN cookies.  I'm also playing with the idea of allowing middleboxes to interpose a challenge in response to the SYN, and when the challenge response arrives from the client, only then is the packet passed through to the actual server, and the handshake continues.  I'm not clear yet if including middleboxes in some way impacts the API.\r\n> \r\n> 3.  Encryption.  Goal is to do tcpcrypt-like encryption, but provide hooks to higher layers so they can do whatever full authentication that particular application needs.\r\n> \r\n> 4.  Redirect.  Redirecting connections is a very common application-layer function, but really you would prefer to redirect before you've set up a connection.  Such redirection obviously needs some form of authentication (maybe this contradicts 3 - not clear where I'm going on this yet).   What would the API be for a redirect server? It's not a full server;  it listens, but simply sends stateless syn/ack redirects, rather than accept connections.   \r\n> \r\n> 5. Acking.  NeoTCP supports multi-path using two sequence spaces - subflow packet sequence numbers and data sequence numbers like MPTCP.  Unlike MPTCP, the data sequence number ack indicates the receiving application received the packet (with MPTCP, it only indicates reception by the receiving stack.\r\n> \r\n> 6. Pulling.  NeoTCP takes some lessons from NDP, and is a receiver-driven protocol.  When several senders are sending to one receiver, this allows the receiver to choose precisely which senders to pull packets from at any time.  This generalizes the QUIC/HTTP2 priorities to now support multiple different senders.  You can use this to do aggregate congestion control for incoming traffic, avoiding self-congestion.  It's up to the receiving application to determine priorities, and to the transport to decide how to use those priorities.\r\n> \r\n> 7.  Close is a total mess with TCP.  It's even worse with a user-space protocol - your application may quit when close returns; data may not have been received yet and needs retransmitting, but there's no-one left to do it.   By default, with NDP close won't return until the receiving application has received sent data.   Obviously you need some way to avoid deadlock when the receiver died; that timeout is application specific.\r\n> \r\n> 8. Finally, we've done a lot of work over the last couple of years on understanding MPTCP for web traffic.  It's ugly. You have a whole load of short objects, and the application has a priority order for them.  But the paths may have very different latency.  If you send any packet from the highest priority object on the high latency path, you can delay the object significantly, and it can really hurt the overall page load time, as other requests get stalled waiting for that object.  The best you can do is to run a per-packet scheduler, and ask the question \"if I send the next packet from this object on the higher latency path, will it arrive after the rest of the object sent on the lower latency path?\" If the answer is yes, you shouldn't send that packet on the higher latency path.  Next you have to consider the second highest priority object, and ask if you should instead send a packet from that object on the higher latency path.  You should, if will arrive before both the highest priority object and all the rest of the second highest priority object. If not, you shouldn't, and you should consider the third highest priority object, and so on.  Obviously, this is complicated.  At the very least, the transport protocol needs to know which packets are from which object, and what those object priorities are.  At the receiver, objects may arrive out of order, but packets within an object must be in-order.\r\n> \r\n> There are probably more things, but that's what comes to mind right now.\r\n> \r\n> Mark"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/146",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15716,11 +16085,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -15859,10 +16228,7 @@
     "closed_at": "2018-03-22T16:56:22Z",
     "author_association": "CONTRIBUTOR",
     "body": "When reading the Specifying Transport Parameters section, I got confused by \"boolean properties\" that are \"strict / non-strict requirements\" and when preferences apply.\r\n\r\nWe should fix this by making clear that these  \"boolean\" properties are be used with preferences."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/143",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18276,7 +18642,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/117.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/116",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18521,10 +18890,7 @@
     "closed_at": "2018-02-27T16:06:00Z",
     "author_association": "CONTRIBUTOR",
     "body": "Appendix B of the API draft provides a sample concrete definition of the API, written in Go. Having concrete examples of the API is clearly useful, but I question whether this draft is the right place for them, since we don't want to bless a particular API variant. Suggest this appendix be moved to either the implementation draft, or a separate example API implementation draft."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/113",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21346,7 +21712,10 @@
     "closed_at": "2018-02-25T22:09:14Z",
     "author_association": "CONTRIBUTOR",
     "body": "In Figure 1 and 4.2 we use the term Association Cache. I think this name is too narrow and confusing and it is not aligned with what we have in the implementation draft. I suggest renaming this to Cached State or Protocol and Performance Caches. The text in 4.2 can borrow from the implementation draft and be updated to:\r\n\"Beyond a single Connection's lifetime, it is useful for an implementation to keep state and history. This cached state can help improve future Connection establishment due to re-using results and credentials, and favoring paths and protocols that performed well in the past. It can include DNS results, TLS session state, previous success and quality of transport protocols over certain paths.\""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/86",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21645,10 +22014,7 @@
     "closed_at": "2018-02-24T18:03:17Z",
     "author_association": "NONE",
     "body": "Section 4.1.1 contains some text that looks like RFC Requirements, but we don't say this as a requirements docment. And we don't include the boilerplate explaining RFC2119.\r\n\r\nMy Recommendation: I'd be happy enough to see this section just use lower case keywords. There's a few of these across the document describing the way it should work which currently look non-normative to me. We could always revisit this in a later revision if there is agreement that we should include RFC2119 keywords, but then we need to carefully review each usage:-).\r\n\r\nHowever..., the Security Considerations still uses normative language. My hope is these could also be lower case?"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/83",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24280,7 +24646,10 @@
     "closed_at": "2018-02-21T14:13:29Z",
     "author_association": "NONE",
     "body": "/Not all transport protocols work on all paths. /\r\n- seem untrue, I think the point is that /there could be paths over which some transport protocols are unable to operate, or remote endpoints that support only specific network addresses or transports/."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/56",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24593,10 +24962,7 @@
     "closed_at": "2018-02-21T14:32:32Z",
     "author_association": "NONE",
     "body": "9. Introspection\r\n- I really don’t like the title /9. Introspection/\r\n- It does not tell me what this is.\r\n- Can we please just call it “Setting and Query of Properties”?\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/53",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -25370,11 +25736,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 11,
+      "open_issues": 12,
       "closed_issues": 0,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-05-08T16:56:19Z",
+      "updated_at": "2019-05-15T12:13:03Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -26224,10 +26590,10 @@
         "site_admin": false
       },
       "open_issues": 1,
-      "closed_issues": 2,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2018-03-21T15:43:32Z",
-      "updated_at": "2019-01-29T20:46:05Z",
+      "updated_at": "2019-05-15T13:18:38Z",
       "due_on": "2061-01-01T08:00:00Z",
       "closed_at": null
     },
@@ -27171,7 +27537,10 @@
     "closed_at": "2018-02-15T15:36:25Z",
     "author_association": "CONTRIBUTOR",
     "body": "Resolving Remote Endpoints may result in different stack configurations - add reference to Connection Establishment and how to retrieve the protocol stack actually provided"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/26",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27477,10 +27846,7 @@
     "closed_at": "2018-02-25T22:10:54Z",
     "author_association": "CONTRIBUTOR",
     "body": "Explain specific concerns for given protocols, likely based on survey and minset. Anything from minset that isn't covered by earlier sections or the API explicitly should be mentioned here."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/23",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
