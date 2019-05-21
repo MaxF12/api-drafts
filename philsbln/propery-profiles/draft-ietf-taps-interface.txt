@@ -198,7 +198,7 @@ Internet-Draft               TAPS Interface                     May 2019
    Appendix B.  Additional Properties  . . . . . . . . . . . . . . .  54
      B.1.  Experimental Transport Properties . . . . . . . . . . . .  55
        B.1.1.  Cost Preferences  . . . . . . . . . . . . . . . . . .  55
-   Appendix C.  Sample API definition in Go  . . . . . . . . . . . .  55
+   Appendix C.  Sample API definition in Go  . . . . . . . . . . . .  56
    Appendix D.  Relationship to the Minimal Set of Transport
                 Services for End Systems . . . . . . . . . . . . . .  56
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  59
@@ -914,9 +914,10 @@ Internet-Draft               TAPS Interface                     May 2019
 
    With the creation of the TransportProperties object, an optional
    profile can be passed.  These profiles consist of a list of
-   properties that are used together frequently.  See Appendix A for a
-   list of profiles implementations should support.  Individual
-   properties are then added to the TransportProperties Object:
+   properties that are used together frequently and can be overridden by
+   adding additional TransportProperties.  See Appendix A for a list of
+   profiles implementations should support.  Individual properties are
+   then added to the TransportProperties Object:
 
    TransportProperties.Add(property, value)
 
@@ -945,7 +946,6 @@ Internet-Draft               TAPS Interface                     May 2019
    Section 9.1 provides a list of Connection Properties, while Selection
    Properties are listed in the subsections below.  Note that many
    properties are only considered during establishment, and can not be
-   changed after a Connection is established; however, they can be
 
 
 
@@ -954,6 +954,7 @@ Trammell, et al.        Expires November 22, 2019              [Page 17]
 Internet-Draft               TAPS Interface                     May 2019
 
 
+   changed after a Connection is established; however, they can be
    queried.  Querying a Selection Property after establishment yields
    the value Required for properties of the selected protocol and path,
    Avoid for properties avoided during selection, and Ignore for all
@@ -1000,7 +1001,6 @@ Internet-Draft               TAPS Interface                     May 2019
    transport protocol that can ensure that data is received by the
    application on the other end in the same order as it was sent.  The
    recommended default is to Require Preservation of data ordering.
-
 
 
 
@@ -2939,8 +2939,8 @@ Appendix A.  Transport Property Profiles
 
 A.1.  reliable-inorder-stream
 
-   This profile provides TCP-like transport service.  It should consist
-   of the following properties:
+   This profile provides reliable, in-order transport service with
+   congestion control.  It should consist of the following properties:
 
                    +-------------------------+---------+
                    | Property                | Value   |
@@ -2956,9 +2956,9 @@ A.1.  reliable-inorder-stream
 
 A.2.  reliable-message
 
-   This profile provides SCTP-like transport service.  It should consist
-   of the following properties:
-
+   This profile provides message-preserving, reliable, in-order
+   transport service with congestion control.  It should consist of the
+   following properties:
 
 
 
@@ -2984,22 +2984,27 @@ Internet-Draft               TAPS Interface                     May 2019
 
 A.3.  unreliable-datagram
 
-   This profile provides UDP-like transport service.  It should consist
-   of the following properties:
+   This profile provides unreliable datagram transport service.  It
+   should consist of the following properties:
 
                    +-------------------------+---------+
                    | Property                | Value   |
                    +-------------------------+---------+
-                   | reliability             | avoid   |
+                   | reliability             | ignore  |
                    |                         |         |
-                   | preserve-order          | avoid   |
+                   | preserve-order          | ignore  |
                    |                         |         |
-                   | congestion-control      | avoid   |
+                   | congestion-control      | ignore  |
                    |                         |         |
                    | preserve-msg-boundaries | require |
                    |                         |         |
                    | idempotent              | true    |
                    +-------------------------+---------+
+
+   Applications that choose this Transport Property Profile for latency
+   reasons should also consider setting the Capacity Profile Property,
+   see Section 9.1.10 accordingly and my benefit from controlling
+   checksum coverage, see Section 5.2.7 and Section 5.2.8.
 
 Appendix B.  Additional Properties
 
@@ -3012,12 +3017,7 @@ Appendix B.  Additional Properties
    those in the minimal common interface: Protocol Selection Properties,
    Path Selection Properties, and Message Properties are open sets.
    Implementations of the interface are free to extend these sets to
-   provide additional expressiveness to applications written on top of
-   them.
 
-   This appendix enumerates a few additional properties that could be
-   used to enhance transport protocol and/or path selection, or the
-   transmission of messages given a Protocol Stack that implements them.
 
 
 
@@ -3026,6 +3026,12 @@ Trammell, et al.        Expires November 22, 2019              [Page 54]
 Internet-Draft               TAPS Interface                     May 2019
 
 
+   provide additional expressiveness to applications written on top of
+   them.
+
+   This appendix enumerates a few additional properties that could be
+   used to enhance transport protocol and/or path selection, or the
+   transmission of messages given a Protocol Stack that implements them.
    These are not part of the interface, and may be removed from the
    final document, but are presented here to support discussion within
    the TAPS working group as to whether they should be added to a future
@@ -3067,13 +3073,7 @@ B.1.1.  Cost Preferences
 
    The default is "Balance Cost".
 
-Appendix C.  Sample API definition in Go
 
-   This document defines an abstract interface.  To illustrate how this
-   would map concretely into a programming language, an API interface
-   definition in Go is available online at https://github.com/mami-
-   project/postsocket.  Documentation for this API - an illustration of
-   the documentation an application developer would see for an instance
 
 
 
@@ -3082,6 +3082,13 @@ Trammell, et al.        Expires November 22, 2019              [Page 55]
 Internet-Draft               TAPS Interface                     May 2019
 
 
+Appendix C.  Sample API definition in Go
+
+   This document defines an abstract interface.  To illustrate how this
+   would map concretely into a programming language, an API interface
+   definition in Go is available online at https://github.com/mami-
+   project/postsocket.  Documentation for this API - an illustration of
+   the documentation an application developer would see for an instance
    of this interface - is available online at
    https://godoc.org/github.com/mami-project/postsocket.  This API
    definition will be kept largely in sync with the development of this
@@ -3123,13 +3130,6 @@ Appendix D.  Relationship to the Minimal Set of Transport Services for
       before connection establishment:
       "InitiateWithSend" Action.
 
-   o  Hand over a message to reliably transfer during connection
-      establishment:
-      "InitiateWithSend" Action.
-
-   o  Change timeout for aborting connection (using retransmit limit or
-      time value):
-      "Timeout for aborting Connection" property, using a time value.
 
 
 
@@ -3137,6 +3137,14 @@ Trammell, et al.        Expires November 22, 2019              [Page 56]
 
 Internet-Draft               TAPS Interface                     May 2019
 
+
+   o  Hand over a message to reliably transfer during connection
+      establishment:
+      "InitiateWithSend" Action.
+
+   o  Change timeout for aborting connection (using retransmit limit or
+      time value):
+      "Timeout for aborting Connection" property, using a time value.
 
    o  Timeout event when data could not be delivered for too long:
       "ConnectionError" Event.
@@ -3177,14 +3185,6 @@ Internet-Draft               TAPS Interface                     May 2019
       "Maximum Message size before fragmentation or segmentation"
       property.
 
-   o  Get max. transport-message size that may be received from the
-      configured interface:
-      "Maximum Message size on receive" property.
-
-   o  Obtain ECN field:
-      "ECN" is a defined metadata value as part of the Message Receive
-      Context.
-
 
 
 
@@ -3193,6 +3193,14 @@ Trammell, et al.        Expires November 22, 2019              [Page 57]
 
 Internet-Draft               TAPS Interface                     May 2019
 
+
+   o  Get max. transport-message size that may be received from the
+      configured interface:
+      "Maximum Message size on receive" property.
+
+   o  Obtain ECN field:
+      "ECN" is a defined metadata value as part of the Message Receive
+      Context.
 
    o  "Specify DSCP field", "Disable Nagle algorithm", "Enable and
       configure a 'Low Extra Delay Background Transfer'":
@@ -3232,6 +3240,16 @@ Internet-Draft               TAPS Interface                     May 2019
       "Ordered".
 
    o  Request not to delay the acknowledgement (SACK) of a message:
+
+
+
+
+
+Trammell, et al.        Expires November 22, 2019              [Page 58]
+
+Internet-Draft               TAPS Interface                     May 2019
+
+
       Should the protocol support it, this is one of the transport
       features the transport system can use when an application uses the
       Capacity Profile Property with value "Low Latency/Interactive".
@@ -3242,14 +3260,6 @@ Internet-Draft               TAPS Interface                     May 2019
    o  Receive a message:
       "Received" Event.  Section 5.1 of [I-D.ietf-taps-minset] discusses
       how messages can be obtained from a bytestream in case of
-
-
-
-Trammell, et al.        Expires November 22, 2019              [Page 58]
-
-Internet-Draft               TAPS Interface                     May 2019
-
-
       implementation over TCP.  Here, this is dealt with by Framers and
       Deframers.
 
@@ -3286,16 +3296,6 @@ Authors' Addresses
    Email: michawe@ifi.uio.no
 
 
-   Theresa Enghardt
-   TU Berlin
-   Marchstrasse 23
-   10587 Berlin
-   Germany
-
-   Email: theresa@inet.tu-berlin.de
-
-
-
 
 
 
@@ -3304,6 +3304,15 @@ Authors' Addresses
 Trammell, et al.        Expires November 22, 2019              [Page 59]
 
 Internet-Draft               TAPS Interface                     May 2019
+
+
+   Theresa Enghardt
+   TU Berlin
+   Marchstrasse 23
+   10587 Berlin
+   Germany
+
+   Email: theresa@inet.tu-berlin.de
 
 
    Godred Fairhurst
@@ -3343,6 +3352,16 @@ Internet-Draft               TAPS Interface                     May 2019
    Email: philipp@inet.tu-berlin.de
 
 
+
+
+
+
+
+Trammell, et al.        Expires November 22, 2019              [Page 60]
+
+Internet-Draft               TAPS Interface                     May 2019
+
+
    Chris Wood
    Apple Inc.
    1 Infinite Loop
@@ -3357,4 +3376,41 @@ Internet-Draft               TAPS Interface                     May 2019
 
 
 
-Trammell, et al.        Expires November 22, 2019              [Page 60]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trammell, et al.        Expires November 22, 2019              [Page 61]

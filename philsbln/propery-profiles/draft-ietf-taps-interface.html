@@ -1037,7 +1037,7 @@ LocalSpecifier.WithStunServer(address, port, credentials)
 <pre>
 TransportProperties := NewTransportProperties(profile?)
 </pre>
-<p id="rfc.section.5.2.p.7">With the creation of the TransportProperties object, an optional profile can be passed. These profiles consist of a list of properties that are used together frequently.  See <a href="#property-profiles" class="xref">Appendix A</a> for a list of profiles implementations should support.  Individual properties are then added to the TransportProperties Object:</p>
+<p id="rfc.section.5.2.p.7">With the creation of the TransportProperties object, an optional profile can be passed. These profiles consist of a list of properties that are used together frequently and can be overridden by adding additional TransportProperties.  See <a href="#property-profiles" class="xref">Appendix A</a> for a list of profiles implementations should support.  Individual properties are then added to the TransportProperties Object:</p>
 <pre>
 TransportProperties.Add(property, value)
 </pre>
@@ -2077,7 +2077,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 <h1 id="rfc.appendix.A.1">
 <a href="#rfc.appendix.A.1">A.1.</a> <a href="#reliable-inorder-stream" id="reliable-inorder-stream">reliable-inorder-stream</a>
 </h1>
-<p id="rfc.section.A.1.p.1">This profile provides TCP-like transport service. It should consist of the following properties:</p>
+<p id="rfc.section.A.1.p.1">This profile provides reliable, in-order transport service with congestion control.  It should consist of the following properties:</p>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <thead><tr>
 <th class="left">Property</th>
@@ -2105,7 +2105,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 <h1 id="rfc.appendix.A.2">
 <a href="#rfc.appendix.A.2">A.2.</a> <a href="#reliable-message" id="reliable-message">reliable-message</a>
 </h1>
-<p id="rfc.section.A.2.p.1">This profile provides SCTP-like transport service. It should consist of the following properties:</p>
+<p id="rfc.section.A.2.p.1">This profile provides message-preserving, reliable, in-order transport service with congestion control.  It should consist of the following properties:</p>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <thead><tr>
 <th class="left">Property</th>
@@ -2133,7 +2133,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 <h1 id="rfc.appendix.A.3">
 <a href="#rfc.appendix.A.3">A.3.</a> <a href="#unreliable-datagram" id="unreliable-datagram">unreliable-datagram</a>
 </h1>
-<p id="rfc.section.A.3.p.1">This profile provides UDP-like transport service. It should consist of the following properties:</p>
+<p id="rfc.section.A.3.p.1">This profile provides unreliable datagram transport service.  It should consist of the following properties:</p>
 <table cellpadding="3" cellspacing="0" class="tt full center">
 <thead><tr>
 <th class="left">Property</th>
@@ -2142,15 +2142,15 @@ Connection -&gt; ConnectionError&lt;&gt;
 <tbody>
 <tr>
 <td class="left">reliability</td>
-<td class="left">avoid</td>
+<td class="left">ignore</td>
 </tr>
 <tr>
 <td class="left">preserve-order</td>
-<td class="left">avoid</td>
+<td class="left">ignore</td>
 </tr>
 <tr>
 <td class="left">congestion-control</td>
-<td class="left">avoid</td>
+<td class="left">ignore</td>
 </tr>
 <tr>
 <td class="left">preserve-msg-boundaries</td>
@@ -2162,6 +2162,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 </tr>
 </tbody>
 </table>
+<p id="rfc.section.A.3.p.2">Applications that choose this Transport Property Profile for latency reasons should also consider setting the Capacity Profile Property, see <a href="#prop-cap-profile" class="xref">Section 9.1.10</a> accordingly and my benefit from controlling checksum coverage, see <a href="#prop-checksum-control-send" class="xref">Section 5.2.7</a> and <a href="#prop-checksum-control-receive" class="xref">Section 5.2.8</a>.</p>
 <h1 id="rfc.appendix.B">
 <a href="#rfc.appendix.B">Appendix B.</a> <a href="#appendix-non-consensus" id="appendix-non-consensus">Additional Properties</a>
 </h1>
