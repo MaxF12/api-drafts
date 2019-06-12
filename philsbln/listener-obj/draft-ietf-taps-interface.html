@@ -388,7 +388,7 @@ ul.toc li {
 
   <meta name="dct.creator" content="Trammell, B., Ed., Welzl, M., Ed., Enghardt, T., Fairhurst, G., Kuehlewind, M., Perkins, C., Tiesel, P., and C. Wood" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-taps-interface-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-05-06" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-06-12" />
   <meta name="dct.abstract" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
   <meta name="description" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
 
@@ -412,7 +412,7 @@ ul.toc li {
 <td class="right">M. Welzl, Ed.</td>
 </tr>
 <tr>
-<td class="left">Expires: November 7, 2019</td>
+<td class="left">Expires: December 14, 2019</td>
 <td class="right">University of Oslo</td>
 </tr>
 <tr>
@@ -465,7 +465,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">May 06, 2019</td>
+<td class="right">June 12, 2019</td>
 </tr>
 
     	
@@ -481,7 +481,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 7, 2019.</p>
+<p>This Internet-Draft will expire on December 14, 2019.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -794,9 +794,9 @@ Preconnection := NewPreconnection(LocalSpecifier,
                                   TransportProperties,
                                   SecurityParameters)
 
-Preconnection.Listen()
+Listener := Preconnection.Listen()
 
-Preconnection -&gt; ConnectionReceived&lt;Connection&gt;
+Listener -&gt; ConnectionReceived&lt;Connection&gt;
 
 // Only receive complete messages
 Connection.Receive()
@@ -808,7 +808,7 @@ Connection.Send(messageDataResponse)
 Connection.Close()
 
 // Stop listening for incoming Connections
-Preconnection.Stop()
+Listener.Stop()
 </pre>
 <h1 id="rfc.section.4.1.2">
 <a href="#rfc.section.4.1.2">4.1.2.</a> <a href="#client-example" id="client-example">Client Example</a>
@@ -1021,7 +1021,7 @@ LocalSpecifier.WithStunServer(address, port, credentials)
 </table>
 <p id="rfc.section.5.2.p.4">In addition, the pseudo-level <samp>Default</samp> can be used to reset the property to the default level used by the implementation. This level will never show up when queuing the value of a preference - the effective preference must be returned instead.</p>
 <p id="rfc.section.5.2.p.5">Internally, the transport system will first exclude all protocols and paths that match a Prohibit, then exclude all protocols and paths that do not match a Require, then sort candidates according to Preferred properties, and then use Avoided properties as a tiebreaker. Selection Properties which select paths take preference over those which select protocols. For example, if an application indicates a preference for a specific path by specifying an interface, but also a preference for a protocol not available on this path, the transport system will try the path first, ignoring the preference.</p>
-<p id="rfc.section.5.2.p.6">Both Selection and Connection Properties can be added to a Preconnection to configure the selection process, and to further configure the eventually selected protocol stack(s). They are collected into a TransportProperties object to be passed into a Preconnection object:</p>
+<p id="rfc.section.5.2.p.6">Selection, and Connection Properties, as well as defaults for Message Properties, can be added to a Preconnection to configure the selection process, and to further configure the eventually selected protocol stack(s).  They are collected into a TransportProperties object to be passed into a Preconnection object:</p>
 <pre>
 TransportProperties := NewTransportProperties()
 </pre>
@@ -1300,28 +1300,28 @@ Connection -&gt; InitiateError&lt;&gt;
 <h1 id="rfc.section.6.2">
 <a href="#rfc.section.6.2">6.2.</a> <a href="#listen" id="listen">Passive Open: Listen</a>
 </h1>
-<p id="rfc.section.6.2.p.1">Passive open is the Action of waiting for Connections from remote endpoints, commonly used by servers in client-server interactions. Passive open is supported by this interface through the Listen Action:</p>
+<p id="rfc.section.6.2.p.1">Passive open is the Action of waiting for Connections from remote endpoints, commonly used by servers in client-server interactions. Passive open is supported by this interface through the Listen Action and returns a Listener object:</p>
 <pre>
-Preconnection.Listen()
+Listener := Preconnection.Listen()
 </pre>
-<p id="rfc.section.6.2.p.2">Before calling Listen, the caller must have initialized the Preconnection during the pre-establishment phase with a Local Endpoint specifier, as well as all properties necessary for Protocol Stack selection. A Remote Endpoint may optionally be specified, to constrain what Connections are accepted.  The Listen() Action consumes the Preconnection. Once Listen() has been called, no further properties may be added to the Preconnection, and no subsequent establishment call may be made on the Preconnection.</p>
-<p id="rfc.section.6.2.p.3">Listening continues until the global context shuts down, or until the Stop action is performed on the same Preconnection:</p>
+<p id="rfc.section.6.2.p.2">Before calling Listen, the caller must have initialized the Preconnection during the pre-establishment phase with a Local Endpoint specifier, as well as all properties necessary for Protocol Stack selection. A Remote Endpoint may optionally be specified, to constrain what Connections are accepted.  The Listen() Action returns a Listener object. Once Listen() has been called, properties added to the Preconnection have no effect on the Listener and the Preconnection can be disposed of or reused.</p>
+<p id="rfc.section.6.2.p.3">Listening continues until the global context shuts down, or until the Stop action is performed on the Listener object:</p>
 <pre>
-Preconnection.Stop()
+Listener.Stop()
 </pre>
-<p id="rfc.section.6.2.p.4">After Stop() is called, the preconnection can be disposed of.</p>
+<p id="rfc.section.6.2.p.4">After Stop() is called, the Listener can be disposed of.</p>
 <pre>
-Preconnection -&gt; ConnectionReceived&lt;Connection&gt;
+Listener -&gt; ConnectionReceived&lt;Connection&gt;
 </pre>
-<p id="rfc.section.6.2.p.5">The ConnectionReceived Event occurs when a Remote Endpoint has established a transport-layer connection to this Preconnection (for Connection-oriented transport protocols), or when the first Message has been received from the Remote Endpoint (for Connectionless protocols), causing a new Connection to be created. The resulting Connection is contained within the ConnectionReceived event, and is ready to use as soon as it is passed to the application via the event.</p>
+<p id="rfc.section.6.2.p.5">The ConnectionReceived Event occurs when a Remote Endpoint has established a transport-layer connection to this Listener (for Connection-oriented transport protocols), or when the first Message has been received from the Remote Endpoint (for Connectionless protocols), causing a new Connection to be created. The resulting Connection is contained within the ConnectionReceived event, and is ready to use as soon as it is passed to the application via the event.</p>
 <pre>
-Preconnection -&gt; ListenError&lt;&gt;
+Listener -&gt; ListenError&lt;&gt;
 </pre>
-<p id="rfc.section.6.2.p.6">A ListenError occurs either when the Preconnection cannot be fulfilled for listening, when the Local Endpoint (or Remote Endpoint, if specified) cannot be resolved, or when the application is prohibited from listening by policy.</p>
+<p id="rfc.section.6.2.p.6">A ListenError occurs either when the Properties of the Preconnection cannot be fulfilled for listening, when the Local Endpoint (or Remote Endpoint, if specified) cannot be resolved, or when the application is prohibited from listening by policy.</p>
 <pre>
-Preconnection -&gt; Stopped&lt;&gt;
+Listener -&gt; Stopped&lt;&gt;
 </pre>
-<p id="rfc.section.6.2.p.7">A Stopped event occurs after the Preconnection has stopped listening.</p>
+<p id="rfc.section.6.2.p.7">A Stopped event occurs after the Listener has stopped listening.</p>
 <h1 id="rfc.section.6.3">
 <a href="#rfc.section.6.3">6.3.</a> <a href="#rendezvous" id="rendezvous">Peer-to-Peer Establishment: Rendezvous</a>
 </h1>
@@ -1348,18 +1348,22 @@ Preconnection -&gt; RendezvousError&lt;msgRef, error&gt;
 <h1 id="rfc.section.6.4">
 <a href="#rfc.section.6.4">6.4.</a> <a href="#groups" id="groups">Connection Groups</a>
 </h1>
-<p id="rfc.section.6.4.p.1">Groups of Connections can be created using the Clone Action:</p>
+<p id="rfc.section.6.4.p.1">Entangled Connections can be created using the Clone Action:</p>
 <pre>
 Connection := Connection.Clone()
 </pre>
 <p id="rfc.section.6.4.p.2">Calling Clone on a Connection yields a group of two Connections: the parent Connection on which Clone was called, and the resulting cloned Connection. These connections are &#8220;entangled&#8221; with each other, and become part of a Connection Group. Calling Clone on any of these two Connections adds a third Connection to the Connection Group, and so on. Connections in a Connection Group share all Protocol Properties that are not applicable to a Message.</p>
-<p id="rfc.section.6.4.p.3">Changing one of these Protocol Properties on one Connection in the group changes it for all others. Per-Message Protocol Properties, however, are not entangled.  For example, changing &#8220;Timeout for aborting Connection&#8221; (see <a href="#conn-timeout" class="xref">Section 9.1.4</a>) on one Connection in a group will automatically change this Protocol Property for all Connections in the group in the same way. However, changing &#8220;Lifetime&#8221; (see <a href="#msg-lifetime" class="xref">Section 7.3.1</a>) of a Message will only affect a single Message on a single Connection, entangled or not.</p>
-<p id="rfc.section.6.4.p.4">If the underlying protocol supports multi-streaming, it is natural to use this functionality to implement Clone. In that case, entangled Connections are multiplexed together, giving them similar treatment not only inside endpoints but also across the end-to-end Internet path.</p>
-<p id="rfc.section.6.4.p.5">If the underlying Protocol Stack does not support cloning, or cannot create a new stream on the given Connection, then attempts to clone a connection will result in a CloneError:</p>
+<p id="rfc.section.6.4.p.3">In addition, incoming entangled Connections can be received by creating a Listener on an existing connection:</p>
+<pre>
+Listener := Connection.Listen()
+</pre>
+<p id="rfc.section.6.4.p.4">Changing one of these Protocol Properties on one Connection in the group changes it for all others. Per-Message Protocol Properties, however, are not entangled. For example, changing &#8220;Timeout for aborting Connection&#8221; (see <a href="#conn-timeout" class="xref">Section 9.1.4</a>) on one Connection in a group will automatically change this Protocol Property for all Connections in the group in the same way. However, changing &#8220;Lifetime&#8221; (see <a href="#msg-lifetime" class="xref">Section 7.3.1</a>) of a Message will only affect a single Message on a single Connection, entangled or not.</p>
+<p id="rfc.section.6.4.p.5">If the underlying protocol supports multi-streaming, it is natural to use this functionality to implement Clone. In that case, entangled Connections are multiplexed together, giving them similar treatment not only inside endpoints but also across the end-to-end Internet path.</p>
+<p id="rfc.section.6.4.p.6">If the underlying Protocol Stack does not support cloning, or cannot create a new stream on the given Connection, then attempts to clone a connection will result in a CloneError:</p>
 <pre>
 Connection -&gt; CloneError&lt;&gt;
 </pre>
-<p id="rfc.section.6.4.p.6">The Protocol Property &#8220;Priority&#8221; operates on entangled Connections as in <a href="#msg-priority" class="xref">Section 7.3.2</a>: when allocating available network capacity among Connections in a Connection Group, sends on Connections with higher Priority values will be prioritized over sends on Connections with lower Priority values. An ideal transport system implementation would assign each Connection the capacity share (M-N) x C / M, where N is the Connection&#8217;s Priority value, M is the maximum Priority value used by all Connections in the group and C is the total available capacity. However, the Priority setting is purely advisory, and no guarantees are given about the way capacity is shared.  Each implementation is free to implement a way to share capacity that it sees fit.</p>
+<p id="rfc.section.6.4.p.7">The Protocol Property &#8220;Priority&#8221; operates on entangled Connections as in <a href="#msg-priority" class="xref">Section 7.3.2</a>: when allocating available network capacity among Connections in a Connection Group, sends on Connections with higher Priority values will be prioritized over sends on Connections with lower Priority values. An ideal transport system implementation would assign each Connection the capacity share (M-N) x C / M, where N is the Connection&#8217;s Priority value, M is the maximum Priority value used by all Connections in the group and C is the total available capacity. However, the Priority setting is purely advisory, and no guarantees are given about the way capacity is shared.  Each implementation is free to implement a way to share capacity that it sees fit.</p>
 <h1 id="rfc.section.7">
 <a href="#rfc.section.7">7.</a> <a href="#sending" id="sending">Sending Data</a>
 </h1>
@@ -1472,6 +1476,7 @@ Connection.Send(messageData, messageContext)
 <dd style="margin-left: 8">Boolean</dd>
 </dl>
 <p id="rfc.section.7.3.4.p.2">If true, it specifies that a Message is safe to send to the remote endpoint more than once for a single Send Action. It is used to mark data safe for certain 0-RTT establishment techniques, where retransmission of the 0-RTT data may cause the remote application to receive the Message multiple times.</p>
+<p id="rfc.section.7.3.4.p.3">Note that for protocols that do not protect against duplicated messages, e.g., UDP, all messages MUST be marked as Idempotent.  In order to enable protocol selection to choose such a protocol, Idempotent MUST be added to the TransportProperties passed to the Preconnection. If such a protocol was chosen, disabling Idempotent on individual messages MUST result in a SendError.</p>
 <h1 id="rfc.section.7.3.5">
 <a href="#rfc.section.7.3.5">7.3.5.</a> <a href="#msg-final" id="msg-final">Final</a>
 </h1>
@@ -2284,7 +2289,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 	</span>
 	<span class="org vcardline">TU Berlin</span>
 	<span class="adr">
-	  <span class="vcardline">Marchstrasse 23</span>
+	  <span class="vcardline">Einsteinufer 25</span>
 
 	  <span class="vcardline">
 		<span class="locality">10587 Berlin</span>,  
@@ -2293,7 +2298,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 	  </span>
 	  <span class="country-name vcardline">Germany</span>
 	</span>
-	<span class="vcardline">EMail: <a href="mailto:philipp@inet.tu-berlin.de">philipp@inet.tu-berlin.de</a></span>
+	<span class="vcardline">EMail: <a href="mailto:philipp@tiesel.net">philipp@tiesel.net</a></span>
 
   </address>
 </div><div class="avoidbreak">
@@ -2322,3 +2327,4 @@ Connection -&gt; ConnectionError&lt;&gt;
 
 </body>
 </html>
+
