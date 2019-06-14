@@ -390,9 +390,9 @@ ul.toc li {
   <meta name="generator" content="xml2rfc version 2.22.2 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
-  <meta name="dct.creator" content="Trammell, B., Ed., Welzl, M., Ed., Enghardt, T., Fairhurst, G., Kuehlewind, M., Perkins, C., Tiesel, P., Wood, C., and T. Pauly, Ed." />
+  <meta name="dct.creator" content="Trammell, B., Ed., Welzl, M., Ed., Enghardt, T., Fairhurst, G., Kuehlewind, M., Perkins, C., Tiesel, P., Wood, C., and T. Pauly" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-taps-interface-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-06-12" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-06-14" />
   <meta name="dct.abstract" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
   <meta name="description" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
 
@@ -416,7 +416,7 @@ ul.toc li {
 <td class="right">M. Welzl, Ed.</td>
 </tr>
 <tr>
-<td class="left">Expires: December 14, 2019</td>
+<td class="left">Expires: December 16, 2019</td>
 <td class="right">University of Oslo</td>
 </tr>
 <tr>
@@ -465,7 +465,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">T. Pauly, Ed.</td>
+<td class="right">T. Pauly</td>
 </tr>
 <tr>
 <td class="left"></td>
@@ -473,7 +473,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">June 12, 2019</td>
+<td class="right">June 14, 2019</td>
 </tr>
 
     	
@@ -489,7 +489,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on December 14, 2019.</p>
+<p>This Internet-Draft will expire on December 16, 2019.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -772,7 +772,7 @@ Action(param0, param1?, ...) / Event&lt;param0, param1, ...&gt;
 </h1>
 <p id="rfc.section.4.p.1">The Transport Services Interface is the basic common abstract application programming interface to the Transport Services Architecture defined in <a href="#I-D.ietf-taps-arch" class="xref">[I-D.ietf-taps-arch]</a>.</p>
 <p id="rfc.section.4.p.2">An application primarily interacts with this interface through two Objects, Preconnections and Connections. A Preconnection represents a set of properties and constraints on the selection and configuration of paths and protocols to establish a Connection with a remote endpoint. A Connection represents a transport Protocol Stack on which data can be sent to and/or received from a remote endpoint (i.e., depending on the kind of transport, connections can be bi-directional or unidirectional). Connections can be created from Preconnections in three ways: by initiating the Preconnection (i.e., actively opening, as in a client), through listening on the Preconnection (i.e., passively opening, as in a server), or rendezvousing on the Preconnection (i.e.  peer to peer establishment).</p>
-<p id="rfc.section.4.p.3">Once a Connection is established, data can be sent on it in the form of Messages. The interface supports the preservation of message boundaries both via explicit Protocol Stack support, and via application support through a Message Framer definition which finds message boundaries in a stream. Messages are received asynchronously through a callback registered by the application.  Errors and other notifications also happen asynchronously on the Connection.</p>
+<p id="rfc.section.4.p.3">Once a Connection is established, data can be sent on it in the form of Messages. The interface supports the preservation of message boundaries both via explicit Protocol Stack support, and via application support through a Message Framer which finds message boundaries in a stream. Messages are received asynchronously through a callback registered by the application.  Errors and other notifications also happen asynchronously on the Connection.</p>
 <p><a href="#pre-establishment" class="xref">Section 5</a>, <a href="#establishment" class="xref">Section 6</a>, <a href="#sending" class="xref">Section 7</a>, <a href="#receiving" class="xref">Section 8</a>, and <a href="#termination" class="xref">Section 11</a> describe the details of application interaction with Objects through Actions and Events in each phase of a Connection, following the phases described in <a href="#I-D.ietf-taps-arch" class="xref">[I-D.ietf-taps-arch]</a>.</p>
 <h1 id="rfc.section.4.1">
 <a href="#rfc.section.4.1">4.1.</a> <a href="#usage-examples" id="usage-examples">Usage Examples</a>
@@ -1674,27 +1674,27 @@ Connection -&gt; ReceiveError&lt;messageContext&gt;
 <h1 id="rfc.section.9">
 <a href="#rfc.section.9">9.</a> <a href="#framing" id="framing">Message Framers</a>
 </h1>
-<p id="rfc.section.9.p.1">Message Framers are implementations of simple protocols that can convert between application Message data and raw transport protocol data. A Framer can encapsulate or encode outbound Messages, and decapsulate or decode inbound data into Messages.</p>
-<p id="rfc.section.9.p.2">Message Framers allow message boundaries to be preserved when using a Connection object, even when using octet-stream transports. This facility is designed based on the fact that many of our current application protocols evolved over TCP, which does not provide message boundary preservation, and since many of these protocols require message boundaries to function, each application layer protocol has defined its own framing.</p>
+<p id="rfc.section.9.p.1">Message Framers are pieces of code that define simple transformations between application Message data and raw transport protocol data. A Framer can encapsulate or encode outbound Messages, and decapsulate or decode inbound data into Messages.</p>
+<p id="rfc.section.9.p.2">Message Framers allow message boundaries to be preserved when using a Connection object, even when using octet-stream transports. This facility is designed based on the fact that many of the current application protocols evolved over TCP, which does not provide message boundary preservation, and since many of these protocols require message boundaries to function, each application layer protocol has defined its own framing.</p>
 <p id="rfc.section.9.p.3">While many protocols can be represented as Message Framers, for the purposes of the Transport Services interface these are ways for applications or application frameworks to define their own Message parsing to be included within a Connection&#8217;s Protocol Stack. As an example, TLS can serve the purpose of framing data over TCP, but is exposed as a protocol natively supported by the Transport Services interface.</p>
-<p id="rfc.section.9.p.4">Most Message Framer protocols fall into one of two categories: - Header-prefixed record protocols, such as a basic Type-Length-Value (TLV) structure - Delimeter-separated protocols, such as HTTP/1.1.</p>
+<p id="rfc.section.9.p.4">Most Message Framers fall into one of two categories: - Header-prefixed record formats, such as a basic Type-Length-Value (TLV) structure - Delimeter-separated formats, such as HTTP/1.1.</p>
 <p id="rfc.section.9.p.5">Note that while Message Framers add the most value when placed above a protocol that otherwise does not preserve message boundaries, they can also be used with datagram- or message-based protocols. In these cases, they add an additional transformation to further encode or encapsulate, and can potentially support packing multiple application-layer Messages into individual transport datagrams.</p>
 <h1 id="rfc.section.9.1">
 <a href="#rfc.section.9.1">9.1.</a> <a href="#defining-message-framers" id="defining-message-framers">Defining Message Framers</a>
 </h1>
-<p id="rfc.section.9.1.p.1">Applications can define a Message Framer by creating an object to represent a unique definition of a framing protocol. Event handlers for inbound and outbound data are registered on this object.</p>
+<p id="rfc.section.9.1.p.1">A Message Framer is primarily defined by the set of code that handles events for the Framer, specifically how it handles inbound and outbound data parsing.</p>
+<p id="rfc.section.9.1.p.2">Applications can instantiate a Message Framer upon which they will receive framing events, or use a Message Framer defined by another library.</p>
 <pre>
 framer := NewMessageFramer()
-framer.setEventHandlers()
 </pre>
 <h1 id="rfc.section.9.2">
 <a href="#rfc.section.9.2">9.2.</a> <a href="#adding-message-framers-to-connections" id="adding-message-framers-to-connections">Adding Message Framers to Connections</a>
 </h1>
-<p id="rfc.section.9.2.p.1">The Message Framer object can then be added to one or more Preconnections to run on top of transport protocols. Multiple Framers may be added.</p>
+<p id="rfc.section.9.2.p.1">The Message Framer object can then be added to one or more Preconnections to run on top of transport protocols. Multiple Framers may be added. If multiple Framers are added, the last one added runs first when framing outbound messages, and last when parsing inbound data.</p>
 <pre>
 Preconnection.AddFramer(framer)
 </pre>
-<p id="rfc.section.9.2.p.2">When sending Messages, applications can add specific Message values to a MessageContext (<a href="#message-props" class="xref">Section 7.3</a>) that is intended for a Framer.  This can be used, for example, to set the type of a Message for a TLV protocol.  The namespace of values is custom for each unique Message Framer.</p>
+<p id="rfc.section.9.2.p.2">When sending Messages, applications can add specific Message values to a MessageContext (<a href="#message-props" class="xref">Section 7.3</a>) that is intended for a Framer.  This can be used, for example, to set the type of a Message for a TLV format.  The namespace of values is custom for each unique Message Framer.</p>
 <pre>
 messageContext := NewMessageContext()
 messageContext.add(framer, key, value)
@@ -1707,57 +1707,56 @@ messageContext.get(framer, key) -&gt; value
 <h1 id="rfc.section.9.3">
 <a href="#rfc.section.9.3">9.3.</a> <a href="#message-framer-lifetime" id="message-framer-lifetime">Message Framer Lifetime</a>
 </h1>
-<p id="rfc.section.9.3.p.1">When a Connection establishment attempt begins, an event is delivered to notify the framer that a new Connection is being created and has a new instance of a Message Framer. Similarly, a stop event is delivered when a Connection is being torn down.</p>
+<p id="rfc.section.9.3.p.1">When a Connection establishment attempt begins, an event is delivered to notify the Framer that a new Connection is being created.  Similarly, a stop event is delivered when a Connection is being torn down.  The Framer can use the Connection object to look up specific properties of the connection or the network being used that may influence how to frame Messages.</p>
 <pre>
-FramerInstance -&gt; Start()
-FramerInstance -&gt; Stop()
+MessageFramer -&gt; Start(Connection)
+MessageFramer -&gt; Stop(Connection)
 </pre>
-<p id="rfc.section.9.3.p.2">When Message Framer gets a start message, it sets up its state and then indicates to the connection that it is ready to handle sending Messages by calling <samp>ready</samp> on the FramerInstance. This call can be delayed in case the protocol needs to do some simple handshake exchange before handling application Messages.</p>
+<p id="rfc.section.9.3.p.2">When Message Framer receives a <samp>Start</samp> event, it has the opportunity to start writing some data on the Connection prior to the Connection delivering its <samp>Ready</samp> event. This allows the Framer to communicate control data to the remote endpoint that can be used to parse Messages.</p>
 <pre>
-// instance is a FramerInstance reference
-instance.ready()
+MessageFramer.MakeConnectionReady(Connection)
 </pre>
 <p id="rfc.section.9.3.p.3">At any time if the Message Framer encounters a fatal error, it can also cause the Connection to fail and provide an error.</p>
 <pre>
-instance.failed(Error)
+MessageFramer.FailConnection(Connection, Error)
 </pre>
 <p id="rfc.section.9.3.p.4">Before a Message Framer marks itself as ready, it can also dynamically add a protocol or framer above it in the stack. This allows protocols like STARTTLS, that need to add TLS conditionally, to modify the Protocol Stack based on a handshake result.</p>
 <pre>
 otherFramer := NewMessageFramer()
-instance.prependProtocol(otherFramer)
+MessageFramer.PrependFramer(Connection, otherFramer)
 </pre>
 <h1 id="rfc.section.9.4">
 <a href="#rfc.section.9.4">9.4.</a> <a href="#send-framing" id="send-framing">Sender-side Message Framing</a>
 </h1>
-<p id="rfc.section.9.4.p.1">Message Framers define an event that gets called on an instance of a Framer to handle a new Message being sent by the application.</p>
+<p id="rfc.section.9.4.p.1">Message Framers deliver an event whenever a Connection sends a new Message.</p>
 <pre>
-FramerInstance -&gt; NewSentMessage&lt;messageData, messageContext, endOfMessage&gt;
+MessageFramer -&gt; NewSentMessage&lt;Connection, MessageData, MessageContext, IsEndOfMessage&gt;
 </pre>
 <p id="rfc.section.9.4.p.2">Upon receiving this event, a Message Framer implementation is responsible for performing any necessary transformations and sending the resulting data to the next protocol. Implementations SHOULD ensure that there is a way to pass the original data through without copying to improve performance.</p>
 <pre>
-instance.send(Data)
+MessageFramer.Send(Connection, Data)
 </pre>
-<p id="rfc.section.9.4.p.3">To provide an example, a simple protocol that adds a length as a header would receive the <samp>NewOutputMessage</samp> event, create a data representation of the length of the Message data, and then send a block of data that is the concatenation of the length header and the original Message data.</p>
+<p id="rfc.section.9.4.p.3">To provide an example, a simple protocol that adds a length as a header would receive the <samp>NewSentMessage</samp> event, create a data representation of the length of the Message data, and then send a block of data that is the concatenation of the length header and the original Message data.</p>
 <h1 id="rfc.section.9.5">
 <a href="#rfc.section.9.5">9.5.</a> <a href="#receive-framing" id="receive-framing">Receiver-side Message Framing</a>
 </h1>
 <p id="rfc.section.9.5.p.1">In order to parse an received flow of data into Messages, the Message Framer is first notified whenever new data is available to parse.</p>
 <pre>
-FramerInstance -&gt; HandleReceivedData&lt;&gt;
+MessageFramer -&gt; HandleReceivedData&lt;Connection&gt;
 </pre>
 <p id="rfc.section.9.5.p.2">Upon receiving this event, a Message Framer can inspect the inbound data. The data is parsed from a particular cursor representing the unprocessed data. The Framer requests a specific amount of data it needs to have available in order to parse.  If the data is not available, the parse fails.</p>
 <pre>
-instance.parse(minIncompleteLength, maxLength) -&gt; (Data?, endOfMessage?)
+MessageFramer.Parse(Connection, MinimumIncompleteLength, MaximumLength) -&gt; (Data?, IsEndOfMessage?)
 </pre>
 <p id="rfc.section.9.5.p.3">The Message Framer can directly advance the receive cursor once it has parsed data to effectively discard data (for example, discard a header once the content has been parsed).</p>
 <p id="rfc.section.9.5.p.4">To deliver a Message to the application, the Framer can either directly send data that it has created, or deliver a range of data directly from the underlying transport and simulatenously advance the receive cursor.</p>
 <pre>
-instance.advanceReceiveCursor(length)
-instance.deliverAndAdvanceReceiveCursor(messageContext, length, endOfMessage)
-instance.deliver(messageContext, data, endOfMessage)
+MessageFramer.AdvanceReceiveCursor(Connection, Length)
+MessageFramer.DeliverAndAdvanceReceiveCursor(Connection, MessageContext, Length, IsEndOfMessage)
+MessageFramer.Deliver(Connection, MessageContext, Data, IsEndOfMessage)
 </pre>
-<p id="rfc.section.9.5.p.5">Note that <samp>deliverAndAdvanceReceiveCursor</samp> allows the Framer to earmark bytes as part of a Message even before they are received by the transport. This allows the delivery of very large Messages without requiring the Framer to directly inspect all of the octets.</p>
-<p id="rfc.section.9.5.p.6">To provide an example, a simple protocol that parses a length as a header value would receive the <samp>HandleReceivedData</samp> event, and call <samp>parse</samp> with a minimum and maximum set to the length of the header field. Once the parse succeeded, it would call <samp>advanceReceiveCursor</samp> with the length of the header field, and then call <samp>deliverAndAdvanceReceiveCursor</samp> with the length of the body that was parsed from the header, marking the new Message as complete.</p>
+<p id="rfc.section.9.5.p.5">Note that <samp>MessageFramer.DeliverAndAdvanceReceiveCursor</samp> allows the Framer to earmark bytes as part of a Message even before they are received by the transport. This allows the delivery of very large Messages without requiring the Framer to directly inspect all of the octets.</p>
+<p id="rfc.section.9.5.p.6">To provide an example, a simple protocol that parses a length as a header value would receive the <samp>HandleReceivedData</samp> event, and call <samp>Parse</samp> with a minimum and maximum set to the length of the header field. Once the parse succeeded, it would call <samp>AdvanceReceiveCursor</samp> with the length of the header field, and then call <samp>DeliverAndAdvanceReceiveCursor</samp> with the length of the body that was parsed from the header, marking the new Message as complete.</p>
 <h1 id="rfc.section.10">
 <a href="#rfc.section.10">10.</a> <a href="#introspection" id="introspection">Managing Connections</a>
 </h1>
@@ -2404,7 +2403,7 @@ Connection -&gt; ConnectionError&lt;&gt;
 </div><div class="avoidbreak">
   <address class="vcard">
 	<span class="vcardline">
-	  <span class="fn">Tommy Pauly</span> (editor)
+	  <span class="fn">Tommy Pauly</span> 
 	  <span class="n hidden">
 		<span class="family-name">Pauly</span>
 	  </span>
