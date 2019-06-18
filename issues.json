@@ -41,7 +41,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
@@ -76,18 +76,18 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2019-06-12T14:27:45Z",
-    "updated_at": "2019-06-13T07:50:38Z",
-    "closed_at": null,
+    "updated_at": "2019-06-17T07:59:13Z",
+    "closed_at": "2019-06-14T21:22:30Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/332",
@@ -344,11 +344,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -449,11 +449,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -539,17 +539,17 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2019-05-15T13:56:03Z",
-    "updated_at": "2019-05-29T07:50:24Z",
+    "updated_at": "2019-06-17T07:59:15Z",
     "closed_at": "2019-05-29T07:50:23Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -783,11 +783,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -905,17 +905,17 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 2,
+    "comments": 4,
     "created_at": "2019-05-06T22:16:10Z",
-    "updated_at": "2019-06-14T20:27:18Z",
+    "updated_at": "2019-06-14T21:24:16Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2317,11 +2317,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2454,11 +2454,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2634,7 +2634,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "philsbln",
@@ -2707,18 +2707,18 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
     "comments": 0,
     "created_at": "2019-03-25T12:46:16Z",
-    "updated_at": "2019-05-08T16:44:43Z",
-    "closed_at": null,
+    "updated_at": "2019-06-14T21:22:30Z",
+    "closed_at": "2019-06-14T21:22:30Z",
     "author_association": "CONTRIBUTOR",
     "body": "We talk about listen objects in architecture and implementation, but not in the API.\r\n\r\nChanges needed:\r\n - Let ```listen()``` return a Listener\r\n - Move the ```stop()``` the Listener\r\n - Allow Preconnection to be used multiple times."
   },
@@ -2829,11 +2829,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -5594,7 +5594,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
@@ -5603,8 +5603,8 @@
     "milestone": null,
     "comments": 23,
     "created_at": "2018-12-06T15:18:09Z",
-    "updated_at": "2019-05-08T16:48:26Z",
-    "closed_at": null,
+    "updated_at": "2019-06-14T21:22:30Z",
+    "closed_at": "2019-06-14T21:22:30Z",
     "author_association": "CONTRIBUTOR",
     "body": "This issue popped up while discussing #266 and seem to be a wired QUIC multi-streaming issue, possible affecting SCTP too):\r\n\r\nWhen a multi-streaming protocol like QUIC allows both ends to open new streams (e.g. by cloning the QUIC connection representing the stream), the both side needs a way to get a ConnectionReceived event for a new stream. That might result in the following weird pattern:\r\n```\r\npc1 := NewPreconnection(…)\r\nc1 := pc1.Initiate()\r\n…\r\npc1 ->  ConnectionReceived<c1.1>\r\n…\r\npc1 ->  ConnectionReceived<c1.2>\r\n```\r\n\r\nI think this needs to be documented somehow and we may need to add a Selection Property do turn off this behaviour."
   },
@@ -5847,11 +5847,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -7550,11 +7550,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -10526,11 +10526,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -13312,11 +13312,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -15508,11 +15508,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -16591,11 +16591,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -26242,11 +26242,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 16,
-      "closed_issues": 1,
+      "open_issues": 14,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-12T14:27:45Z",
+      "updated_at": "2019-06-14T21:22:30Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
