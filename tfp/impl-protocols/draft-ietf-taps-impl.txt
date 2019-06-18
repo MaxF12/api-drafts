@@ -1637,7 +1637,9 @@ Internet-Draft             TAPS Implementation                 June 2019
 
 9.1.  TCP
 
-   Connectedness: Connected Data Unit: Byte-stream
+   Connectedness: Connected
+
+   Data Unit: Byte-stream
 
    API mappings for TCP are as follows:
 
@@ -1671,9 +1673,7 @@ Internet-Draft             TAPS Implementation                 June 2019
       with equivalent parameters.  The two Connections are otherwise
       independent.
 
-   Send:  TCP does not on its own preserve Message boundaries.  Calling
-      "Send" on a TCP connection lays out the bytes on the TCP send
-      stream without any other delineation.  Any Message marked as Final
+
 
 
 
@@ -1682,6 +1682,9 @@ Brunstrom, et al.       Expires December 20, 2019              [Page 30]
 Internet-Draft             TAPS Implementation                 June 2019
 
 
+   Send:  TCP does not on its own preserve Message boundaries.  Calling
+      "Send" on a TCP connection lays out the bytes on the TCP send
+      stream without any other delineation.  Any Message marked as Final
       will cause TCP to send a FIN once the Message has been completely
       written.
 
@@ -1703,7 +1706,9 @@ Internet-Draft             TAPS Implementation                 June 2019
 
 9.2.  UDP
 
-   Connectedness: Unconnected Data Unit: Datagram
+   Connectedness: Unconnected
+
+   Data Unit: Datagram
 
    API mappings for UDP are as follows:
 
@@ -1726,17 +1731,15 @@ Internet-Draft             TAPS Implementation                 June 2019
    ConnectionError:  Once in use, UDP throws errors upon receiving ICMP
       notifications indicating failures in the network.
 
-   Listen:  Calling "Listen" for UDP binds a local port and prepares it
-      to receive inbound UDP datagrams from peers.
-
-
-
 
 
 Brunstrom, et al.       Expires December 20, 2019              [Page 31]
 
 Internet-Draft             TAPS Implementation                 June 2019
 
+
+   Listen:  Calling "Listen" for UDP binds a local port and prepares it
+      to receive inbound UDP datagrams from peers.
 
    ConnectionReceived:  UDP Listeners will deliver new connections once
       they have received traffic from a new Remote Endpoint.
@@ -1782,9 +1785,6 @@ Internet-Draft             TAPS Implementation                 June 2019
    delivery with a SCTP_PR_SCTP_TTL policy [RFC6458]).  However, since
    multiplexing of Connections onto SCTP streams may happen, and would
    be hidden from the application, the Transport System requires a per-
-   stream receiver buffer anyway, so this potential benefit is lost and
-   the "partial flag" becomes unnecessary for the system.
-
 
 
 
@@ -1793,6 +1793,9 @@ Brunstrom, et al.       Expires December 20, 2019              [Page 32]
 
 Internet-Draft             TAPS Implementation                 June 2019
 
+
+   stream receiver buffer anyway, so this potential benefit is lost and
+   the "partial flag" becomes unnecessary for the system.
 
    The problem of long messages either requiring large receiver-side
    buffers or getting in the way of multiplexing is addressed by message
@@ -1839,9 +1842,6 @@ Internet-Draft             TAPS Implementation                 June 2019
    itself.  Rather, the implementation may choose to close the QUIC
    connection once all streams have been closed (possibly after some
    timeout), or after an individual stream Connection sends an Abort.
-
-
-
 
 
 
