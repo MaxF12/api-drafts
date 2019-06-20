@@ -1,6 +1,105 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/333",
+    "id": 457210343,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0Mjg5MDY5NTk2",
+    "number": 333,
+    "title": "Make protocol-specific mappings in TAPS Implementation more rigorous",
+    "user": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781840,
+        "node_id": "MDU6TGFiZWw4MjM3ODE4NDA=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Implementation",
+        "name": "Implementation",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "tfpauly",
+        "id": 1609964,
+        "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/tfpauly",
+        "html_url": "https://github.com/tfpauly",
+        "followers_url": "https://api.github.com/users/tfpauly/followers",
+        "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+        "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+        "repos_url": "https://api.github.com/users/tfpauly/repos",
+        "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-06-18T00:56:34Z",
+    "updated_at": "2019-06-18T00:56:34Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/333",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/333",
+      "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/333.diff",
+      "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/333.patch"
+    },
+    "body": "Starting to address #128 \r\n\r\nThis is an early review, to check if we like the structure. I'd also like help filling out the SCTP section!"
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/332",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/332/labels{/name}",
@@ -915,7 +1014,7 @@
     },
     "comments": 4,
     "created_at": "2019-05-06T22:16:10Z",
-    "updated_at": "2019-06-14T21:24:16Z",
+    "updated_at": "2019-06-20T00:35:15Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2331,7 +2430,10 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "The arch definition of connection should add a sentence to say that there may be multiple flows (MPTCP, MPQUIC, or even connection pooling) below the abstraction. This was assumed but not stated."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2468,10 +2570,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "The current multipath selection property is an on/off selection.  We will eventually need something more expressive here to distinguish for instance between handover/back-up and aggregate multipath modes.\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/302",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5144,7 +5243,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/274.patch"
     },
     "body": "Several small updates, mostly to clean things up a bit, and align property names and such."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/273",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5199,10 +5301,7 @@
     "closed_at": "2019-01-25T13:16:41Z",
     "author_association": "CONTRIBUTOR",
     "body": "Because we also have 7.3.1 Lifetime, with the statement \"When a Message’s Lifetime is infinite, it must be transmitted reliably.\""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/272",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7928,7 +8027,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/244.patch"
     },
     "body": "Address #45 by adding explicit caching context for defining state sharing boundaries. Doesn't expose knobs for accessing the cached state externally, but we can discuss and add that later if needed."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/243",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -8029,10 +8131,7 @@
     "closed_at": "2019-03-11T11:12:28Z",
     "author_association": "CONTRIBUTOR",
     "body": "The API suggest object, action, and event names. It should suggest property names as well. Add \"code\" names for each of the Selection, (Generic) Connection, and Message properties in the respective subsections."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/242",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9851,7 +9950,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/214.patch"
     },
     "body": "This is my attempt to address #112 with something that's (IMO) less clunky in the common case than #124. \r\n\r\nI'm not a big fan of this way of doing things either -- specifically, I think the semantics of RendezvousAndSend(), while consistent, are probably wrong."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/213",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9905,10 +10007,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/213.patch"
     },
     "body": "as I started reviewing issues in advance of the interim, I saw that #102 was already mostly fixed, but I made a few editorial changes to the language there."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/212",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12546,7 +12645,10 @@
     "closed_at": "2019-03-25T12:15:08Z",
     "author_association": "CONTRIBUTOR",
     "body": "The RFC Editor has become rather strict in implementing the 5 author limit for drafts:\r\n\r\nThis document has more than five authors listed, which is considered excessive under normal circumstances. If you plan to request publication as an RFC, this will require additional consideration by the stream manager (for example, the IESG), and publication may be declined unless sufficient justification is provided. See RFC 7322, section 4.1.1 for details.\r\n\r\nWe should update these for -01"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/183",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12674,10 +12776,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/183.patch"
     },
     "body": "Satisfies #53 "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/182",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15522,7 +15621,10 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Review structure. What fits in pre-establishment. Relation system policy - cached state. Generalizes #127 "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/153",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15679,10 +15781,7 @@
     "closed_at": "2018-07-02T07:20:18Z",
     "author_association": "CONTRIBUTOR",
     "body": "We have Protocol Selection Properties and Path Selection Properties (§5.2 of -00), General Protocol Properties and Specific Protocol Properties (§9.1), Transport Features and Path Properties (mentioned in §9), Security Properties (§5.3), Message Properties (called Send Properties in §7.1), unless I'm forgetting some. \r\n\r\n- We definitely need to **restructure** the API draft.\r\nI propose that these Properties all go in the same Section (former §9, maybe move it up in the draft more).\r\n- Perhaps we may need to **rename** some of them, to reduce confusion, and make sure our descriptions are clear enough.\r\n- We need to make clear **when** which of these properties can be specified and when they become immutable."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/152",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18695,7 +18794,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/124.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/123",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18749,10 +18851,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/123.patch"
     },
     "body": "Closes #111"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/122",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21335,7 +21434,10 @@
     "closed_at": "2018-02-26T17:06:32Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/93",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21464,10 +21566,7 @@
     "closed_at": "2018-02-27T14:20:30Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/92",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24495,7 +24594,10 @@
     "closed_at": "2018-04-11T20:22:10Z",
     "author_association": "NONE",
     "body": "\r\nI'm curious about whether cloning is the correct way to go:\r\n\r\nMaybe (I don't know) the concept of cloning could fit well with postsockets and less well with NEAT.? - NEAT does have the concept of combining flows into a group - and relative priorities within the group, etc. So is this actually the way we need to go? (and then they can share attributes)\r\n- I'm worried about how cloning before a race works after racing the candidates, and after it has found candidates, I am not sure all the parameters can then be copied. \r\n\r\nI see you can likely do some of these things if the connections are within an SCTP association, or a QUIC session, but the present description seems very linked to these transports. \r\n\r\nBasically can cloning  be implemented? And haow is racing handled?\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/63",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24586,10 +24688,7 @@
     "closed_at": "2018-02-21T14:30:55Z",
     "author_association": "NONE",
     "body": "\r\n/Preconnection -> Rendezvoused<Connection>/\r\n- I really dislike the term /Rendezvoused/ - to me that really offends my sense of language. Can we used /RendezvousDone/ or anything else?\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/62",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27509,7 +27608,10 @@
     "closed_at": "2018-02-19T13:29:13Z",
     "author_association": "CONTRIBUTOR",
     "body": "§5.2.4, taken from Socket Intents, provides the transport application hints by binding a special higher-layer class of transport parameter to the connection. \r\n\r\n§7, which describes the sending API, is largely taken from Post Sockets and tends to give simpler semantics to each Content at send time.\r\n\r\nThese approaches have the similar aims, but come to them from different angles. Socket Intents was very ~Socket~Connection-oriented, and Post Sockets very ~Message~Content oriented. It seems difficult for them to coexist in a way that would allow an application developer to use this interface with ease. \r\n\r\nWe should discuss, and agree on a way forward."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/33",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27563,10 +27665,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/33.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/32",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30826,7 +30925,10 @@
     "closed_at": "2018-02-06T10:37:28Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/3",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30955,10 +31057,7 @@
     "closed_at": "2018-02-12T12:55:02Z",
     "author_association": "CONTRIBUTOR",
     "body": "separate out cryptographic parameters, since these bind to a local and a remote. one can also do pre-shared keying tricks here. look at Post for inspiration/text."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/2",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
