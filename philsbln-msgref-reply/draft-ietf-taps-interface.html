@@ -1376,8 +1376,9 @@ Connection -&gt; CloneError&lt;&gt;
 messageContext := Connection.Send(messageData, messageContext?, endOfMessage?)
 </pre>
 <p id="rfc.section.7.p.3">where messageData is the data object to send.</p>
-<p id="rfc.section.7.p.4">The optional messageContext parameter supports per-message properties and is described in <a href="#message-props" class="xref">Section 7.4</a>.</p>
+<p id="rfc.section.7.p.4">The optional messageContext parameter supports per-message properties and is described in <a href="#message-props" class="xref">Section 7.4</a>. If provided, the Message Context object returned is identical to the one that was passed.</p>
 <p id="rfc.section.7.p.5">The optional endOfMessage parameter supports partial sending and is described in <a href="#send-partial" class="xref">Section 7.5</a>.</p>
+<p id="rfc.section.7.p.6">The MessageContext returned by Send can be used to identify send events (see <a href="#send-events" class="xref">Section 7.3</a>) related to a specific message or to inspect meta-data related to the message sent.</p>
 <h1 id="rfc.section.7.1">
 <a href="#rfc.section.7.1">7.1.</a> <a href="#send-basic" id="send-basic">Basic Sending</a>
 </h1>
@@ -1393,7 +1394,7 @@ Connection.Send(messageData)
 </h1>
 <p id="rfc.section.7.2.p.1">When a message is sent in response to a message received, the application may use the Message Context of the received Message to construct a Message Context for the reply.</p>
 <pre>
-replyMessgeContext := replyMessageContext.reply()
+replyMessageContext := requestMessageContext.reply()
 </pre>
 <p id="rfc.section.7.2.p.2">By using the <samp>replyMessageContext</samp>, the transport system is informed that the message to be sent is a response and can map the response to the same underlying transport connection or stream the request was received from.  The concept of Message Contexts is described in <a href="#msg-ctx" class="xref">Section 8.3</a>.</p>
 <h1 id="rfc.section.7.3">

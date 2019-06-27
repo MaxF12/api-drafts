@@ -128,7 +128,7 @@ Internet-Draft               TAPS Interface                    June 2019
      7.1.  Basic Sending . . . . . . . . . . . . . . . . . . . . . .  29
      7.2.  Sending Replies . . . . . . . . . . . . . . . . . . . . .  30
      7.3.  Send Events . . . . . . . . . . . . . . . . . . . . . . .  30
-       7.3.1.  Sent  . . . . . . . . . . . . . . . . . . . . . . . .  30
+       7.3.1.  Sent  . . . . . . . . . . . . . . . . . . . . . . . .  31
        7.3.2.  Expired . . . . . . . . . . . . . . . . . . . . . . .  31
        7.3.3.  SendError . . . . . . . . . . . . . . . . . . . . . .  31
      7.4.  Message Properties  . . . . . . . . . . . . . . . . . . .  31
@@ -1603,21 +1603,21 @@ messageContext := Connection.Send(messageData, messageContext?, endOfMessage?)
    where messageData is the data object to send.
 
    The optional messageContext parameter supports per-message properties
-   and is described in Section 7.4.
+   and is described in Section 7.4.  If provided, the Message Context
+   object returned is identical to the one that was passed.
 
    The optional endOfMessage parameter supports partial sending and is
    described in Section 7.5.
+
+   The MessageContext returned by Send can be used to identify send
+   events (see Section 7.3) related to a specific message or to inspect
+   meta-data related to the message sent.
 
 7.1.  Basic Sending
 
    The most basic form of sending on a connection involves enqueuing a
    single Data block as a complete Message, with default Message
    Properties.  Message data is transferred as an array of bytes, and
-   the resulting object contains both the byte array and the length of
-   the array.
-
-   messageData := "hello".bytes()
-   Connection.Send(messageData)
 
 
 
@@ -1625,6 +1625,12 @@ Trammell, et al.        Expires December 29, 2019              [Page 29]
 
 Internet-Draft               TAPS Interface                    June 2019
 
+
+   the resulting object contains both the byte array and the length of
+   the array.
+
+   messageData := "hello".bytes()
+   Connection.Send(messageData)
 
    The interpretation of a Message to be sent is dependent on the
    implementation, and on the constraints on the Protocol Stacks implied
@@ -1648,7 +1654,7 @@ Internet-Draft               TAPS Interface                    June 2019
    application may use the Message Context of the received Message to
    construct a Message Context for the reply.
 
-   replyMessgeContext := replyMessageContext.reply()
+   replyMessageContext := requestMessageContext.reply()
 
    By using the "replyMessageContext", the transport system is informed
    that the message to be sent is a response and can map the response to
@@ -1668,12 +1674,6 @@ Internet-Draft               TAPS Interface                    June 2019
    that Message are outstanding, there will be two Expired events
    delivered.
 
-7.3.1.  Sent
-
-   Connection -> Sent<messageContext>
-
-   The Sent Event occurs when a previous Send Action has completed,
-   i.e., when the data derived from the Message has been passed down or
 
 
 
@@ -1682,6 +1682,12 @@ Trammell, et al.        Expires December 29, 2019              [Page 30]
 Internet-Draft               TAPS Interface                    June 2019
 
 
+7.3.1.  Sent
+
+   Connection -> Sent<messageContext>
+
+   The Sent Event occurs when a previous Send Action has completed,
+   i.e., when the data derived from the Message has been passed down or
    through the underlying Protocol Stack and is no longer the
    responsibility of this interface.  The exact disposition of the
    Message (i.e., whether it has actually been transmitted, moved into a
@@ -1724,12 +1730,6 @@ Internet-Draft               TAPS Interface                    June 2019
    Applications may need to annotate the Messages they send with extra
    information to control how data is scheduled and processed by the
    transport protocols in the Connection.  Therefore a message context
-   containing these properties can be passed to the Send Action.  For
-   other uses of the message context, see Section 8.3.
-
-   Note that message properties are per-Message, not per-Send if partial
-   Messages are sent (Section 7.5).  All data blocks associated with a
-   single Message share properties specified in the Message Contexts.
 
 
 
@@ -1738,6 +1738,12 @@ Trammell, et al.        Expires December 29, 2019              [Page 31]
 Internet-Draft               TAPS Interface                    June 2019
 
 
+   containing these properties can be passed to the Send Action.  For
+   other uses of the message context, see Section 8.3.
+
+   Note that message properties are per-Message, not per-Send if partial
+   Messages are sent (Section 7.5).  All data blocks associated with a
+   single Message share properties specified in the Message Contexts.
    For example, it would not make sense to have the beginning of a
    Message expire, but allow the end of a Message to still be sent.
 
@@ -1780,12 +1786,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Recommended default:  infinite
 
-   Lifetime specifies how long a particular Message can wait to be sent
-   to the remote endpoint before it is irrelevant and no longer needs to
-   be (re-)transmitted.  This is a hint to the transport system - it is
-   not guaranteed that a Message will not be sent when its Lifetime has
-   expired.
-
 
 
 
@@ -1793,6 +1793,12 @@ Trammell, et al.        Expires December 29, 2019              [Page 32]
 
 Internet-Draft               TAPS Interface                    June 2019
 
+
+   Lifetime specifies how long a particular Message can wait to be sent
+   to the remote endpoint before it is irrelevant and no longer needs to
+   be (re-)transmitted.  This is a hint to the transport system - it is
+   not guaranteed that a Message will not be sent when its Lifetime has
+   expired.
 
    Setting a Message's Lifetime to infinite indicates that the
    application does not wish to apply a time constraint on the
@@ -1836,12 +1842,6 @@ Internet-Draft               TAPS Interface                    June 2019
    only deliver the Message to the receiving application after the
    previous ordered Message which was passed to the same Connection via
    the Send Action, when such a Message exists.  If false, the Message
-   may be delivered to the receiving application out of order.  This
-   property is used for protocols that support preservation of data
-   ordering, see Section 5.2.4, but allow out-of-order delivery for
-   certain messages.
-
-
 
 
 
@@ -1849,6 +1849,11 @@ Trammell, et al.        Expires December 29, 2019              [Page 33]
 
 Internet-Draft               TAPS Interface                    June 2019
 
+
+   may be delivered to the receiving application out of order.  This
+   property is used for protocols that support preservation of data
+   ordering, see Section 5.2.4, but allow out-of-order delivery for
+   certain messages.
 
 7.4.4.  Idempotent
 
@@ -1892,11 +1897,6 @@ Internet-Draft               TAPS Interface                    June 2019
    of Messages.  The Final property overrides Priority and any other
    property that would re-order Messages.  If another Message is sent
    after a Message marked as Final has already been sent on a
-   Connection, the Send Action for the new Message will cause a
-   SendError Event.
-
-
-
 
 
 
@@ -1905,6 +1905,9 @@ Trammell, et al.        Expires December 29, 2019              [Page 34]
 
 Internet-Draft               TAPS Interface                    June 2019
 
+
+   Connection, the Send Action for the new Message will cause a
+   SendError Event.
 
 7.4.6.  Corruption Protection Length
 
@@ -1952,15 +1955,14 @@ Internet-Draft               TAPS Interface                    June 2019
    the Capacity Profile protocol and path selection property (see
    Section 9.1.10).
 
-   The following values are valid for Transmission Profile:
-
-
 
 
 Trammell, et al.        Expires December 29, 2019              [Page 35]
 
 Internet-Draft               TAPS Interface                    June 2019
 
+
+   The following values are valid for Transmission Profile:
 
    Default:  No special optimizations of the tradeoff between delay,
       delay variation, and bandwidth efficiency should be made when
@@ -2006,8 +2008,6 @@ Internet-Draft               TAPS Interface                    June 2019
    for endOfMessage.
 
    The following example sends a Message in two separate calls to Send.
-
-
 
 
 
