@@ -5,7 +5,7 @@
 TAPS Working Group                                      B. Trammell, Ed.
 Internet-Draft                                                    Google
 Intended status: Standards Track                           M. Welzl, Ed.
-Expires: December 22, 2019                            University of Oslo
+Expires: January 1, 2020                              University of Oslo
                                                              T. Enghardt
                                                                TU Berlin
                                                             G. Fairhurst
@@ -19,7 +19,7 @@ Expires: December 22, 2019                            University of Oslo
                                                                  C. Wood
                                                                 T. Pauly
                                                               Apple Inc.
-                                                           June 20, 2019
+                                                           June 30, 2019
 
 
      An Abstract Application Layer Interface to Transport Services
@@ -53,12 +53,12 @@ Status of This Memo
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 1]
+Trammell, et al.         Expires January 1, 2020                [Page 1]
 
 Internet-Draft               TAPS Interface                    June 2019
 
 
-   This Internet-Draft will expire on December 22, 2019.
+   This Internet-Draft will expire on January 1, 2020.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 2]
+Trammell, et al.         Expires January 1, 2020                [Page 2]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -128,80 +128,80 @@ Internet-Draft               TAPS Interface                    June 2019
      7.1.  Basic Sending . . . . . . . . . . . . . . . . . . . . . .  29
      7.2.  Send Events . . . . . . . . . . . . . . . . . . . . . . .  30
        7.2.1.  Sent  . . . . . . . . . . . . . . . . . . . . . . . .  30
-       7.2.2.  Expired . . . . . . . . . . . . . . . . . . . . . . .  30
+       7.2.2.  Expired . . . . . . . . . . . . . . . . . . . . . . .  31
        7.2.3.  SendError . . . . . . . . . . . . . . . . . . . . . .  31
      7.3.  Message Properties  . . . . . . . . . . . . . . . . . . .  31
        7.3.1.  Lifetime  . . . . . . . . . . . . . . . . . . . . . .  32
        7.3.2.  Priority  . . . . . . . . . . . . . . . . . . . . . .  32
        7.3.3.  Ordered . . . . . . . . . . . . . . . . . . . . . . .  33
        7.3.4.  Idempotent  . . . . . . . . . . . . . . . . . . . . .  33
-       7.3.5.  Final . . . . . . . . . . . . . . . . . . . . . . . .  33
+       7.3.5.  Final . . . . . . . . . . . . . . . . . . . . . . . .  34
        7.3.6.  Corruption Protection Length  . . . . . . . . . . . .  34
        7.3.7.  Reliable Data Transfer (Message)  . . . . . . . . . .  34
-       7.3.8.  Message Capacity Profile Override . . . . . . . . . .  34
+       7.3.8.  Message Capacity Profile Override . . . . . . . . . .  35
        7.3.9.  Singular Transmission . . . . . . . . . . . . . . . .  35
-     7.4.  Partial Sends . . . . . . . . . . . . . . . . . . . . . .  35
+     7.4.  Partial Sends . . . . . . . . . . . . . . . . . . . . . .  36
      7.5.  Batching Sends  . . . . . . . . . . . . . . . . . . . . .  36
-     7.6.  Send on Active Open: InitiateWithSend . . . . . . . . . .  36
+     7.6.  Send on Active Open: InitiateWithSend . . . . . . . . . .  37
    8.  Receiving Data  . . . . . . . . . . . . . . . . . . . . . . .  37
-     8.1.  Enqueuing Receives  . . . . . . . . . . . . . . . . . . .  37
+     8.1.  Enqueuing Receives  . . . . . . . . . . . . . . . . . . .  38
      8.2.  Receive Events  . . . . . . . . . . . . . . . . . . . . .  38
        8.2.1.  Received  . . . . . . . . . . . . . . . . . . . . . .  38
-       8.2.2.  ReceivedPartial . . . . . . . . . . . . . . . . . . .  38
-       8.2.3.  ReceiveError  . . . . . . . . . . . . . . . . . . . .  39
-     8.3.  Message Receive Context . . . . . . . . . . . . . . . . .  39
-       8.3.1.  ECN . . . . . . . . . . . . . . . . . . . . . . . . .  39
+       8.2.2.  ReceivedPartial . . . . . . . . . . . . . . . . . . .  39
+       8.2.3.  ReceiveError  . . . . . . . . . . . . . . . . . . . .  40
+     8.3.  Message Receive Context . . . . . . . . . . . . . . . . .  40
+       8.3.1.  ECN . . . . . . . . . . . . . . . . . . . . . . . . .  40
        8.3.2.  Early Data  . . . . . . . . . . . . . . . . . . . . .  40
-       8.3.3.  Receiving Final Messages  . . . . . . . . . . . . . .  40
-   9.  Message Framers . . . . . . . . . . . . . . . . . . . . . . .  40
-     9.1.  Defining Message Framers  . . . . . . . . . . . . . . . .  41
-     9.2.  Adding Message Framers to Connections . . . . . . . . . .  41
-     9.3.  Message Framer Lifetime . . . . . . . . . . . . . . . . .  42
+       8.3.3.  Receiving Final Messages  . . . . . . . . . . . . . .  41
+   9.  Message Framers . . . . . . . . . . . . . . . . . . . . . . .  41
+     9.1.  Defining Message Framers  . . . . . . . . . . . . . . . .  42
+     9.2.  Adding Message Framers to Connections . . . . . . . . . .  42
+     9.3.  Message Framer Lifetime . . . . . . . . . . . . . . . . .  43
      9.4.  Sender-side Message Framing . . . . . . . . . . . . . . .  43
-     9.5.  Receiver-side Message Framing . . . . . . . . . . . . . .  43
-   10. Managing Connections  . . . . . . . . . . . . . . . . . . . .  44
-     10.1.  Generic Connection Properties  . . . . . . . . . . . . .  45
+     9.5.  Receiver-side Message Framing . . . . . . . . . . . . . .  44
+   10. Managing Connections  . . . . . . . . . . . . . . . . . . . .  45
+     10.1.  Generic Connection Properties  . . . . . . . . . . . . .  46
        10.1.1.  Retransmission threshold before excessive
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 3]
+Trammell, et al.         Expires January 1, 2020                [Page 3]
 
 Internet-Draft               TAPS Interface                    June 2019
 
 
                 retransmission notification  . . . . . . . . . . . .  46
        10.1.2.  Required minimum coverage of the Corruption
-                Protection for receiving . . . . . . . . . . . . . .  46
-       10.1.3.  Priority (Connection)  . . . . . . . . . . . . . . .  46
-       10.1.4.  Timeout for aborting Connection  . . . . . . . . . .  46
+                Protection for receiving . . . . . . . . . . . . . .  47
+       10.1.3.  Priority (Connection)  . . . . . . . . . . . . . . .  47
+       10.1.4.  Timeout for aborting Connection  . . . . . . . . . .  47
        10.1.5.  Connection group transmission scheduler  . . . . . .  47
        10.1.6.  Maximum message size concurrent with Connection
-                establishment  . . . . . . . . . . . . . . . . . . .  47
+                establishment  . . . . . . . . . . . . . . . . . . .  48
        10.1.7.  Maximum Message size before fragmentation or
-                segmentation . . . . . . . . . . . . . . . . . . . .  47
-       10.1.8.  Maximum Message size on send . . . . . . . . . . . .  47
-       10.1.9.  Maximum Message size on receive  . . . . . . . . . .  47
+                segmentation . . . . . . . . . . . . . . . . . . . .  48
+       10.1.8.  Maximum Message size on send . . . . . . . . . . . .  48
+       10.1.9.  Maximum Message size on receive  . . . . . . . . . .  48
        10.1.10. Capacity Profile . . . . . . . . . . . . . . . . . .  48
-       10.1.11. Bounds on Send or Receive Rate . . . . . . . . . . .  49
+       10.1.11. Bounds on Send or Receive Rate . . . . . . . . . . .  50
        10.1.12. TCP-specific Property: User Timeout  . . . . . . . .  50
-     10.2.  Soft Errors  . . . . . . . . . . . . . . . . . . . . . .  50
-     10.3.  Excessive retransmissions  . . . . . . . . . . . . . . .  50
+     10.2.  Soft Errors  . . . . . . . . . . . . . . . . . . . . . .  51
+     10.3.  Excessive retransmissions  . . . . . . . . . . . . . . .  51
    11. Connection Termination  . . . . . . . . . . . . . . . . . . .  51
-   12. Connection State and Ordering of Operations and Events  . . .  51
-   13. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  52
-   14. Security Considerations . . . . . . . . . . . . . . . . . . .  52
+   12. Connection State and Ordering of Operations and Events  . . .  52
+   13. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  53
+   14. Security Considerations . . . . . . . . . . . . . . . . . . .  53
    15. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  53
-   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  53
-     16.1.  Normative References . . . . . . . . . . . . . . . . . .  53
+   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  54
+     16.1.  Normative References . . . . . . . . . . . . . . . . . .  54
      16.2.  Informative References . . . . . . . . . . . . . . . . .  54
-   Appendix A.  Additional Properties  . . . . . . . . . . . . . . .  55
-     A.1.  Experimental Transport Properties . . . . . . . . . . . .  56
-       A.1.1.  Cost Preferences  . . . . . . . . . . . . . . . . . .  56
+   Appendix A.  Additional Properties  . . . . . . . . . . . . . . .  56
+     A.1.  Experimental Transport Properties . . . . . . . . . . . .  57
+       A.1.1.  Cost Preferences  . . . . . . . . . . . . . . . . . .  57
    Appendix B.  Sample API definition in Go  . . . . . . . . . . . .  57
    Appendix C.  Relationship to the Minimal Set of Transport
-                Services for End Systems . . . . . . . . . . . . . .  57
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  60
+                Services for End Systems . . . . . . . . . . . . . .  58
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  61
 
 1.  Introduction
 
@@ -221,7 +221,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 4]
+Trammell, et al.         Expires January 1, 2020                [Page 4]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -277,7 +277,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 5]
+Trammell, et al.         Expires January 1, 2020                [Page 5]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -333,7 +333,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 6]
+Trammell, et al.         Expires January 1, 2020                [Page 6]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -389,7 +389,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 7]
+Trammell, et al.         Expires January 1, 2020                [Page 7]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -418,11 +418,11 @@ Internet-Draft               TAPS Interface                    June 2019
 
    If none of the available transport protocols provides Preservation of
    Message Boundaries, but there is a transport protocol which provides
-   a reliable ordered octet stream, an application may receive this
-   octet stream as partial Messages and transform it into application-
-   layer Messages.  Alternatively, an application may provide a Message
-   Framer, which can transform an octet stream into a sequence of
-   Messages (Section 9.5).
+   a reliable ordered byte stream, an application may receive this byte
+   stream as partial Messages and transform it into application-layer
+   Messages.  Alternatively, an application may provide a Message
+   Framer, which can transform a byte stream into a sequence of Messages
+   (Section 9.5).
 
 4.1.1.  Server Example
 
@@ -445,7 +445,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 8]
+Trammell, et al.         Expires January 1, 2020                [Page 8]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -468,9 +468,9 @@ Internet-Draft               TAPS Interface                    June 2019
                                      TransportProperties,
                                      SecurityParameters)
 
-   Preconnection.Listen()
+   Listener := Preconnection.Listen()
 
-   Preconnection -> ConnectionReceived<Connection>
+   Listener -> ConnectionReceived<Connection>
 
    // Only receive complete messages
    Connection.Receive()
@@ -482,7 +482,7 @@ Internet-Draft               TAPS Interface                    June 2019
    Connection.Close()
 
    // Stop listening for incoming Connections
-   Preconnection.Stop()
+   Listener.Stop()
 
 4.1.2.  Client Example
 
@@ -501,7 +501,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019               [Page 9]
+Trammell, et al.         Expires January 1, 2020                [Page 9]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -557,7 +557,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 10]
+Trammell, et al.         Expires January 1, 2020               [Page 10]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -613,7 +613,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 11]
+Trammell, et al.         Expires January 1, 2020               [Page 11]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -669,7 +669,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 12]
+Trammell, et al.         Expires January 1, 2020               [Page 12]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -725,7 +725,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 13]
+Trammell, et al.         Expires January 1, 2020               [Page 13]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -781,7 +781,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 14]
+Trammell, et al.         Expires January 1, 2020               [Page 14]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -837,7 +837,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 15]
+Trammell, et al.         Expires January 1, 2020               [Page 15]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -893,7 +893,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 16]
+Trammell, et al.         Expires January 1, 2020               [Page 16]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -949,7 +949,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 17]
+Trammell, et al.         Expires January 1, 2020               [Page 17]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1005,7 +1005,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 18]
+Trammell, et al.         Expires January 1, 2020               [Page 18]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1061,7 +1061,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 19]
+Trammell, et al.         Expires January 1, 2020               [Page 19]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1117,7 +1117,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 20]
+Trammell, et al.         Expires January 1, 2020               [Page 20]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1173,7 +1173,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 21]
+Trammell, et al.         Expires January 1, 2020               [Page 21]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1229,7 +1229,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 22]
+Trammell, et al.         Expires January 1, 2020               [Page 22]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1285,7 +1285,7 @@ SecurityParameters.AddSignatureAlgorithm(ed25519)
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 23]
+Trammell, et al.         Expires January 1, 2020               [Page 23]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1341,7 +1341,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 24]
+Trammell, et al.         Expires January 1, 2020               [Page 24]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1397,7 +1397,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 25]
+Trammell, et al.         Expires January 1, 2020               [Page 25]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1406,31 +1406,31 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Passive open is the Action of waiting for Connections from remote
    endpoints, commonly used by servers in client-server interactions.
-   Passive open is supported by this interface through the Listen
-   Action:
+   Passive open is supported by this interface through the Listen Action
+   and returns a Listener object:
 
-   Preconnection.Listen()
+   Listener := Preconnection.Listen()
 
    Before calling Listen, the caller must have initialized the
    Preconnection during the pre-establishment phase with a Local
    Endpoint specifier, as well as all properties necessary for Protocol
    Stack selection.  A Remote Endpoint may optionally be specified, to
-   constrain what Connections are accepted.  The Listen() Action
-   consumes the Preconnection.  Once Listen() has been called, no
-   further properties may be added to the Preconnection, and no
-   subsequent establishment call may be made on the Preconnection.
+   constrain what Connections are accepted.  The Listen() Action returns
+   a Listener object.  Once Listen() has been called, properties added
+   to the Preconnection have no effect on the Listener and the
+   Preconnection can be disposed of or reused.
 
    Listening continues until the global context shuts down, or until the
-   Stop action is performed on the same Preconnection:
+   Stop action is performed on the Listener object:
 
-   Preconnection.Stop()
+   Listener.Stop()
 
-   After Stop() is called, the preconnection can be disposed of.
+   After Stop() is called, the Listener can be disposed of.
 
-   Preconnection -> ConnectionReceived<Connection>
+   Listener -> ConnectionReceived<Connection>
 
    The ConnectionReceived Event occurs when a Remote Endpoint has
-   established a transport-layer connection to this Preconnection (for
+   established a transport-layer connection to this Listener (for
    Connection-oriented transport protocols), or when the first Message
    has been received from the Remote Endpoint (for Connectionless
    protocols), causing a new Connection to be created.  The resulting
@@ -1438,22 +1438,22 @@ Internet-Draft               TAPS Interface                    June 2019
    ready to use as soon as it is passed to the application via the
    event.
 
-   Preconnection -> ListenError<>
+   Listener -> ListenError<>
 
-   A ListenError occurs either when the Preconnection cannot be
-   fulfilled for listening, when the Local Endpoint (or Remote Endpoint,
-   if specified) cannot be resolved, or when the application is
-   prohibited from listening by policy.
+   A ListenError occurs either when the Properties of the Preconnection
+   cannot be fulfilled for listening, when the Local Endpoint (or Remote
+   Endpoint, if specified) cannot be resolved, or when the application
+   is prohibited from listening by policy.
 
-   Preconnection -> Stopped<>
+   Listener -> Stopped<>
 
-   A Stopped event occurs after the Preconnection has stopped listening.
-
-
+   A Stopped event occurs after the Listener has stopped listening.
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 26]
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 26]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1509,7 +1509,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 27]
+Trammell, et al.         Expires January 1, 2020               [Page 27]
 
 Internet-Draft               TAPS Interface                    June 2019
 
@@ -1527,7 +1527,7 @@ Internet-Draft               TAPS Interface                    June 2019
 
 6.4.  Connection Groups
 
-   Groups of Connections can be created using the Clone Action:
+   Entangled Connections can be created using the Clone Action:
 
    Connection := Connection.Clone()
 
@@ -1538,6 +1538,11 @@ Internet-Draft               TAPS Interface                    June 2019
    Connections adds a third Connection to the Connection Group, and so
    on.  Connections in a Connection Group share all Protocol Properties
    that are not applicable to a Message.
+
+   In addition, incoming entangled Connections can be received by
+   creating a Listener on an existing connection:
+
+   Listener := Connection.Listen()
 
    Changing one of these Protocol Properties on one Connection in the
    group changes it for all others.  Per-Message Protocol Properties,
@@ -1556,20 +1561,19 @@ Internet-Draft               TAPS Interface                    June 2019
 
    If the underlying Protocol Stack does not support cloning, or cannot
    create a new stream on the given Connection, then attempts to clone a
-   connection will result in a CloneError:
+   Connection will result in a CloneError:
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 28]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    Connection -> CloneError<>
 
    The Protocol Property "Priority" operates on entangled Connections as
    in Section 7.3.2: when allocating available network capacity among
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 28]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Connections in a Connection Group, sends on Connections with higher
    Priority values will be prioritized over sends on Connections with
    lower Priority values.  An ideal transport system implementation
@@ -1584,8 +1588,8 @@ Internet-Draft               TAPS Interface                    June 2019
 7.  Sending Data
 
    Once a Connection has been established, it can be used for sending
-   data.  Data is sent in terms of Messages, which allow the application
-   to communicate the boundaries of the data being transferred.  By
+   data.  Data is sent as Messages, which allow the application to
+   communicate the boundaries of the data being transferred.  By
    default, Send enqueues a complete Message, and takes optional per-
    Message properties (see Section 7.1).  All Send actions are
    asynchronous, and deliver events (see Section 7.2).  Sending partial
@@ -1605,40 +1609,41 @@ Internet-Draft               TAPS Interface                    June 2019
 
    The most basic form of sending on a connection involves enqueuing a
    single Data block as a complete Message, with default Message
-   Properties.  Message data is created as an array of octets, and the
-   resulting object contains both the byte array and the length of the
-   array.
+   Properties.  Message data is transferred as an array of bytes, and
+   the resulting object contains both the byte array and the length of
+   the array.
 
-   messageData := "hello".octets()
+   messageData := "hello".bytes()
    Connection.Send(messageData)
 
    The interpretation of a Message to be sent is dependent on the
    implementation, and on the constraints on the Protocol Stacks implied
-   by the Connection's transport properties.  For example, a Message may
-   be a single datagram for UDP Connections; or an HTTP Request for HTTP
-   Connections.
 
 
 
-
-Trammell, et al.        Expires December 22, 2019              [Page 29]
+Trammell, et al.         Expires January 1, 2020               [Page 29]
 
 Internet-Draft               TAPS Interface                    June 2019
 
 
+   by the Connection's transport properties.  For example, a Message may
+   be a single datagram for UDP Connections; or an HTTP Request for HTTP
+   Connections.
+
    Some transport protocols can deliver arbitrarily sized Messages, but
    other protocols constrain the maximum Message size.  Applications can
-   query the protocol property Maximum Message Size on Send to determine
-   the maximum size allowed for a single Message.  If a Message is too
-   large to fit in the Maximum Message Size for the Connection, the Send
-   will fail with a SendError event (Section 7.2.3).  For example, it is
-   invalid to send a Message over a UDP connection that is larger than
-   the available datagram sending size.
+   query the Connection Property "Maximum Message size on send"
+   (Section 10.1.8) to determine the maximum size allowed for a single
+   Message.  If a Message is too large to fit in the Maximum Message
+   Size for the Connection, the Send will fail with a SendError event
+   (Section 7.2.3).  For example, it is invalid to send a Message over a
+   UDP connection that is larger than the available datagram sending
+   size.
 
 7.2.  Send Events
 
    Like all Actions in this interface, the Send Action is asynchronous.
-   There are several events that can be delivered in response to Sending
+   There are several Events that can be delivered in response to Sending
    a Message.
 
    Note that if partial Sends are used (Section 7.4), there will still
@@ -1654,12 +1659,12 @@ Internet-Draft               TAPS Interface                    June 2019
    The Sent Event occurs when a previous Send Action has completed,
    i.e., when the data derived from the Message has been passed down or
    through the underlying Protocol Stack and is no longer the
-   responsibility of the implementation of this interface.  The exact
-   disposition of the Message (i.e., whether it has actually been
-   transmitted, moved into a buffer on the network interface, moved into
-   a kernel buffer, and so on) when the Sent Event occurs is
-   implementation-specific.  The Sent Event contains an implementation-
-   specific reference to the Message to which it applies.
+   responsibility of this interface.  The exact disposition of the
+   Message (i.e., whether it has actually been transmitted, moved into a
+   buffer on the network interface, moved into a kernel buffer, and so
+   on) when the Sent Event occurs is implementation-specific.  The Sent
+   Event contains an implementation-specific reference to the Message to
+   which it applies.
 
    Sent Events allow an application to obtain an understanding of the
    amount of buffering it creates.  That is, if an application calls the
@@ -1668,20 +1673,21 @@ Internet-Draft               TAPS Interface                    June 2019
    that always waits for the Sent Event before calling the next Send
    Action.
 
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 30]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
 7.2.2.  Expired
 
    Connection -> Expired<msgRef>
 
    The Expired Event occurs when a previous Send Action expired before
    completion; i.e. when the Message was not sent before its Lifetime
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 30]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    (see Section 7.3.1) expired.  This is separate from SendError, as it
    is an expected behavior for partially reliable transports.  The
    Expired Event contains an implementation-specific reference to the
@@ -1710,13 +1716,14 @@ Internet-Draft               TAPS Interface                    June 2019
    would not make sense to have the beginning of a Message expire, but
    allow the end of a Message to still be sent.
 
-   messageData := "hello".octets()
+   messageData := "hello".bytes()
    messageContext := NewMessageContext()
    messageContext.add(parameter, value)
    Connection.Send(messageData, messageContext)
 
-   The simpler form of Send that does not take any messageContext is
-   equivalent to passing a default MessageContext with not values added.
+   The simpler form of Send, which does not take any messageContext, is
+   equivalent to passing a default MessageContext without adding any
+   Message Properties to it.
 
    If an application wants to override Message Properties for a specific
    message, it can acquire an empty MessageContext Object and add all
@@ -1724,20 +1731,19 @@ Internet-Draft               TAPS Interface                    June 2019
    same messageContext Object for sending multiple Messages with the
    same properties.
 
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 31]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    Properties may be added to a MessageContext object only before the
    context is used for sending.  Once a messageContext has been used
    with a Send call, modifying any of its properties is invalid.
 
    Message Properties may be inconsistent with the properties of the
    Protocol Stacks underlying the Connection on which a given Message is
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 31]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    sent.  For example, a Connection must provide reliability to allow
    setting an infinitie value for the lifetime property of a Message.
    Sending a Message with Message Properties inconsistent with the
@@ -1750,6 +1756,8 @@ Internet-Draft               TAPS Interface                    June 2019
    Name:  msg-lifetime
 
    Type:  Integer
+
+   Recommended default:  infinite
 
    Lifetime specifies how long a particular Message can wait to be sent
    to the remote endpoint before it is irrelevant and no longer needs to
@@ -1770,12 +1778,22 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Type:  Integer (non-negative)
 
+   Recommended default:  100
+
    This property represents a hierarchy of priorities.  It can specify
    the priority of a Message, relative to other Messages sent over the
    same Connection.
 
    A Message with Priority 0 will yield to a Message with Priority 1,
    which will yield to a Message with Priority 2, and so on.  Priorities
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 32]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    may be used as a sender-side scheduling construct only, or be used to
    specify priorities on the wire for Protocol Stacks supporting
    prioritization.
@@ -1785,20 +1803,13 @@ Internet-Draft               TAPS Interface                    June 2019
    may interact, but can be used independently and be realized by
    different mechanisms.
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 32]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
 7.3.3.  Ordered
 
    Name:  msg-ordered
 
    Type:  Boolean
+
+   Default:  true
 
    If true, it specifies that the receiver-side transport protocol stack
    only deliver the Message to the receiving application after the
@@ -1815,6 +1826,8 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Type:  Boolean
 
+   Default:  false
+
    If true, it specifies that a Message is safe to send to the remote
    endpoint more than once for a single Send Action.  It is used to mark
    data safe for certain 0-RTT establishment techniques, where
@@ -1828,11 +1841,22 @@ Internet-Draft               TAPS Interface                    June 2019
    Preconnection.  If such a protocol was chosen, disabling Idempotent
    on individual messages MUST result in a SendError.
 
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 33]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
 7.3.5.  Final
 
    Type:  Boolean
 
    Name:  final
+
+   Default:  false
 
    If true, this Message is the last one that the application will send
    on a Connection.  This allows underlying protocols to indicate to the
@@ -1842,13 +1866,6 @@ Internet-Draft               TAPS Interface                    June 2019
    indicated by marking endOfMessage.  Protocols that do not support
    signalling the end of a Connection in a given direction will ignore
    this property.
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 33]
-
-Internet-Draft               TAPS Interface                    June 2019
-
 
    Note that a Final Message must always be sorted to the end of a list
    of Messages.  The Final property overrides Priority and any other
@@ -1863,20 +1880,31 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Type:  Integer (non-negative with -1 as special value)
 
-   This property specifies the length of the section of the Message,
-   starting from byte 0, that the application requires to be delivered
-   without corruption due to lower layer errors.  It is used to specify
-   options for simple integrity protection via checksums.  By default,
-   the entire Message is protected by a checksum.  A value of 0 means
-   that no checksum is required, and a special value (e.g. -1) can be
-   used to indicate the default.  Only full coverage is guaranteed, any
-   other requests are advisory.
+   Default:  full coverage
+
+   This property specifies the minimum length of the section of the
+   Message, starting from byte 0, that the application requires to be
+   delivered without corruption due to lower layer errors.  It is used
+   to specify options for simple integrity protection via checksums.  A
+   value of 0 means that no checksum is required, and -1 means that the
+   entire Message is protected by a checksum.  Only full coverage is
+   guaranteed, any other requests are advisory.
 
 7.3.7.  Reliable Data Transfer (Message)
 
    Name:  msg-reliable
 
    Type:  Boolean
+
+   Default:  true
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 34]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    When true, this property specifies that a message should be sent in
    such a way that the transport protocol ensures all data is received
@@ -1897,15 +1925,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    This enumerated property specifies the application's preferred
    tradeoffs for sending this Message; it is a per-Message override of
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 34]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    the Capacity Profile protocol and path selection property (see
    Section 10.1.10).
 
@@ -1932,6 +1951,17 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Type:  Boolean
 
+   Default:  false
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 35]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    This property specifies that a message should be sent and received as
    a single packet without transport-layer segmentation or network-layer
    fragmentation.  Attempts to send a message with this property set
@@ -1954,22 +1984,14 @@ Internet-Draft               TAPS Interface                    June 2019
 
    The following example sends a Message in two separate calls to Send.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 35]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    messageContext := NewMessageContext()
    messageContext.add(parameter, value)
 
-   messageData := "hel".octets()
+   messageData := "hel".bytes()
    endOfMessage := false
    Connection.Send(messageData, messageContext, endOfMessage)
 
-   messageData := "lo".octets()
+   messageData := "lo".bytes()
    endOfMessage := true
    Connection.Send(messageData, messageContext, endOfMessage)
 
@@ -1981,12 +2003,20 @@ Internet-Draft               TAPS Interface                    June 2019
 
 7.5.  Batching Sends
 
-   In order to reduce the overhead of sending multiple small Messages on
-   a Connection, the application may want to batch several Send actions
+   To reduce the overhead of sending multiple small Messages on a
+   Connection, the application may want to batch several Send actions
    together.  This provides a hint to the system that the sending of
    these Messages should be coalesced when possible, and that sending
    any of the batched Messages may be delayed until the last Message in
    the batch is enqueued.
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 36]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    Connection.Batch(
        Connection.Send(messageData)
@@ -2008,15 +2038,6 @@ Connection := Preconnection.InitiateWithSend(messageData, messageContext?, timeo
    stack(s) do not support transmitting data upon connection
    establishment, InitiateWithSend is identical to Initiate() followed
    by Send().
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 36]
-
-Internet-Draft               TAPS Interface                    June 2019
-
 
    Neither partial sends nor send batching are supported by
    InitiateWithSend().
@@ -2040,6 +2061,18 @@ Internet-Draft               TAPS Interface                    June 2019
    As with sending, the type of the Message to be passed is dependent on
    the implementation, and on the constraints on the Protocol Stacks
    implied by the Connection's transport parameters.
+
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 37]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 8.1.  Enqueuing Receives
 
@@ -2065,15 +2098,6 @@ Internet-Draft               TAPS Interface                    June 2019
    and not assume it will be as long as minIncompleteLength in the case
    of shorter complete Messages or memory issues.
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 37]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    The maxLength argument indicates the maximum size of a Message in
    bytes the application is currently prepared to receive.  The default
    value for maxLength is infinite.  If an incoming Message is larger
@@ -2097,6 +2121,15 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Connection -> Received<messageData, messageContext>
 
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 38]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    A Received event indicates the delivery of a complete Message.  It
    contains two objects, the received bytes as messageData, and the
    metadata and properties of the received Message as messageContext.
@@ -2106,7 +2139,7 @@ Internet-Draft               TAPS Interface                    June 2019
    received for this Message, along with the length of the byte array.
 
    See Section 9.5 for handling Message framing in situations where the
-   Protocol Stack only provides an octet-stream transport.
+   Protocol Stack only provides a byte-stream transport.
 
 8.2.2.  ReceivedPartial
 
@@ -2122,13 +2155,6 @@ Connection -> ReceivedPartial<messageData, messageContext, endOfMessage>
    flag is delivered or a ReceiveError occurs.  All partial blocks of a
    single Message are delivered in order without gaps.  This event does
    not support delivering discontiguous partial Messages.
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 38]
-
-Internet-Draft               TAPS Interface                    June 2019
-
 
    If the minIncompleteLength in the Receive request was set to be
    infinite (indicating a request to receive only complete Messages),
@@ -2151,6 +2177,14 @@ Internet-Draft               TAPS Interface                    June 2019
    Note that in the absence of message boundary preservation or a
    Message Framer, all bytes received on the Connection will be
    represented as one large Message of indeterminate length.
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 39]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 8.2.3.  ReceiveError
 
@@ -2178,14 +2212,6 @@ Internet-Draft               TAPS Interface                    June 2019
    When available, Message metadata carries the value of the Explicit
    Congestion Notification (ECN) field.  This information can be used
    for logging and debugging purposes, and for building applications
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 39]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    which need access to information about the transport internals for
    their own operation.
 
@@ -2204,6 +2230,17 @@ Internet-Draft               TAPS Interface                    June 2019
    data is enabled, applications should check this metadata field for
    Messages received during connection establishment and respond
    accordingly.
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 40]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 8.3.3.  Receiving Final Messages
 
@@ -2230,18 +2267,10 @@ Internet-Draft               TAPS Interface                    June 2019
    or decode inbound data into Messages.
 
    Message Framers allow message boundaries to be preserved when using a
-   Connection object, even when using octet-stream transports.  This
+   Connection object, even when using byte-stream transports.  This
    facility is designed based on the fact that many of the current
    application protocols evolved over TCP, which does not provide
    message boundary preservation, and since many of these protocols
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 40]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    require message boundaries to function, each application layer
    protocol has defined its own framing.
 
@@ -2261,6 +2290,14 @@ Internet-Draft               TAPS Interface                    June 2019
    a protocol that otherwise does not preserve message boundaries, they
    can also be used with datagram- or message-based protocols.  In these
    cases, they add an additional transformation to further encode or
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 41]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    encapsulate, and can potentially support packing multiple
    application-layer Messages into individual transport datagrams.
 
@@ -2289,15 +2326,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Preconnection.AddFramer(framer)
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 41]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Framers have the ability to also dynamically modify Protocol Stacks,
    as described in Section 9.3.
 
@@ -2315,6 +2343,16 @@ Internet-Draft               TAPS Interface                    June 2019
    can also look to see if a value was set by a specific Message Framer.
 
    messageContext.get(framer, key) -> value
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 42]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 9.3.  Message Framer Lifetime
 
@@ -2346,14 +2384,6 @@ Internet-Draft               TAPS Interface                    June 2019
    allows protocols like STARTTLS, that need to add TLS conditionally,
    to modify the Protocol Stack based on a handshake result.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 42]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    otherFramer := NewMessageFramer()
    MessageFramer.PrependFramer(Connection, otherFramer)
 
@@ -2371,6 +2401,14 @@ MessageFramer -> NewSentMessage<Connection, MessageData, MessageContext, IsEndOf
    performance.
 
    MessageFramer.Send(Connection, Data)
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 43]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    To provide an example, a simple protocol that adds a length as a
    header would receive the "NewSentMessage" event, create a data
@@ -2403,13 +2441,6 @@ MessageFramer.Parse(Connection, MinimumIncompleteLength, MaximumLength) -> (Data
    range of data directly from the underlying transport and
    simulatenously advance the receive cursor.
 
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 43]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
 MessageFramer.AdvanceReceiveCursor(Connection, Length)
 MessageFramer.DeliverAndAdvanceReceiveCursor(Connection, MessageContext, Length, IsEndOfMessage)
 MessageFramer.Deliver(Connection, MessageContext, Data, IsEndOfMessage)
@@ -2418,7 +2449,7 @@ MessageFramer.Deliver(Connection, MessageContext, Data, IsEndOfMessage)
    framer implementation to earmark bytes as part of a Message even
    before they are received by the transport.  This allows the delivery
    of very large Messages without requiring the implementation to
-   directly inspect all of the octets.
+   directly inspect all of the bytes.
 
    To provide an example, a simple protocol that parses a length as a
    header value would receive the "HandleReceivedData" event, and call
@@ -2427,6 +2458,13 @@ MessageFramer.Deliver(Connection, MessageContext, Data, IsEndOfMessage)
    "AdvanceReceiveCursor" with the length of the header field, and then
    call "DeliverAndAdvanceReceiveCursor" with the length of the body
    that was parsed from the header, marking the new Message as complete.
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 44]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 10.  Managing Connections
 
@@ -2458,14 +2496,6 @@ MessageFramer.Deliver(Connection, MessageContext, Data, IsEndOfMessage)
 
    At any point, the application can query Connection Properties.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 44]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    ConnectionProperties := Connection.GetProperties()
 
    Depending on the status of the connection, the queried Connection
@@ -2484,6 +2514,14 @@ Internet-Draft               TAPS Interface                    June 2019
       can not be used for reading if the connection was created with the
       Selection Property "Direction of Communication" set to
       "unidirectional send" or if a Message marked as "Final" was
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 45]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
       received, see Section 8.3.3.  The latter is only supported by
       certain transport protocols, e.g., by TCP as half-closed
       connection.
@@ -2513,15 +2551,6 @@ Internet-Draft               TAPS Interface                    June 2019
    The Connection Properties defined as independent, and available on
    all Connections are defined in the subsections below.
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 45]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Note that many protocol properties have a corresponding selection
    property, which prefers protocols providing a specific transport
    feature that controlled by that protocol property.  [EDITOR'S NOTE:
@@ -2537,12 +2566,26 @@ Internet-Draft               TAPS Interface                    June 2019
    This property specifies after how many retransmissions to inform the
    application about "Excessive Retransmissions".
 
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 46]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
 10.1.2.  Required minimum coverage of the Corruption Protection for
          receiving
 
    Name:  recv-checksum-len
 
    Type:  Integer
+
+   Default:  -1
 
    This property specifies the part of the received data that needs to
    be covered by a checksum.  It is given in Bytes.  A value of 0 means
@@ -2569,15 +2612,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    This property specifies how long to wait before deciding that a
    Connection has failed when trying to reliably deliver data to the
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 46]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    destination.  Adjusting this Property will only take effect when the
    underlying stack supports reliability.
 
@@ -2590,6 +2624,15 @@ Internet-Draft               TAPS Interface                    June 2019
    This property specifies which scheduler should be used among
    Connections within a Connection Group, see Section 6.4.  The set of
    schedulers can be taken from [I-D.ietf-tsvwg-sctp-ndata].
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 47]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
 10.1.6.  Maximum message size concurrent with Connection establishment
 
@@ -2625,15 +2668,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Type:  Integer (read only)
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 47]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    This numeric property represents the maximum Message size that can be
    received.
 
@@ -2648,6 +2682,13 @@ Internet-Draft               TAPS Interface                    June 2019
    Default, the transport system should select paths and profiles to
    optimize for the capacity profile specified.  The following values
    are valid for the Capacity Profile:
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 48]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    Default:  The application makes no representation about its expected
       capacity profile.  No special optimizations of the tradeoff
@@ -2682,14 +2723,6 @@ Internet-Draft               TAPS Interface                    June 2019
       the Connection is multiplexed, the guidelines in section 6 of
       [RFC7657] apply.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 48]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Low Latency/Non-Interactive:  The application prefers loss to latency
       but is not interactive.  Response time should be optimized at the
       expense of bandwidth efficiency and delay variation when sending
@@ -2705,6 +2738,14 @@ Internet-Draft               TAPS Interface                    June 2019
       efficiency.  This implies that the Connection may fail if the
       desired rate cannot be maintained across the Path.  A transport
       may interpret this capacity profile as preferring a circuit
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 49]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
       breaker [RFC8084] to a rate-adaptive congestion controller.
       Transport system implementations that map the requested capacity
       profile onto per-connection DSCP signaling without multiplexing
@@ -2737,15 +2778,6 @@ Internet-Draft               TAPS Interface                    June 2019
    does not deem a data transfer useful.  It is given in bits per
    second.
 
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 49]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
 10.1.12.  TCP-specific Property: User Timeout
 
    This property specifies, for the case TCP becomes the chosen
@@ -2760,6 +2792,15 @@ Internet-Draft               TAPS Interface                    June 2019
    User Timeout Enabled (name: tcp.user-timeout, type: Boolean):  a bool
       ean (default false) to control whether the UTO option is enabled
       for a connection.  This applies to both sending and receiving.
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 50]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    Changeable (name: tcp.user-timeout-recv, type: Boolean):  a boolean
       (default true) which controls whether the "Timeout for aborting
@@ -2792,16 +2833,6 @@ Internet-Draft               TAPS Interface                    June 2019
 
    Connection -> ExcessiveRetransmission<>
 
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 50]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
 11.  Connection Termination
 
    Close terminates a Connection after satisfying all the requirements
@@ -2819,6 +2850,13 @@ Internet-Draft               TAPS Interface                    June 2019
    remote Close will indeed be signaled.
 
    Connection -> Closed<>
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 51]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    Abort terminates a Connection without delivering remaining data:
 
@@ -2850,14 +2888,6 @@ Internet-Draft               TAPS Interface                    June 2019
    o  RendezvousDone<> occurs when a Connection created with
       Rendezvous() transitions to Established state.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 51]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    o  Closed<> occurs when a Connection transitions to Closed state
       without error.
 
@@ -2874,6 +2904,15 @@ Internet-Draft               TAPS Interface                    June 2019
    o  Sent<> events will occur on a Connection in the order in which the
       Messages were sent (i.e., delivered to the kernel or to the
       network interface, depending on implementation).
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 52]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    o  Received<> will never occur on a Connection before it is
       Established; i.e.  before a Ready<> event on that Connection, or a
@@ -2906,14 +2945,6 @@ Internet-Draft               TAPS Interface                    June 2019
    algorithms or protocols.  Any API-compatible transport security
    protocol should work in a TAPS system.
 
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 52]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
 15.  Acknowledgements
 
    This work has received funding from the European Union's Horizon 2020
@@ -2930,6 +2961,15 @@ Internet-Draft               TAPS Interface                    June 2019
    Thanks to Stuart Cheshire, Josh Graessley, David Schinazi, and Eric
    Kinnear for their implementation and design efforts, including Happy
    Eyeballs, that heavily influenced this work.  Thanks to Laurent Chuat
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 53]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    and Jason Lee for initial work on the Post Sockets interface, from
    which this work has evolved.
 
@@ -2963,13 +3003,6 @@ Internet-Draft               TAPS Interface                    June 2019
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 53]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/info/rfc8446>.
@@ -2980,6 +3013,18 @@ Internet-Draft               TAPS Interface                    June 2019
               Welzl, M. and S. Gjessing, "A Minimal Set of Transport
               Services for End Systems", draft-ietf-taps-minset-11 (work
               in progress), September 2018.
+
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 54]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    [I-D.ietf-taps-transport-security]
               Wood, C., Enghardt, T., Pauly, T., Perkins, C., and K.
@@ -3016,16 +3061,6 @@ Internet-Draft               TAPS Interface                    June 2019
               Behavior)", RFC 3246, DOI 10.17487/RFC3246, March 2002,
               <https://www.rfc-editor.org/info/rfc3246>.
 
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 54]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    [RFC3261]  Rosenberg, J., Schulzrinne, H., Camarillo, G., Johnston,
               A., Peterson, J., Sparks, R., Handley, M., and E.
               Schooler, "SIP: Session Initiation Protocol", RFC 3261,
@@ -3036,6 +3071,16 @@ Internet-Draft               TAPS Interface                    June 2019
               Guidelines for DiffServ Service Classes", RFC 4594,
               DOI 10.17487/RFC4594, August 2006,
               <https://www.rfc-editor.org/info/rfc4594>.
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 55]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    [RFC5245]  Rosenberg, J., "Interactive Connectivity Establishment
               (ICE): A Protocol for Network Address Translator (NAT)
@@ -3074,14 +3119,6 @@ Appendix A.  Additional Properties
    architecture [I-D.ietf-taps-arch], based upon that architecture and
    on the minimal set of transport service features elaborated in
    [I-D.ietf-taps-minset].  However, the interface has been designed
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 55]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    with extension points to allow the implementation of features beyond
    those in the minimal common interface: Protocol Selection Properties,
    Path Selection Properties, and Message Properties are open sets.
@@ -3093,6 +3130,14 @@ Internet-Draft               TAPS Interface                    June 2019
    used to enhance transport protocol and/or path selection, or the
    transmission of messages given a Protocol Stack that implements them.
    These are not part of the interface, and may be removed from the
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 56]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    final document, but are presented here to support discussion within
    the TAPS working group as to whether they should be added to a future
    revision of the base specification.
@@ -3131,13 +3176,6 @@ A.1.1.  Cost Preferences
    Ignore Cost:  Ignore cost, choose transport solely based on other
       criteria
 
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 56]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    The default is "Balance Cost".
 
 Appendix B.  Sample API definition in Go
@@ -3148,6 +3186,14 @@ Appendix B.  Sample API definition in Go
    project/postsocket.  Documentation for this API - an illustration of
    the documentation an application developer would see for an instance
    of this interface - is available online at
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 57]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
    https://godoc.org/github.com/mami-project/postsocket.  This API
    definition will be kept largely in sync with the development of this
    abstract interface definition.
@@ -3186,14 +3232,6 @@ Appendix C.  Relationship to the Minimal Set of Transport Services for
 
    o  Hand over a message to reliably transfer (possibly multiple times)
       before connection establishment:
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 57]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
       "InitiateWithSend" Action.
 
    o  Hand over a message to reliably transfer during connection
@@ -3203,6 +3241,14 @@ Internet-Draft               TAPS Interface                    June 2019
    o  Change timeout for aborting connection (using retransmit limit or
       time value):
       "Timeout for aborting Connection" property, using a time value.
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 58]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    o  Timeout event when data could not be delivered for too long:
       "ConnectionError" Event.
@@ -3243,13 +3289,6 @@ Internet-Draft               TAPS Interface                    June 2019
       "Maximum Message size before fragmentation or segmentation"
       property.
 
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 58]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    o  Get max. transport-message size that may be received from the
       configured interface:
       "Maximum Message size on receive" property.
@@ -3257,6 +3296,15 @@ Internet-Draft               TAPS Interface                    June 2019
    o  Obtain ECN field:
       "ECN" is a defined metadata value as part of the Message Receive
       Context.
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 59]
+
+Internet-Draft               TAPS Interface                    June 2019
+
 
    o  "Specify DSCP field", "Disable Nagle algorithm", "Enable and
       configure a 'Low Extra Delay Background Transfer'":
@@ -3296,16 +3344,6 @@ Internet-Draft               TAPS Interface                    June 2019
       "Ordered".
 
    o  Request not to delay the acknowledgement (SACK) of a message:
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 59]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
       Should the protocol support it, this is one of the transport
       features the transport system can use when an application uses the
       Capacity Profile Property with value "Low Latency/Interactive".
@@ -3316,6 +3354,14 @@ Internet-Draft               TAPS Interface                    June 2019
    o  Receive a message:
       "Received" Event.  Section 5.1 of [I-D.ietf-taps-minset] discusses
       how messages can be obtained from a bytestream in case of
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 60]
+
+Internet-Draft               TAPS Interface                    June 2019
+
+
       implementation over TCP.  Here, this is dealt with by Message
       Framers.
 
@@ -3352,16 +3398,6 @@ Authors' Addresses
    Email: michawe@ifi.uio.no
 
 
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 60]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Theresa Enghardt
    TU Berlin
    Marchstrasse 23
@@ -3369,6 +3405,17 @@ Internet-Draft               TAPS Interface                    June 2019
    Germany
 
    Email: theresa@inet.tu-berlin.de
+
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 61]
+
+Internet-Draft               TAPS Interface                    June 2019
 
 
    Godred Fairhurst
@@ -3408,16 +3455,6 @@ Internet-Draft               TAPS Interface                    June 2019
    Email: philipp@tiesel.net
 
 
-
-
-
-
-
-Trammell, et al.        Expires December 22, 2019              [Page 61]
-
-Internet-Draft               TAPS Interface                    June 2019
-
-
    Chris Wood
    Apple Inc.
    One Apple Park Way
@@ -3425,6 +3462,16 @@ Internet-Draft               TAPS Interface                    June 2019
    United States of America
 
    Email: cawood@apple.com
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 62]
+
+Internet-Draft               TAPS Interface                    June 2019
 
 
    Tommy Pauly
@@ -3469,4 +3516,13 @@ Internet-Draft               TAPS Interface                    June 2019
 
 
 
-Trammell, et al.        Expires December 22, 2019              [Page 62]
+
+
+
+
+
+
+
+
+
+Trammell, et al.         Expires January 1, 2020               [Page 63]
