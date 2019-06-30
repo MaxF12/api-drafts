@@ -1,6 +1,54 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/334",
+    "id": 462249004,
+    "node_id": "MDU6SXNzdWU0NjIyNDkwMDQ=",
+    "number": 334,
+    "title": "Consider message send API that takes padding policy as input",
+    "user": {
+      "login": "chris-wood",
+      "id": 2172048,
+      "node_id": "MDQ6VXNlcjIxNzIwNDg=",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2172048?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chris-wood",
+      "html_url": "https://github.com/chris-wood",
+      "followers_url": "https://api.github.com/users/chris-wood/followers",
+      "following_url": "https://api.github.com/users/chris-wood/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chris-wood/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chris-wood/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chris-wood/subscriptions",
+      "organizations_url": "https://api.github.com/users/chris-wood/orgs",
+      "repos_url": "https://api.github.com/users/chris-wood/repos",
+      "events_url": "https://api.github.com/users/chris-wood/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chris-wood/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2019-06-29T00:50:47Z",
+    "updated_at": "2019-06-29T13:58:33Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "One might want to send a message M as a multiple of size B octets. Since padding is (increasingly) supported by transports, this should be something a TAPS implementation provides. Moreover, applications should ideally be able to specify their padding policy. "
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/333/labels{/name}",
@@ -1012,9 +1060,9 @@
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 5,
+    "comments": 7,
     "created_at": "2019-05-06T22:16:10Z",
-    "updated_at": "2019-06-20T11:31:08Z",
+    "updated_at": "2019-06-30T18:14:40Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -1204,9 +1252,9 @@
       }
     ],
     "milestone": null,
-    "comments": 3,
+    "comments": 5,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-06-27T14:03:05Z",
+    "updated_at": "2019-06-27T18:13:10Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2301,7 +2349,10 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "Per the architecture draft, only protocol stacks that are equivalent can be safely raced. What is the expected behavior if selection properties are set in such a way that the resulting candidate set includes protocol stacks that are not equivalent? Would the selection properties simply be treated as invalid? "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2430,10 +2481,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "The arch definition of connection should add a sentence to say that there may be multiple flows (MPTCP, MPQUIC, or even connection pooling) below the abstraction. This was assumed but not stated."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/303",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5146,7 +5194,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/275.patch"
     },
     "body": "This closes #230 and addresses a comment about soft errors by @theri in #227:\r\n\r\n- \"Notification of Excessive Retransmission\" is made a Selection Property\r\n- There's now an \"Excessive Retransmission\" Event (just like the one for Soft Errors)\r\n- The preference to receive Soft Errors is also made a Selection Property\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/274",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5243,10 +5294,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/274.patch"
     },
     "body": "Several small updates, mostly to clean things up a bit, and align property names and such."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/273",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -6774,9 +6822,9 @@
       }
     ],
     "milestone": null,
-    "comments": 7,
+    "comments": 9,
     "created_at": "2018-11-30T11:40:16Z",
-    "updated_at": "2019-03-25T12:49:16Z",
+    "updated_at": "2019-06-27T19:59:23Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Should we add \"Connection Ready\", \"Message Sent\", and \"Path Properties Changed\" to the diagram? Actually I not sure why \"Path Properties Changed\" shows up in this doc at all. This seems to be rather specific and the section actually explicilty says \"The API may expand this list.\"."
@@ -7920,7 +7968,10 @@
     "closed_at": "2018-10-31T11:50:36Z",
     "author_association": "CONTRIBUTOR",
     "body": "Right now, minset is a normative reference for the Interface draft.\r\nIt should be changed to an informative reference for the following reasons:\r\n\r\n- it's not necessary to read how we represent transport features in minset in order to implement the API specified in our interface draft (see [IESG statement on normative references](https://www.ietf.org/blog/iesg-statement-normative-and-informative-references/))\r\n- There is now Appendix C on how minset is reflected in the API.\r\n- it avoids a downref\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/244",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -8027,10 +8078,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/244.patch"
     },
     "body": "Address #45 by adding explicit caching context for defining state sharing boundaries. Doesn't expose knobs for accessing the cached state externally, but we can discuss and add that later if needed."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/243",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9896,7 +9944,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/215.patch"
     },
     "body": "1 tiny fix suggested to make the text a little clearer (because the default \"complete message\" delivery may need a de-framer, or the whole Connection may function as a message), and pointed at a possible error when delivering partial data (it's already written elsewhere, but the suggestion makes a sentence more correct, I believe)."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/214",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9950,10 +10001,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/214.patch"
     },
     "body": "This is my attempt to address #112 with something that's (IMO) less clunky in the common case than #124. \r\n\r\nI'm not a big fan of this way of doing things either -- specifically, I think the semantics of RendezvousAndSend(), while consistent, are probably wrong."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/213",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12582,7 +12630,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/185.patch"
     },
     "body": "Satisfies #184 "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/184",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12645,10 +12696,7 @@
     "closed_at": "2019-03-25T12:15:08Z",
     "author_association": "CONTRIBUTOR",
     "body": "The RFC Editor has become rather strict in implementing the 5 author limit for drafts:\r\n\r\nThis document has more than five authors listed, which is considered excessive under normal circumstances. If you plan to request publication as an RFC, this will require additional consideration by the stream manager (for example, the IESG), and publication may be declined unless sufficient justification is provided. See RFC 7322, section 4.1.1 for details.\r\n\r\nWe should update these for -01"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/183",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15492,7 +15540,10 @@
     "closed_at": "2018-07-16T15:51:06Z",
     "author_association": "NONE",
     "body": "The API document needs to specify the relative timing and ordering (i.e., for appropriate thread models, the threading properties) of events.\r\n\r\nE.g., I think it should be guaranteed that a connection's Received<> event isn't called until its initiating event (Connected<>, ConnectionReceived<>, or RendezvousDone<>) has finished processing; and only one Received<> event is invoked at a time for a given connection, with the events being invoked with the appropriate logical order is required by the connection semantics.\r\n\r\nSimilarly, only one of a connection's Sent<> events should be invoked at a time.  However, I don't think there needs to be any restriction against Sent<> and Received<> being invoked simultaneously on the same connection.\r\n\r\nNo other events should be received for a connection after Closed<> or ConnectionError<>.\r\n\r\nFor different connections, It should be allowed for their events to be invoked simultaneously, even if the connections are entangled with each other."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/154",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15621,10 +15672,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Review structure. What fits in pre-establishment. Relation system policy - cached state. Generalizes #127 "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/153",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18733,7 +18781,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/125.patch"
     },
     "body": "This addresses #39"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/124",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18794,10 +18845,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/124.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/123",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21305,7 +21353,10 @@
     "closed_at": "2018-02-27T14:20:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "We create Connection Groups via `Clone().`\r\n\r\nIt would be nice to be able to create groups during pre-establishment.\r\n\r\nBut you need a Connection to `Clone()` a connection.\r\n\r\nThere are a few possible syntaxes to use here, we should pick one. For now, will drop mention of being able to clone in pre-establishment."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/94",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21434,10 +21485,7 @@
     "closed_at": "2018-02-26T17:06:32Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/93",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24465,7 +24513,10 @@
     "closed_at": "2018-04-11T13:09:41Z",
     "author_association": "NONE",
     "body": "I am really unsure I believe the transport should specify - see notes below:\r\n\r\n/7.1.1.7. Immediate Acknowledgement /\r\n- I suggest this is the wrong approach. I suggest the APP should ask for “low latency” and the stack should figure this out with respect to the protocols it is using. To me this seems like a direct protocol specific optimisation. How you do this in TCP v SCTP v foo-over-UDP all seem different, and unnecessary to expose for a generic interface.\r\n/7.1.1.8. Send Bitrate/\r\n- I vote to remove this for the reason above.\r\n\r\n/7.1.1.9. Timeliness/\r\nThis specifies what delay characteristics the applications prefers for the given content. It provides hints for the transport system whether to optimize for low latency or other criteria and set the DSCP flags for packets used to transmit the content.\r\n- - - -\r\n/Stream/\r\n- I vote to simplify this to Boolean.\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/64",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24594,10 +24645,7 @@
     "closed_at": "2018-04-11T20:22:10Z",
     "author_association": "NONE",
     "body": "\r\nI'm curious about whether cloning is the correct way to go:\r\n\r\nMaybe (I don't know) the concept of cloning could fit well with postsockets and less well with NEAT.? - NEAT does have the concept of combining flows into a group - and relative priorities within the group, etc. So is this actually the way we need to go? (and then they can share attributes)\r\n- I'm worried about how cloning before a race works after racing the candidates, and after it has found candidates, I am not sure all the parameters can then be copied. \r\n\r\nI see you can likely do some of these things if the connections are within an SCTP association, or a QUIC session, but the present description seems very linked to these transports. \r\n\r\nBasically can cloning  be implemented? And haow is racing handled?\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/63",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27471,7 +27519,10 @@
     "closed_at": "2018-06-09T12:12:01Z",
     "author_association": "CONTRIBUTOR",
     "body": "We should be a bit more specific about how an application is supposed to interact with path selection properties. Do we want to bind this to a world in which the system specifies a set of interface type labels and the application has to choose, or is there some other approach here?"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/34",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27608,10 +27659,7 @@
     "closed_at": "2018-02-19T13:29:13Z",
     "author_association": "CONTRIBUTOR",
     "body": "§5.2.4, taken from Socket Intents, provides the transport application hints by binding a special higher-layer class of transport parameter to the connection. \r\n\r\n§7, which describes the sending API, is largely taken from Post Sockets and tends to give simpler semantics to each Content at send time.\r\n\r\nThese approaches have the similar aims, but come to them from different angles. Socket Intents was very ~Socket~Connection-oriented, and Post Sockets very ~Message~Content oriented. It seems difficult for them to coexist in a way that would allow an application developer to use this interface with ease. \r\n\r\nWe should discuss, and agree on a way forward."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/33",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30796,7 +30844,10 @@
     "closed_at": "2018-02-06T10:37:54Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/4",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30925,10 +30976,7 @@
     "closed_at": "2018-02-06T10:37:28Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/3",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
