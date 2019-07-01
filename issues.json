@@ -41,9 +41,9 @@
 
     ],
     "milestone": null,
-    "comments": 2,
+    "comments": 3,
     "created_at": "2019-06-29T00:50:47Z",
-    "updated_at": "2019-06-29T13:58:33Z",
+    "updated_at": "2019-07-01T07:22:48Z",
     "closed_at": null,
     "author_association": "NONE",
     "body": "One might want to send a message M as a multiple of size B octets. Since padding is (increasingly) supported by transports, this should be something a TAPS implementation provides. Moreover, applications should ideally be able to specify their padding policy. "
@@ -223,11 +223,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -491,11 +491,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -596,11 +596,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -686,11 +686,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -930,11 +930,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -979,7 +979,7 @@
     "labels": [
 
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "tfpauly",
@@ -1052,18 +1052,18 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 7,
+    "comments": 8,
     "created_at": "2019-05-06T22:16:10Z",
-    "updated_at": "2019-06-30T18:14:40Z",
-    "closed_at": null,
+    "updated_at": "2019-06-30T18:16:35Z",
+    "closed_at": "2019-06-30T18:16:34Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/323",
@@ -1254,7 +1254,7 @@
     "milestone": null,
     "comments": 5,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-06-27T18:13:10Z",
+    "updated_at": "2019-07-01T08:13:38Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2467,11 +2467,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2604,11 +2604,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2854,11 +2854,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2976,11 +2976,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -5994,11 +5994,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -7697,11 +7697,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -10673,11 +10673,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -13459,11 +13459,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -15658,11 +15658,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -16738,11 +16738,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -26389,11 +26389,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 14,
-      "closed_issues": 3,
+      "open_issues": 13,
+      "closed_issues": 4,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-06-14T21:22:30Z",
+      "updated_at": "2019-06-30T18:16:35Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
