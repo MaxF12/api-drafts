@@ -662,7 +662,7 @@ Internet-Draft               TAPS Interface                    July 2019
 
    o  Protocol Specific Properties must use the protocol acronym as
       Namespace, e.g., "tcp" for TCP specific Transport Properties.  For
-      IETF protocols, property names under these namespaces should be
+      IETF protocols, property names under these namespaces SHOULD be
       defined in an RFC.
 
 
