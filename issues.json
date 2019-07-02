@@ -1252,9 +1252,9 @@
       }
     ],
     "milestone": null,
-    "comments": 5,
+    "comments": 7,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-07-01T08:13:38Z",
+    "updated_at": "2019-07-02T08:55:57Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -1430,7 +1430,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
@@ -1439,8 +1439,8 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2019-04-29T12:34:27Z",
-    "updated_at": "2019-05-24T10:34:45Z",
-    "closed_at": null,
+    "updated_at": "2019-07-01T13:45:40Z",
+    "closed_at": "2019-07-01T13:45:40Z",
     "author_association": "NONE",
     "body": "In section 6.4:\r\nThis para opens with the words “Groups of Connections”\r\n- Please check which letter groups should be capitalised in this section, I think it should be “Connection Group”, so this should be “Groups of connections”.\r\n—\r\nIn Section 7:\r\n“Data is sent in terms of Messages,”\r\n- Is it true that “blocks of data supplied by the application are sent as Messages” \r\n- or what does “in terms of” refer to?\r\n—\r\nIn Section 7.1:\r\n“Message data is created as an array of octets”\r\n- even I have a a hard time remembering 6-bit bytes, can we declare “octet”as historic and use “bytes”.\r\n- is the data “created” or “transferred”\r\n—\r\nIn Section 7.1:\r\n“Applications can query the protocol property Maximum Message Size on Send to determine the maximum size allowed for a single Message.”\r\n- I don’t know how the app does this across the API, can we be more clear? (It could be the example below seeks to explain this, in which case maybe a little wording change would help me?)\r\n—\r\nSection 7.2:\r\n“There are several events” - should this be “Events”?\r\n—\r\nSection 7.2.1:\r\n“and is no longer the responsibility of the implementation of this interface”:\r\n- why use the words “the implementation of”, is there something more subtle that needs explained, or can these words be deleted?\r\n—\r\nSection 7.3:\r\n“The simpler form of Send that does not take any messageContext is equivalent to passing a default MessageContext with not values added.”\r\n- These read wrong: /not/ /is equivalent/, could this be better?\r\n“The simpler form of Send, which does not take any messageContext, is equivalent to passing a default MessageContext without adding any values.”\r\n- Also, what are values here: properties or something else?\r\n—\r\nSection 7.5:\r\n“In order to reduce the overhead”\r\n- please remove /In order/ to avoid any misunderstanding about ordering.\r\n—\r\nSection 9.1.2. Required minimum coverage of the Corruption Protection for receiving\r\n- The default needs to be protect the entire message.\r\n"
   },
@@ -6822,9 +6822,9 @@
       }
     ],
     "milestone": null,
-    "comments": 9,
+    "comments": 10,
     "created_at": "2018-11-30T11:40:16Z",
-    "updated_at": "2019-06-27T19:59:23Z",
+    "updated_at": "2019-07-01T14:59:34Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Should we add \"Connection Ready\", \"Message Sent\", and \"Path Properties Changed\" to the diagram? Actually I not sure why \"Path Properties Changed\" shows up in this doc at all. This seems to be rather specific and the section actually explicilty says \"The API may expand this list.\"."
