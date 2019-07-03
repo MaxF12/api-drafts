@@ -1,6 +1,60 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/335",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/335/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/335/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/335/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/335",
+    "id": 463110549,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MjkzNjUzOTA5",
+    "number": 335,
+    "title": "Various minor issues - closes #314, #315 #316 and #331",
+    "user": {
+      "login": "mwelzl",
+      "id": 7081644,
+      "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mwelzl",
+      "html_url": "https://github.com/mwelzl",
+      "followers_url": "https://api.github.com/users/mwelzl/followers",
+      "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+      "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+      "repos_url": "https://api.github.com/users/mwelzl/repos",
+      "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-07-02T09:07:16Z",
+    "updated_at": "2019-07-02T09:07:52Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/335",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/335",
+      "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/335.diff",
+      "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/335.patch"
+    },
+    "body": "... and some nits (capitalization, ..)\r\n\r\n#314: 0-rtt establishment: fixed default as requested by @gorryfair and incorporated text fix suggestion\r\n#315: last missing update to hopefully close this issue: adjusted the wording of checksum related selection properties\r\n#316: fixed some text details regarding how transport properties are to be specified, based on a converged discussion.\r\n#331: wrote some defaults for parameters in section 9.1"
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/334/labels{/name}",
@@ -501,7 +555,7 @@
     },
     "comments": 5,
     "created_at": "2019-05-21T09:38:22Z",
-    "updated_at": "2019-05-24T10:53:59Z",
+    "updated_at": "2019-07-03T07:09:02Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -1254,7 +1308,7 @@
     "milestone": null,
     "comments": 7,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-07-02T08:55:57Z",
+    "updated_at": "2019-07-02T18:24:20Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -1656,9 +1710,9 @@
       }
     ],
     "milestone": null,
-    "comments": 6,
+    "comments": 7,
     "created_at": "2019-04-29T11:26:50Z",
-    "updated_at": "2019-05-24T10:34:05Z",
+    "updated_at": "2019-07-02T09:10:20Z",
     "closed_at": null,
     "author_association": "NONE",
     "body": "In Section 5.2.7 Control checksum coverage on sending\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n\r\n—\r\nIn Section, 5.2.8. Control checksum coverage on receiving\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n"
@@ -2294,7 +2348,10 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "Make it clearer that the implementation should only check for unsatisfiable selection property configurations after initiate/listen/rendezvous has been called. "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/305",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2349,10 +2406,7 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "Per the architecture draft, only protocol stacks that are equivalent can be safely raced. What is the expected behavior if selection properties are set in such a way that the resulting candidate set includes protocol stacks that are not equivalent? Would the selection properties simply be treated as invalid? "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/304",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5140,7 +5194,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/276.patch"
     },
     "body": "This PR contains a rough skeleton for an IANA registry fro property names.\r\n\r\nIt is mainly a proposal and starting point and will be discussed on the Jan'19 Interim."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/275",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5194,10 +5251,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/275.patch"
     },
     "body": "This closes #230 and addresses a comment about soft errors by @theri in #227:\r\n\r\n- \"Notification of Excessive Retransmission\" is made a Selection Property\r\n- There's now an \"Excessive Retransmission\" Event (just like the one for Soft Errors)\r\n- The preference to receive Soft Errors is also made a Selection Property\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/274",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7913,7 +7967,10 @@
     "closed_at": "2018-12-12T10:40:33Z",
     "author_association": "CONTRIBUTOR",
     "body": "these are a few minor changes to apply, and properties to add (e.g. \"disable MPTCP\")"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/245",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7968,10 +8025,7 @@
     "closed_at": "2018-10-31T11:50:36Z",
     "author_association": "CONTRIBUTOR",
     "body": "Right now, minset is a normative reference for the Interface draft.\r\nIt should be changed to an informative reference for the following reasons:\r\n\r\n- it's not necessary to read how we represent transport features in minset in order to implement the API specified in our interface draft (see [IESG statement on normative references](https://www.ietf.org/blog/iesg-statement-normative-and-informative-references/))\r\n- There is now Appendix C on how minset is reflected in the API.\r\n- it avoids a downref\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/244",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9890,7 +9944,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/216.patch"
     },
     "body": "Rather than saying \"this can only be queried\" everywhere, I split this into setting and querying now, and I also moved SoftErrors in there. It's not precisely \"querying\" for a Property, but it's the closest match - better than \"Connection Termination\", I think (this is where SoftErrors were before)."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/215",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9944,10 +10001,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/215.patch"
     },
     "body": "1 tiny fix suggested to make the text a little clearer (because the default \"complete message\" delivery may need a de-framer, or the whole Connection may function as a message), and pointed at a possible error when delivering partial data (it's already written elsewhere, but the suggestion makes a sentence more correct, I believe)."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/214",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12531,7 +12585,10 @@
     "closed_at": "2018-06-12T08:22:14Z",
     "author_association": "NONE",
     "body": "----\r\nSection: Low Latency: : \r\nI really dislike the term /bandwidth efficiency/ - because we are not talking here of bandwidth in MHz, and certainly of not how efficiently the bandwidth is used from a radio perspective. Could we say /efficiently of using the available capacity/?\r\n\r\nI also have problems undrestaing what was intended by /and delay variation/ - because it doesn’t read correctly to me. What is intended?\r\n\r\nSection: Constant Rate: : \r\n- still dislike  /bandwidth efficiency/ - see above.\r\n---\r\n/rate adaptive/ should this be /rate-adaptive/ ?\r\n---\r\nSection: Scavenger/Bulk: : \r\n/for less-than-best-effort treatment, and so on./\r\n- can we explicitly point to the scavenger traffic class, rather than just the transport behaviour?\r\n\r\ne.g. add /or to assign the traffic to a lower effort service/ ??\r\n----\r\nShould we expand these abbreviations on first use?:\r\nNAT, ICE, STUN, SIP\r\n----\r\nSection: Connection Groups {#groups}\r\n- Could we consider removing the following clause ... I am not sure that I buy the specification text that reads:\r\n/An ideal transport system implementation would assign the Connection the capacity share (M-N) x C / M, where N is the Connection's Niceness value, M is the maximum Niceness value used by all Connections in the group and C is the total available capacity. /\r\n- I’d prefer to feel comfortable that we have running code that does this - NEAT does not implement this approach, it could do something I am sure - but do we have to write this as if we specify this in the API?\r\n---\r\nI do not like the words /about capacity allocation/ --- my rationale is that this doesn’t imply using an allocation method - I’d much prefer /about the way capacity is shared/\r\n\r\nSimilarly: /exact capacity allocation/ -- I’d prefer: /the way an implementation shares capacity/\r\n----\r\n/For example, infinite Lifetime is not possible on a Message over a Connection not providing reliability. /\r\n- This didn’t read quite correct to me, is this better:\r\n/For example, it is not possible to set an infinite Lifetime for a Message over a Connection that does not provide reliability. /\r\nor\r\n/For example, a Connection must provide reliability to allow a Message to set an infinite Lifetime. /\r\n----\r\nThe concept of  /an infinite Lifetime/  is just a tiny little odd, does this mean the value is set to infinite - or do we really expect persistent non-volatile storage of the message until it is sent?, I'd perhaps geel happier if we explained this as /an infinitie value for the lifetime property means that ..../\r\n----\r\nSection: Niceness {#send-niceness}\r\nThe term /normal/\r\n/Note that this inversion of normal schemes for expressing priority has a convenient property: priority increases as both Niceness and Lifetime decrease./\r\n- I wonder if this actually is clearer just to say:\r\n/This encoding of the priority has a convenient property that the priority increases as both Niceness and Lifetime decrease./\r\n\r\n/It is most naturally represented as a non-negative integer./\r\n- the other terms are defined more concretely. Is there any reason we do not start the niceness section by saying Niceness is a numeric (non-negative integer) quantity. \r\n---\r\nI didn't read the appendexes because I thought they were still being edited - happy to read when asked."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/185",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12630,10 +12687,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/185.patch"
     },
     "body": "Satisfies #184 "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/184",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15411,7 +15465,10 @@
     "closed_at": "2018-07-16T15:51:35Z",
     "author_association": "NONE",
     "body": "An application needs a way to know when its Close() or Abort() call is complete, guaranteeing it won't receive any further events on the connection and all current event processing is done.  This is necessary so the application can clean up any application state related to the connection.\r\n\r\nNote that in a multi-threaded environment, events can be executing on other threads at the same time that the Close() or Abort() call is called; in addition, an application can potentially call Close() or Abort() from within an event processing function itself."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/155",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15540,10 +15597,7 @@
     "closed_at": "2018-07-16T15:51:06Z",
     "author_association": "NONE",
     "body": "The API document needs to specify the relative timing and ordering (i.e., for appropriate thread models, the threading properties) of events.\r\n\r\nE.g., I think it should be guaranteed that a connection's Received<> event isn't called until its initiating event (Connected<>, ConnectionReceived<>, or RendezvousDone<>) has finished processing; and only one Received<> event is invoked at a time for a given connection, with the events being invoked with the appropriate logical order is required by the connection semantics.\r\n\r\nSimilarly, only one of a connection's Sent<> events should be invoked at a time.  However, I don't think there needs to be any restriction against Sent<> and Received<> being invoked simultaneously on the same connection.\r\n\r\nNo other events should be received for a connection after Closed<> or ConnectionError<>.\r\n\r\nFor different connections, It should be allowed for their events to be invoked simultaneously, even if the connections are entangled with each other."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/154",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18727,7 +18781,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/126.patch"
     },
     "body": "Closes #113 "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/125",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18781,10 +18838,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/125.patch"
     },
     "body": "This addresses #39"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/124",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21224,7 +21278,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/96.patch"
     },
     "body": "Fixes all outstanding London API issues except #92 and #93"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/95",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21353,10 +21410,7 @@
     "closed_at": "2018-02-27T14:20:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "We create Connection Groups via `Clone().`\r\n\r\nIt would be nice to be able to create groups during pre-establishment.\r\n\r\nBut you need a Connection to `Clone()` a connection.\r\n\r\nThere are a few possible syntaxes to use here, we should pick one. For now, will drop mention of being able to clone in pre-establishment."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/94",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24384,7 +24438,10 @@
     "closed_at": "2018-02-21T14:48:23Z",
     "author_association": "NONE",
     "body": "Text: /The Content may also contain metadata from protocols in the Protocol Stack for logging and debugging purposes. In particular, when this information is available, the value of the Explicit Congestion Notification (ECN) field is contained in such metadata./\r\n- I think ECN or IP options and maybe some other metadata are not only for “logging and debugging purposes”. Therefore, I think this first sentence needs to also indicate the metadata can be used by applications that implement protocol functions  above the transport. You can (if you wish) quote UDP Guidelines to suggest this may be necessary for some datagram functions, but that it is general desirable to use standard transport functions when these can provide the desired functionality!"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/65",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24513,10 +24570,7 @@
     "closed_at": "2018-04-11T13:09:41Z",
     "author_association": "NONE",
     "body": "I am really unsure I believe the transport should specify - see notes below:\r\n\r\n/7.1.1.7. Immediate Acknowledgement /\r\n- I suggest this is the wrong approach. I suggest the APP should ask for “low latency” and the stack should figure this out with respect to the protocols it is using. To me this seems like a direct protocol specific optimisation. How you do this in TCP v SCTP v foo-over-UDP all seem different, and unnecessary to expose for a generic interface.\r\n/7.1.1.8. Send Bitrate/\r\n- I vote to remove this for the reason above.\r\n\r\n/7.1.1.9. Timeliness/\r\nThis specifies what delay characteristics the applications prefers for the given content. It provides hints for the transport system whether to optimize for low latency or other criteria and set the DSCP flags for packets used to transmit the content.\r\n- - - -\r\n/Stream/\r\n- I vote to simplify this to Boolean.\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/64",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27418,7 +27472,10 @@
     "closed_at": "2018-02-14T15:32:03Z",
     "author_association": "CONTRIBUTOR",
     "body": "§5.2.1 defines \"Control checksum coverage...\" (from minset) as a transport selection property, but there is no support for this in §7 Sending. Need to figure out how to reconcile this."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/35",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27519,10 +27576,7 @@
     "closed_at": "2018-06-09T12:12:01Z",
     "author_association": "CONTRIBUTOR",
     "body": "We should be a bit more specific about how an application is supposed to interact with path selection properties. Do we want to bind this to a world in which the system specifies a set of interface type labels and the application has to choose, or is there some other approach here?"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/34",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30715,7 +30769,10 @@
     "closed_at": "2018-02-18T19:51:27Z",
     "author_association": "CONTRIBUTOR",
     "body": "I don't recall whether we came to consensus in Cambridge that there needed to be a separate entry point for peer-to-peer establishment: is this a kinda-simultaneous Initiate on N sides, or is it really its own call? If the latter, tagging @csperkins for this (and feel free to decide it's not necessary after all)"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/5",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30844,10 +30901,7 @@
     "closed_at": "2018-02-06T10:37:54Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/4",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
