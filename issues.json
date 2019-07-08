@@ -1,6 +1,147 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/338",
+    "id": 464904595,
+    "node_id": "MDU6SXNzdWU0NjQ5MDQ1OTU=",
+    "number": 338,
+    "title": "Listen filtering behavior for TLS connections?",
+    "user": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 835290366,
+        "node_id": "MDU6TGFiZWw4MzUyOTAzNjY=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/discuss",
+        "name": "discuss",
+        "color": "b60205",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-07-07T01:22:31Z",
+    "updated_at": "2019-07-07T01:22:41Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "As I was updating text for #333, I noticed that the Listener object delivers connections, but doesn't provide a particular way to reject connections. Based on existing text, I assume that ReceivedConnection delivers a connection once the TLS server handshake is complete. Some implementation may want to rate limit, or modify/block inbound connections. \r\n\r\nShould we have some event that lets applications handle inbound connections before they are ready?\r\n\r\nOf course, for TLS, we can rely on callback handlers set for the handshake, but that requires each protocol to do this potentially."
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/337",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/337/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/337/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/337/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/337",
+    "id": 464904283,
+    "node_id": "MDU6SXNzdWU0NjQ5MDQyODM=",
+    "number": 337,
+    "title": "Update implementation mapping text for SCTP",
+    "user": {
+      "login": "tfpauly",
+      "id": 1609964,
+      "node_id": "MDQ6VXNlcjE2MDk5NjQ=",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1609964?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tfpauly",
+      "html_url": "https://github.com/tfpauly",
+      "followers_url": "https://api.github.com/users/tfpauly/followers",
+      "following_url": "https://api.github.com/users/tfpauly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tfpauly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tfpauly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tfpauly/subscriptions",
+      "organizations_url": "https://api.github.com/users/tfpauly/orgs",
+      "repos_url": "https://api.github.com/users/tfpauly/repos",
+      "events_url": "https://api.github.com/users/tfpauly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tfpauly/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "mwelzl",
+      "id": 7081644,
+      "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mwelzl",
+      "html_url": "https://github.com/mwelzl",
+      "followers_url": "https://api.github.com/users/mwelzl/followers",
+      "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+      "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+      "repos_url": "https://api.github.com/users/mwelzl/repos",
+      "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "mwelzl",
+        "id": 7081644,
+        "node_id": "MDQ6VXNlcjcwODE2NDQ=",
+        "avatar_url": "https://avatars2.githubusercontent.com/u/7081644?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/mwelzl",
+        "html_url": "https://github.com/mwelzl",
+        "followers_url": "https://api.github.com/users/mwelzl/followers",
+        "following_url": "https://api.github.com/users/mwelzl/following{/other_user}",
+        "gists_url": "https://api.github.com/users/mwelzl/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/mwelzl/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/mwelzl/subscriptions",
+        "organizations_url": "https://api.github.com/users/mwelzl/orgs",
+        "repos_url": "https://api.github.com/users/mwelzl/repos",
+        "events_url": "https://api.github.com/users/mwelzl/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/mwelzl/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2019-07-07T01:16:50Z",
+    "updated_at": "2019-07-07T08:34:22Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "We've updated Implementation mapping details for most protocols with #333, but we didn't tackle SCTP yet."
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/336",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/336/labels{/name}",
@@ -206,7 +347,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "tfpauly",
@@ -253,8 +394,8 @@
     "milestone": null,
     "comments": 1,
     "created_at": "2019-06-18T00:56:34Z",
-    "updated_at": "2019-07-07T01:13:52Z",
-    "closed_at": null,
+    "updated_at": "2019-07-07T01:16:10Z",
+    "closed_at": "2019-07-07T01:16:10Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
       "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/333",
@@ -721,9 +862,9 @@
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 5,
+    "comments": 6,
     "created_at": "2019-05-17T11:56:30Z",
-    "updated_at": "2019-07-05T10:31:58Z",
+    "updated_at": "2019-07-08T08:34:09Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2246,7 +2387,10 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "It should be made more clear in what order queued receives are considered, i.e. what happens if an application calls Receive(minIncompleteLength=20), then calls Receive(minIncompleteLength=1). What now happens if e.g. 10 bytes of data arrive? Will the second receive only be considered after the first has been fulfilled? "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2356,10 +2500,7 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "Per the interface draft, an InitiateError gets thrown both when the set of (protocol) candidates is empty as well as when it is not possible to establish a connection.\r\nThe distinction here is that an application can mend an error involving an empty candidate set while it does not necessarily have control over fixing issues related to the network. \r\nIt might be useful to divide this into distinct two errors, one that points to an empty candidate set and one that points to issues during an actual connection establishment attempt. "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/306",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -4888,7 +5029,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/279.patch"
     },
     "body": "… and Lifetime. Closes #273."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/278",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5160,10 +5304,7 @@
     "closed_at": "2019-03-19T16:05:24Z",
     "author_association": "CONTRIBUTOR",
     "body": "Write text in Architecture to clarify intent of what was originally described in #244"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/276",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7699,7 +7840,10 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "SMTP and XMPP (among other protocols, probably) have \"STARTTLS\" semantics, where a TLS layer can be inserted on top of an already-existing (unencrypted) connection sometime after some application-layer protocol negotiation has already happened.\r\n\r\nFrequently, the choice of certificate presented / accepted can depend on information in the application-level protocol (since these mechanisms pre-date the invention of SNI).\r\n\r\nThere should be some way some way for applications using the TAPS API to be able to do this."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/248",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7937,10 +8081,7 @@
     "closed_at": "2019-03-11T11:53:31Z",
     "author_association": "CONTRIBUTOR",
     "body": "Similar to the way we added simple diagrams to the architecture document to make the \"story\" of the document more compelling, we should begin the interface document with a simple workflow for an example connection. This way, we can show concretely up front how this is simple and useful, while being quite flexible and powerful. This can also inform how we then continue to explain depth to the details."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/246",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9851,7 +9992,10 @@
     "closed_at": "2018-09-20T18:31:00Z",
     "author_association": "CONTRIBUTOR",
     "body": "section 6.3 (Rendezvous) has the following line:\r\n\r\nPreconnectionBinding := Preconnection.Resolve()\r\n\r\nIf i read the text correctly, I'd propose to change this to \r\n\r\nPreconnection<> := Preconnection.Resolve()"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/218",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9953,10 +10097,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/217.patch"
     },
     "body": "I gave the document a very careful back-to-back read. My take-away was that removing the Message Context Parameters from where they are, and just pointing to a later section, would make for a bad reading experience. Basically, it would feel like an empty shell - at some point, the reader wants to see something tangible, and so, reading all these Message properties where they appear is satisfying, in a way. The document would get quite tough to digest if it would just provide the \"framework\" for sending, receiving etc., and we have to wait for the \"meat\" until the end, where it is then offered in a very organized fashion.\r\n\r\nHence, I decided to leave all the message properties described where they are (as Message Context Parameters). That was my approach to de-duplication in this PR.\r\n\r\nSide comment if someone's surprised by the removal of A.1.9 \"Immediate\": that's because this is already fully covered by the Transmission Profile in Section 7.3.7."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/216",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12357,7 +12498,10 @@
     "closed_at": "2018-10-16T20:58:52Z",
     "author_association": "NONE",
     "body": "To me the document is in very good shape, but there are several things that just appear, and a few short paras and maybe a simple picture could help avoid people giving-up before they know the document is useful to them.\r\n\r\nWe seem to not introduce it nicely, I'd suggest:\r\n+ This isn't scarey (draw a simple familiar figure to start our story, that the reader immediately recognises)\r\n+ Sockets v Streams ... we speak of messages, let's explain early that they ae all you need for any app.\r\n+ Events ... we know these are \"nromal\" - but let's say we provide an eevent-driven interface. it would even be worth saying why thsi is much better (Tommy - Apple have been doing this from the start, can you perhaps say why it is beautiful?)\r\n\r\nComments follow:\r\n\r\nSection:  Background.\r\n- The last part of this section suddenly introduces messages. I know it is just an example, but readers may be already looking here at whether this is an interface to TCP or UDP or something else ... and I think we do not really tackle that earlier enough. One way to help that would be to draw a diagram that looks something like this, in this section:\r\n\r\n  +-----------------------------------------------------+\r\n  |                    Application                      |\r\n  +------------------------+----------------------------+\r\n                           |\r\n  +------------------------|----------------------------+\r\n  |           Transport  Services  API                  |              \r\n  +------------------------|----------------------------+\r\n                           |\r\n  +------------------------|----------------------------+\r\n  |         Transport   System  Implementation          |\r\n  |                                                     |\r\n  |        e.g.,  UDP, TCP, SCTP, DCCP, QUIC, ...       |\r\n  +------------------------|----------------------------+\r\n\r\n  +------------------------|----------------------------+\r\n  |              Network Layer Interface                |\r\n  +-----------------------------------------------------+\r\n\r\nAnd the say that the Transport  Services  API provides message-oriented communication using transport protocols (e.g. UDP, TCP, etc). I'd also mention the words /data transfer/ somewhere.\r\n\r\nProviding a simpler earlier diagram may also be slightly easier on the new reader.\r\n---\r\nIn the same way, the intro should explain a little of the idea of /events/ - common enough to some, but may be unexpected for a new reader."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/188",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12519,10 +12663,7 @@
     "closed_at": "2018-06-18T21:52:23Z",
     "author_association": "NONE",
     "body": "These issues mostly relate to the ARCH document wording:\r\n-\r\nSection: Introduction \r\nIt looks to me like we should have a reference after:/the BSD socket() interface./\r\n---\r\nSection:  Background. << separate issue on missing background>>\r\n---\r\nSection: Transport Services Architecture and Concepts\r\n- The Application box seems one character wider than the TAPS boxes. i know apps are important to APIs, but suspect this is just a typo with extra '-' characters!\r\n---\r\n/primarily offer knobs that are applicable to multiple transports/\r\n- Understand /knobs/, but suspect someone who does not speak English as a first language could be most puzzled, can we use a different word please?\r\n---\r\nThis may be something:\r\n/by which data transmission is ceased/\r\n- To me this doesn't read as common English and would be:\r\n/by which data transmission is stopped/\r\n/by which data transmission ceases/\r\n---\r\n/Endpoint can vary in levels of specificity/\r\n- /Endpoint/ and /vary..specificity/\r\n... does it really vary, this seems difficult to pin down.\r\n- Is this better as:\r\n/An Endpoint may be specified at various levels/?\r\n---\r\n/that it wants to use for transport connections/\r\n... surely it does use it, or is more intended (if so, what)? \r\n- Is it simpler as:\r\n/that it uses for transport connections/\r\n---\r\n/paths between itself and the Remote Endpoint/\r\n- I think strictly speaking, it is not between the App and the remote endpoint, but the local and remote endpoints, so could I suggest:\r\n/paths between the Local Endpoint and the Remote Endpoint/\r\n---\r\n/These options can come in the form of /\r\ncould this be written:\r\n/These options can take the form of /\r\n-- appears multiple times in the ID.\r\n---\r\n/Examples of options which may influence/\r\nshould be:\r\n/Examples of options that may influence/\r\n--\r\n/but that if this protocol is employed, a particular set of options should be used./\r\n- understood, is it even clearer (or not) as:\r\n/but that if this protocol is employed, a particular set of options should then be used./\r\n---\r\nIn Section: Establishment Actions and Data Transfer Objects and Actions and Termination Actions::\r\n- I read this as definitions of terms, but there is no syntax that helps someone understand this. Would it look foolish to include a colon or something after each term (as for the case currently defining message), so it is super clear that this is the defining para?\r\n---\r\nIn Section: Establishment Actions\r\n/Connection to a remote endpoint/\r\n- Could remote endpoint be capitalised here to be consistent with earlier?\r\n---\r\n/for example, to a TCP simultaneous open./\r\n- do we need an info reference here. (Sadly, many people will not know what this is).\r\n---\r\nIn Section: Data Transfer Objects and Actions\r\n/ Messages may or may not be usable if incomplete or corrupted. /\r\n- Agree, but not entirely clear, so I think we should explain to the reader. Could we say:\r\n/If a received Message is incomplete or corrupted, it may or may not be usable by a specific application./\r\n---\r\nIn Section: Transport System Implementation Concepts\r\n/the functionality of transport networking/\r\n- what is transport networking? - either define or rephrase, e.g. as:\r\n/the functionality required to provide a transport service across a network/\r\n---\r\nIn Section: Connection Group: \r\n/Connection Group: A Connections Group/\r\n- mixed single and plural, suggest:\r\n/Connection Group: A Connection Group/\r\n---\r\n/Path: A Path represents an available set of properties of a network route on which packets may be sent or received./\r\n- I'm not so happy with this. I know people use terms in various ways but to me this is not a route.\r\n- I'd prefer something like:\r\n/Path: A Path represents an available set of properties that a Local Endpoint may use to send or receive packets with a Remote Endpoint./\r\n---\r\nI think we need to define /candidate/ in some way, e.g. something like: a path or protocol identified in the gathering stage over which a connection may be attempted in the racing stage/.\r\n- Also I'd much prefer to actually the two terms (as we currently do in the earlier figure): \r\n/Candidate Gathering/\r\nand \r\n/Candidate Racing/\r\n---\r\nThe present contents of, provides a set of definitions which are fine...\r\n/Transport System Implementation Concepts/\r\n- but I really wonder if I could suggest something slightly different. I wonder if we could call this /Transport System Concepts/ and move this way forward in the document to provide a nice early introduction of these terms (with forward refs to sections where these are discussed - if that appeals.\r\n----\r\nThings I'd like to see in this section:\r\n/Transport System Implementation Concepts/\r\n- Can we add a couple of sentences on gathering and racing, just to explain this using the terms used in the /lifetime of a connection/ figure.\r\n- Can we create small subsections on /Cached State/ and /System Policy/\r\n----\r\nI think the subsection section titles below should be changed:\r\n/Gathering//Candidate Gathering/\r\nand \r\n/Candidate Racing/Candidate Racing/\r\n===================================================\r\n/### Message Framing, Parsing, and Serialization {#framing}/\r\n- This subsection appears out-of sequence. (Actually this could really help the reader if made a little easier to read and placed ahead of discussing the details). <<separate comment>>\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/186",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15197,7 +15338,10 @@
     "closed_at": "2019-01-04T12:26:03Z",
     "author_association": "CONTRIBUTOR",
     "body": "E.g. 5.1.1.1 explains how to implement send parameters from the API draft, but there's no text explaining how the path and protocol selection properties map to a decision in the code."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/158",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15419,10 +15563,7 @@
     "closed_at": "2018-07-16T15:50:42Z",
     "author_association": "NONE",
     "body": "As far as I can tell there's no way for an application to indicate that it wants to stop listening for an incoming connection.\r\n\r\nAs with my #156, this will need a way to know that it's complete, in case there's a race with Preconnection -> ConnectionReceived<> on another thread."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/156",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18658,7 +18799,10 @@
     "closed_at": "2018-03-05T18:28:49Z",
     "author_association": "CONTRIBUTOR",
     "body": "Issue to track submitting -00 draft of implementation. We need to:\r\n\r\n- Sweep the remaining issues for sections that need more text\r\n- Nits\r\n- Editorial review for flow, etc."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/128",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18790,10 +18934,7 @@
     "closed_at": "2019-03-25T11:56:42Z",
     "author_association": "CONTRIBUTOR",
     "body": "The rendezvous and discovery steps described in Section 10 for peer-to-peer connection establishment are a generalisation of those in Section 4. Need to discuss in London how we can combine these as a single algorithm that works for both cases."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/126",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21177,7 +21318,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/99.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/98",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21287,10 +21431,7 @@
     "closed_at": "2018-02-26T17:56:26Z",
     "author_association": "CONTRIBUTOR",
     "body": "There is no mentioning of Figure 2 in the text. Perhaps add before the figure something like:\r\nThe diagram below provides a high-level view of the actions taken during the life time of a connection."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/96",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24207,7 +24348,10 @@
     "closed_at": "2018-02-26T22:00:26Z",
     "author_association": "CONTRIBUTOR",
     "body": "During my final editorial review pre-00, I'll take everything we're still discussing into a new Appendix A, with some text along the lines \"an advantage of this framework is it has extension points for properties and preferences beyond those in the proposed standard interface; here are some potential properties and preferences that we have some design and implementation experience with that may prove useful, and may be added to the core interface in future revisions of this document.\""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/68",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24410,10 +24554,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/67.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/66",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27282,7 +27423,10 @@
     "closed_at": "2018-03-01T13:11:10Z",
     "author_association": "CONTRIBUTOR",
     "body": "Review the use of notation in the API doc before final submission and unify it stylistically."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/38",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27436,10 +27580,7 @@
     "closed_at": "2018-12-04T12:22:10Z",
     "author_association": "CONTRIBUTOR",
     "body": "Do all of the transport selection parameters in §5.2.1 need to be listed in the proposed standard interface? Discuss."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/36",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30445,7 +30586,10 @@
     "closed_at": "2018-02-06T10:39:05Z",
     "author_association": "CONTRIBUTOR",
     "body": "Here, the document should talk about how to pass a framer down to the API, on the sender as well as the receiver side, and note that on some platforms this allows the API to deal in objects of some arbitrary, application-meaningful type."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/8",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30703,10 +30847,7 @@
     "closed_at": "2018-02-08T15:14:02Z",
     "author_association": "CONTRIBUTOR",
     "body": "We decided that connection groups (the construct by which we support multistreaming) are technically a pre-establishment-phase construct, but \"get me a new connection in a connection group\" seems like establishment in the eyes of the application. Discuss, and write text."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/6",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
