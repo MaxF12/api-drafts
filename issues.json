@@ -1,6 +1,191 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/340",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/340/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/340/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/340/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/340",
+    "id": 467884571,
+    "node_id": "MDU6SXNzdWU0Njc4ODQ1NzE=",
+    "number": 340,
+    "title": "Comments on new framers",
+    "user": {
+      "login": "MaxF12",
+      "id": 18706009,
+      "node_id": "MDQ6VXNlcjE4NzA2MDA5",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18706009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MaxF12",
+      "html_url": "https://github.com/MaxF12",
+      "followers_url": "https://api.github.com/users/MaxF12/followers",
+      "following_url": "https://api.github.com/users/MaxF12/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MaxF12/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MaxF12/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MaxF12/subscriptions",
+      "organizations_url": "https://api.github.com/users/MaxF12/orgs",
+      "repos_url": "https://api.github.com/users/MaxF12/repos",
+      "events_url": "https://api.github.com/users/MaxF12/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MaxF12/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-07-14T21:05:52Z",
+    "updated_at": "2019-07-14T21:05:52Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "body": "Just some points about the new text on framers in the API draft:\r\n\r\n- In 10.2 it is specified in which order multiple framers run on incoming and outgoing messages, it is however never specified what the order looks like on Start and Stop events.\r\n- In 10.6, \"MessageFramer.DeliverAndAdvanceReceiveCursor\" appears to be missing the \"Data\" argument that is present in \"MessageFramer.Deliver\".\r\n- Also in 10.6, in the second paragraph it says:\r\n> The application requests a specific amount of data it needs to have available in order to parse. \r\n\r\nWhen it is probably meant to say \r\n\r\n> The framer implementation requests a specific amount of data it needs to have available in order to parse. \r\n\r\n- While the framer implementation is able to notify the Connection that it has finished handling a Start event (by calling MessageFramer.MakeConnectionReady), there is no such way for Stop events.\r\n\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/339",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/339/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/339/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/339/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/issues/339",
+    "id": 465172999,
+    "node_id": "MDU6SXNzdWU0NjUxNzI5OTk=",
+    "number": 339,
+    "title": "Add text about connection coalescing and connection pooling",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781840,
+        "node_id": "MDU6TGFiZWw4MjM3ODE4NDA=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/Implementation",
+        "name": "Implementation",
+        "color": "fbca04",
+        "default": false
+      },
+      {
+        "id": 935169415,
+        "node_id": "MDU6TGFiZWw5MzUxNjk0MTU=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/ready%20for%20text",
+        "name": "ready for text",
+        "color": "4ae0d1",
+        "default": false
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "assignees": [
+      {
+        "login": "philsbln",
+        "id": 11421499,
+        "node_id": "MDQ6VXNlcjExNDIxNDk5",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/philsbln",
+        "html_url": "https://github.com/philsbln",
+        "followers_url": "https://api.github.com/users/philsbln/followers",
+        "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+        "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+        "organizations_url": "https://api.github.com/users/philsbln/orgs",
+        "repos_url": "https://api.github.com/users/philsbln/repos",
+        "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/philsbln/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
+    "milestone": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/10",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/milestone/10",
+      "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/milestones/10/labels",
+      "id": 4473156,
+      "node_id": "MDk6TWlsZXN0b25lNDQ3MzE1Ng==",
+      "number": 10,
+      "title": "ietf-106 Singapore",
+      "description": null,
+      "creator": {
+        "login": "philsbln",
+        "id": 11421499,
+        "node_id": "MDQ6VXNlcjExNDIxNDk5",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/philsbln",
+        "html_url": "https://github.com/philsbln",
+        "followers_url": "https://api.github.com/users/philsbln/followers",
+        "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+        "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+        "organizations_url": "https://api.github.com/users/philsbln/orgs",
+        "repos_url": "https://api.github.com/users/philsbln/repos",
+        "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/philsbln/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "open_issues": 1,
+      "closed_issues": 0,
+      "state": "open",
+      "created_at": "2019-07-08T10:15:19Z",
+      "updated_at": "2019-07-08T10:15:37Z",
+      "due_on": null,
+      "closed_at": null
+    },
+    "comments": 0,
+    "created_at": "2019-07-08T10:15:37Z",
+    "updated_at": "2019-07-08T10:15:37Z",
+    "closed_at": null,
+    "author_association": "CONTRIBUTOR",
+    "body": "This is a follow-up issue for #266 – As we have the ready to support connection coalescing and connection pooling, we have to describe it more closely in the Implementation."
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/338/labels{/name}",
@@ -197,9 +382,9 @@
 
     ],
     "milestone": null,
-    "comments": 0,
+    "comments": 5,
     "created_at": "2019-07-04T08:34:20Z",
-    "updated_at": "2019-07-04T08:34:20Z",
+    "updated_at": "2019-07-10T15:27:51Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "PR #321 added a return value to the Send to make matching of send error events and reply messages to their originating message easier:\r\n\r\n~~~\r\nmessageContext := Connection.Send(messageData, messageContext?, endOfMessage?)\r\n~~~\r\n\r\n@tfpauly raised the concern that this this adds return value that most often is not needed and ignoring it may often trigger a warning. \r\nTherefore, we have to decide whether to keep the return value based on what is worse:\r\n\r\n - Requiring the application to explicitly create a message context if it wants to identify the message that caused a send errors event or was the original request of a reply.\r\n - Having a return value that is often ignored and causes a lot of warnings in several implementations."
@@ -481,11 +666,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -749,17 +934,17 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 6,
+    "comments": 9,
     "created_at": "2019-05-21T09:38:22Z",
-    "updated_at": "2019-07-04T09:33:25Z",
+    "updated_at": "2019-07-08T10:05:33Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -854,17 +1039,17 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 6,
+    "comments": 7,
     "created_at": "2019-05-17T11:56:30Z",
-    "updated_at": "2019-07-08T08:34:09Z",
+    "updated_at": "2019-07-08T08:41:12Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -944,11 +1129,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1188,11 +1373,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1310,11 +1495,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -1372,7 +1557,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": {
       "login": "tfpauly",
@@ -1417,10 +1602,10 @@
       }
     ],
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2019-05-06T20:41:39Z",
-    "updated_at": "2019-05-08T16:59:47Z",
-    "closed_at": null,
+    "updated_at": "2019-07-14T20:41:25Z",
+    "closed_at": "2019-07-14T20:41:25Z",
     "author_association": "NONE",
     "body": "Hi, we now implemented (basic) framers in [PyTAPS](https://github.com/fg-inet/python-asyncio-taps), here are some things we noticed that might be of value for the upcoming interim:\r\n\r\n- The current way the deframer is supposed to modify the octetstream is not very well specified, the deframer should probably have an interface to the connection on which it can either tell it how much of the stream it has removed or what the new stream is. \r\n\r\n- If the application enables partial receives, the framer needs a way to communicate to the connection that it only deframed part of the message.\r\n\r\n- If there is an error during the deframing process (that is not caused by an incomplete message), the deframer needs some standardized behavior on how to indicate this. The connection should then throw an appropriate event, possibly an invalid configuration event (as mentioned [here](https://github.com/ietf-tapswg/api-drafts/issues/307)) since both are issues the application can actively remedy. "
   },
@@ -1512,7 +1697,7 @@
     "milestone": null,
     "comments": 7,
     "created_at": "2019-04-29T15:26:04Z",
-    "updated_at": "2019-07-03T07:17:31Z",
+    "updated_at": "2019-07-08T13:28:10Z",
     "closed_at": "2019-07-03T07:17:31Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -2239,7 +2424,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/311.patch"
     },
     "body": "Restructure to address #154 \r\nRearrange to include Rendezvous and Environment Discovery text in connection establishment. Remove that previous section. \r\n\r\n#154 was intended to check the ordering of sections against the other drafts and to merge #127. \r\n\r\nI have merged the Rendezvous text into Connection Establishment, but I haven't changed any of the text yet. I am a little concerned about creating an interdependancy in the text between derriving endpoints (name lookup) and the ICE/TURN stuff.\r\n\r\nMore generally, I am not sure what to say about name resolution and proxies (ala #282). TOR opens a can of privacy worms for name lookup and racing paths that I am not sure how to address. \r\n\r\n\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/310",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2387,10 +2575,7 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "It should be made more clear in what order queued receives are considered, i.e. what happens if an application calls Receive(minIncompleteLength=20), then calls Receive(minIncompleteLength=1). What now happens if e.g. 10 bytes of data arrive? Will the second receive only be considered after the first has been fulfilled? "
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/308",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2725,11 +2910,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -2862,11 +3047,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -3112,11 +3297,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -3234,11 +3419,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -3712,7 +3897,7 @@
     "milestone": null,
     "comments": 2,
     "created_at": "2019-03-09T20:42:23Z",
-    "updated_at": "2019-04-01T12:09:44Z",
+    "updated_at": "2019-07-08T13:29:13Z",
     "closed_at": "2019-04-01T12:09:44Z",
     "author_association": "CONTRIBUTOR",
     "pull_request": {
@@ -4921,7 +5106,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/281.patch"
     },
     "body": "… establishment timeout into a parameter of init calls (it stood out strangely in the list of selection properties because it really isn't one); updated defaults for selection properties."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/280",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5029,10 +5217,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/279.patch"
     },
     "body": "… and Lifetime. Closes #273."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/278",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -6217,7 +6402,7 @@
         "default": false
       }
     ],
-    "state": "open",
+    "state": "closed",
     "locked": false,
     "assignee": null,
     "assignees": [
@@ -6252,18 +6437,18 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
-    "comments": 20,
+    "comments": 21,
     "created_at": "2018-12-05T13:40:25Z",
-    "updated_at": "2019-07-04T08:19:38Z",
-    "closed_at": null,
+    "updated_at": "2019-07-08T10:17:00Z",
+    "closed_at": "2019-07-08T10:17:00Z",
     "author_association": "CONTRIBUTOR",
     "body": "During the discussion of possible QUIC mappings for TAPS in Bangkok, we have seen that there might be two ways to map QUIC Streams / Connections to TAPS Messages / Connections / Connection groups – Mapping QUIC Streams to TAPS Message is more convenient for HTTP style applications, mapping QUIC streams to TAPS Connections looks more natural. \r\n\r\nOne way to solve this tussle is to introduce a new kind of object – a Connection Pool:\r\n- An application can send a message using a connection pool and get events for a reply without touching a connection object\r\n- A connection pool can represent things like a multi-streaming QUIC connection or a bunch of TCP connections between equivalent endpoints.\r\n- To make this logic happen, a Connection Pool needs to be stuffed with framers to make this work\r\n- A Send on a connection pool may take Selection Properties to aid selection between multiple connections within a pool.\r\n\r\nDo we want to add Connection Pools to the Architecture / API ?"
   },
@@ -7596,7 +7781,10 @@
     "closed_at": "2018-12-01T22:36:23Z",
     "author_association": "NONE",
     "body": "Please can we add a MAMI Ack for the next rev of architecture.\r\nSuitable words are (taken from the API document):\r\n\r\n   This work has received funding from the European Union's Horizon 2020\r\n   research and innovation programme under grant agreements No. 644334\r\n   (NEAT) and No. 688421 (MAMI)."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/250",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7840,10 +8028,7 @@
     "closed_at": null,
     "author_association": "NONE",
     "body": "SMTP and XMPP (among other protocols, probably) have \"STARTTLS\" semantics, where a TLS layer can be inserted on top of an already-existing (unencrypted) connection sometime after some application-layer protocol negotiation has already happened.\r\n\r\nFrequently, the choice of certificate presented / accepted can depend on information in the application-level protocol (since these mechanisms pre-date the invention of SNI).\r\n\r\nThere should be some way some way for applications using the TAPS API to be able to do this."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/248",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7958,11 +8143,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -9889,7 +10074,10 @@
     "closed_at": "2019-03-25T12:35:47Z",
     "author_association": "CONTRIBUTOR",
     "body": "I don't think having the receive parameter \"minIncompleteLength\" and \"maxLength\" is the right approach here. \r\n\r\n\"minIncompleteLength\" is rather a configuration for the transport layer to decide when to create a callback receive event, therefore providing it together with receive() is too late. It's probably a Connection P*. \r\n\r\n\"maxLength\" seems to superfluous because ideally receiving is a zero copy operation and as the transport as stored the data already somewhere it doesn't seem useful to set a limit here. Of course again there probably needs to be a system config and or connection P* somewhere. If at all this seems rather like an implementation detail to me (that may or may not be discussed somewhere  but should not be part of the actual API spec). "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/220",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -9992,10 +10180,7 @@
     "closed_at": "2018-09-20T18:31:00Z",
     "author_association": "CONTRIBUTOR",
     "body": "section 6.3 (Rendezvous) has the following line:\r\n\r\nPreconnectionBinding := Preconnection.Resolve()\r\n\r\nIf i read the text correctly, I'd propose to change this to \r\n\r\nPreconnection<> := Preconnection.Resolve()"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/218",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -10931,11 +11116,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -12276,7 +12461,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/191.patch"
     },
     "body": "This closed #170 \r\n\r\nAs we have no methods on a connection object that query properties, can_send/can_receive also became connection properties.\r\n\r\nAs with all the other connection properties, these are indeed a little underspecified. I want to keep it that way till we fix it for all connection properties with #153 and #190"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/190",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12498,10 +12686,7 @@
     "closed_at": "2018-10-16T20:58:52Z",
     "author_association": "NONE",
     "body": "To me the document is in very good shape, but there are several things that just appear, and a few short paras and maybe a simple picture could help avoid people giving-up before they know the document is useful to them.\r\n\r\nWe seem to not introduce it nicely, I'd suggest:\r\n+ This isn't scarey (draw a simple familiar figure to start our story, that the reader immediately recognises)\r\n+ Sockets v Streams ... we speak of messages, let's explain early that they ae all you need for any app.\r\n+ Events ... we know these are \"nromal\" - but let's say we provide an eevent-driven interface. it would even be worth saying why thsi is much better (Tommy - Apple have been doing this from the start, can you perhaps say why it is beautiful?)\r\n\r\nComments follow:\r\n\r\nSection:  Background.\r\n- The last part of this section suddenly introduces messages. I know it is just an example, but readers may be already looking here at whether this is an interface to TCP or UDP or something else ... and I think we do not really tackle that earlier enough. One way to help that would be to draw a diagram that looks something like this, in this section:\r\n\r\n  +-----------------------------------------------------+\r\n  |                    Application                      |\r\n  +------------------------+----------------------------+\r\n                           |\r\n  +------------------------|----------------------------+\r\n  |           Transport  Services  API                  |              \r\n  +------------------------|----------------------------+\r\n                           |\r\n  +------------------------|----------------------------+\r\n  |         Transport   System  Implementation          |\r\n  |                                                     |\r\n  |        e.g.,  UDP, TCP, SCTP, DCCP, QUIC, ...       |\r\n  +------------------------|----------------------------+\r\n\r\n  +------------------------|----------------------------+\r\n  |              Network Layer Interface                |\r\n  +-----------------------------------------------------+\r\n\r\nAnd the say that the Transport  Services  API provides message-oriented communication using transport protocols (e.g. UDP, TCP, etc). I'd also mention the words /data transfer/ somewhere.\r\n\r\nProviding a simpler earlier diagram may also be slightly easier on the new reader.\r\n---\r\nIn the same way, the intro should explain a little of the idea of /events/ - common enough to some, but may be unexpected for a new reader."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/188",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -13717,11 +13902,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -15182,7 +15367,10 @@
     "closed_at": "2018-08-27T13:10:12Z",
     "author_association": "NONE",
     "body": "I forgot to upload these - but it would be helpful to fix these in the next rev (all textual):\r\n\r\n—\r\nThe phrase below appears a little ambiguous, please reword:\r\nOLD:\r\nin which the necessary protocol\r\nhandshakes are conducted in order to select which set to use\r\n\r\nDoes this mean:\r\nin which an order is specified for the necessary protocol\r\nhandshakes to be conducted to elect which to use\r\nOR;\r\nin which the necessary protocol\r\nhandshakes are conducted so that it can select which set to use\r\n—\r\nOLD:\r\ndelimeters\r\nNEW: \r\ndelimiters\r\n—\r\nOLD:\r\nover to the Tranport\r\nNEW:\r\nover to the Transport\r\n—\r\nOLD:\r\nAs explained in section Section 4.6,\r\nNEW:\r\nAs explained in Section 4.6,\r\n—\r\nI did not understand this text, please rephrase:\r\nGathering locals is primarily an endpoint local operation\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/160",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15338,10 +15526,7 @@
     "closed_at": "2019-01-04T12:26:03Z",
     "author_association": "CONTRIBUTOR",
     "body": "E.g. 5.1.1.1 explains how to implement send parameters from the API draft, but there's no text explaining how the path and protocol selection properties map to a decision in the code."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/158",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15916,11 +16101,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -16996,11 +17181,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -18577,7 +18762,10 @@
     "closed_at": "2018-03-04T00:21:19Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/130",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18799,10 +18987,7 @@
     "closed_at": "2018-03-05T18:28:49Z",
     "author_association": "CONTRIBUTOR",
     "body": "Issue to track submitting -00 draft of implementation. We need to:\r\n\r\n- Sweep the remaining issues for sections that need more text\r\n- Nits\r\n- Editorial review for flow, etc."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/128",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21163,7 +21348,10 @@
     "closed_at": "2018-02-27T14:20:30Z",
     "author_association": "CONTRIBUTOR",
     "body": "There are still a few `\\[EDITOR'S NOTE`s and similar scattered throughout the document. Find them and fix them, or move them to post-London issues."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/100",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21318,10 +21506,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/99.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/98",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24165,7 +24350,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/71.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/70",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24348,10 +24536,7 @@
     "closed_at": "2018-02-26T22:00:26Z",
     "author_association": "CONTRIBUTOR",
     "body": "During my final editorial review pre-00, I'll take everything we're still discussing into a new Appendix A, with some text along the lines \"an advantage of this framework is it has extension points for properties and preferences beyond those in the proposed standard interface; here are some potential properties and preferences that we have some design and implementation experience with that may prove useful, and may be added to the core interface in future revisions of this document.\""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/68",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -26647,11 +26832,11 @@
         "type": "User",
         "site_admin": false
       },
-      "open_issues": 12,
-      "closed_issues": 5,
+      "open_issues": 11,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2019-03-25T11:53:41Z",
-      "updated_at": "2019-07-03T07:13:42Z",
+      "updated_at": "2019-07-08T10:17:00Z",
       "due_on": "2019-07-01T07:00:00Z",
       "closed_at": null
     },
@@ -27173,7 +27358,10 @@
     "closed_at": "2018-02-13T15:39:02Z",
     "author_association": "CONTRIBUTOR",
     "body": "In section 3.3 of architecture \"all implementations should offer sufficient APIs to use basic transport protocols like TCP and UDP\", should this be \"...to use the distilled minimal set of features offered by transport protocols [I-D.ietf-taps-minset]\"?\r\n\r\nWe should be consistent about what's the base set of protocols (see also #40)"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/40",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27423,10 +27611,7 @@
     "closed_at": "2018-03-01T13:11:10Z",
     "author_association": "CONTRIBUTOR",
     "body": "Review the use of notation in the API doc before final submission and unify it stylistically."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/38",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30328,7 +30513,10 @@
     "closed_at": "2018-02-08T15:28:02Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/10",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30586,10 +30774,7 @@
     "closed_at": "2018-02-06T10:39:05Z",
     "author_association": "CONTRIBUTOR",
     "body": "Here, the document should talk about how to pass a framer down to the API, on the sender as well as the receiver side, and note that on some platforms this allows the API to deal in objects of some arbitrary, application-meaningful type."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/8",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
