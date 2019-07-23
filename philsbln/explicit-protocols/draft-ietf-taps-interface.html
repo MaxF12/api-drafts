@@ -383,11 +383,17 @@ ul.toc li {
 <link href="#rfc.references" rel="Chapter" title="17 References">
 <link href="#rfc.references.1" rel="Chapter" title="17.1 Normative References">
 <link href="#rfc.references.2" rel="Chapter" title="17.2 Informative References">
-<link href="#rfc.appendix.A" rel="Chapter" title="A Additional Properties">
-<link href="#rfc.appendix.A.1" rel="Chapter" title="A.1 Experimental Transport Properties">
-<link href="#rfc.appendix.A.1.1" rel="Chapter" title="A.1.1 Cost Preferences">
-<link href="#rfc.appendix.B" rel="Chapter" title="B Sample API definition in Go">
-<link href="#rfc.appendix.C" rel="Chapter" title="C Relationship to the Minimal Set of Transport Services for End Systems">
+<link href="#rfc.appendix.A" rel="Chapter" title="A Convenience Functions">
+<link href="#rfc.appendix.A.1" rel="Chapter" title="A.1 Adding Preference Properties">
+<link href="#rfc.appendix.A.2" rel="Chapter" title="A.2 Transport Property Profiles">
+<link href="#rfc.appendix.A.2.1" rel="Chapter" title="A.2.1 reliable-inorder-stream">
+<link href="#rfc.appendix.A.2.2" rel="Chapter" title="A.2.2 reliable-message">
+<link href="#rfc.appendix.A.2.3" rel="Chapter" title="A.2.3 unreliable-datagram">
+<link href="#rfc.appendix.B" rel="Chapter" title="B Additional Properties">
+<link href="#rfc.appendix.B.1" rel="Chapter" title="B.1 Experimental Transport Properties">
+<link href="#rfc.appendix.B.1.1" rel="Chapter" title="B.1.1 Cost Preferences">
+<link href="#rfc.appendix.C" rel="Chapter" title="C Sample API definition in Go">
+<link href="#rfc.appendix.D" rel="Chapter" title="D Relationship to the Minimal Set of Transport Services for End Systems">
 <link href="#rfc.authors" rel="Chapter">
 
 
@@ -396,7 +402,7 @@ ul.toc li {
 
   <meta name="dct.creator" content="Trammell, B., Ed., Welzl, M., Ed., Enghardt, T., Fairhurst, G., Kuehlewind, M., Perkins, C., Tiesel, P., Wood, C., and T. Pauly" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-taps-interface-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2019-07-08" />
+  <meta name="dct.issued" scheme="ISO8601" content="2019-07-23" />
   <meta name="dct.abstract" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
   <meta name="description" content="This document describes an abstract programming interface to the transport layer, following the Transport Services Architecture. It supports the asynchronous, atomic transmission of messages over transport protocols and network paths dynamically selected at runtime. It is intended to replace the traditional BSD sockets API as the lowest common denominator interface to the transport layer, in an environment where endpoints have multiple interfaces and potential transport protocols to select from." />
 
@@ -420,7 +426,7 @@ ul.toc li {
 <td class="right">M. Welzl, Ed.</td>
 </tr>
 <tr>
-<td class="left">Expires: January 9, 2020</td>
+<td class="left">Expires: January 24, 2020</td>
 <td class="right">University of Oslo</td>
 </tr>
 <tr>
@@ -477,7 +483,7 @@ ul.toc li {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">July 08, 2019</td>
+<td class="right">July 23, 2019</td>
 </tr>
 
     	
@@ -493,7 +499,7 @@ ul.toc li {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on January 9, 2020.</p>
+<p>This Internet-Draft will expire on January 24, 2020.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2019 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -705,15 +711,27 @@ ul.toc li {
 </li>
 <li>17.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
-</ul><li>Appendix A.   <a href="#rfc.appendix.A">Additional Properties</a>
+</ul><li>Appendix A.   <a href="#rfc.appendix.A">Convenience Functions</a>
 </li>
-<ul><li>A.1.   <a href="#rfc.appendix.A.1">Experimental Transport Properties</a>
+<ul><li>A.1.   <a href="#rfc.appendix.A.1">Adding Preference Properties</a>
 </li>
-<ul><li>A.1.1.   <a href="#rfc.appendix.A.1.1">Cost Preferences</a>
+<li>A.2.   <a href="#rfc.appendix.A.2">Transport Property Profiles</a>
 </li>
-</ul></ul><li>Appendix B.   <a href="#rfc.appendix.B">Sample API definition in Go</a>
+<ul><li>A.2.1.   <a href="#rfc.appendix.A.2.1">reliable-inorder-stream</a>
 </li>
-<li>Appendix C.   <a href="#rfc.appendix.C">Relationship to the Minimal Set of Transport Services for End Systems</a>
+<li>A.2.2.   <a href="#rfc.appendix.A.2.2">reliable-message</a>
+</li>
+<li>A.2.3.   <a href="#rfc.appendix.A.2.3">unreliable-datagram</a>
+</li>
+</ul></ul><li>Appendix B.   <a href="#rfc.appendix.B">Additional Properties</a>
+</li>
+<ul><li>B.1.   <a href="#rfc.appendix.B.1">Experimental Transport Properties</a>
+</li>
+<ul><li>B.1.1.   <a href="#rfc.appendix.B.1.1">Cost Preferences</a>
+</li>
+</ul></ul><li>Appendix C.   <a href="#rfc.appendix.C">Sample API definition in Go</a>
+</li>
+<li>Appendix D.   <a href="#rfc.appendix.D">Relationship to the Minimal Set of Transport Services for End Systems</a>
 </li>
 <li><a href="#rfc.authors">Authors' Addresses</a>
 </li>
@@ -1057,15 +1075,7 @@ TransportProperties := NewTransportProperties()
 <pre>
 TransportProperties.Add(property, value)
 </pre>
-<p id="rfc.section.5.2.p.8">Selection Properties can be added to a TransportProperties object using special actions for each preference level i.e, <samp>TransportProperties.Add(some_property, avoid)</samp> is equivalent to <samp>TransportProperties.Avoid(some_property)</samp>:</p>
-<pre>
-TransportProperties.Require(property)
-TransportProperties.Prefer(property)
-TransportProperties.Ignore(property)
-TransportProperties.Avoid(property)
-TransportProperties.Prohibit(property)
-TransportProperties.Default(property)
-</pre>
+<p id="rfc.section.5.2.p.8">As preference typed selection properties may be used quite frequently, implementations should provide additional convenience functions as outlined in  <a href="#preference-conv" class="xref">Appendix A.1</a>.  In addition, implementations should provide a mechanism to create TransportProperties objects that are preconfigured for common use cases as outlined in <a href="#property-profiles" class="xref">Appendix A.2</a>.</p>
 <p id="rfc.section.5.2.p.9">For an existing Connection, the Transport Properties can be queried any time by using the following call on the Connection Object:</p>
 <pre>
 TransportProperties := Connection.GetTransportProperties()
@@ -1259,7 +1269,7 @@ TransportProperties.Add(protocol-stack, ("tcp", "ipv4"))
 TransportProperties.Add(protocol-stack, ("tcp", "ipv6"))
 </pre>
 <p id="rfc.section.5.2.16.p.4">If at least one set is specified, the transport system will only choose protocol stack instances that use all protocols of one of given sets on the local endpoint.</p>
-<p id="rfc.section.5.2.16.p.5">Note that this mechanism is <strong>not intended</strong> to request transport services for applications that need, e.g., TCP like transport services or have deployment issues as firewalls that require the use of specific protocols.  For the former, Transport Property Profiles [<strong>TODO</strong>: add reference once Issue #325 is fixed or remove] should be used, while for the latter, these deployment considerations should be expressed as a system policy that is deployed with the application.</p>
+<p id="rfc.section.5.2.16.p.5">Note that this mechanism is <strong>not intended</strong> to request transport services for applications that need, e.g., TCP like transport services or have deployment issues as firewalls that require the use of specific protocols.  For the former, the convenience functions outlined in <a href="#property-profiles" class="xref">Appendix A.2</a> should be used, while for the latter, these deployment considerations should be expressed as a system policy that is deployed with the application.</p>
 <p id="rfc.section.5.2.16.p.6">Also note that the protocols used at the remote endpoints my be different, as transport service may involve the use of proxies or protocol converters.</p>
 <h1 id="rfc.section.5.3">
 <a href="#rfc.section.5.3">5.3.</a> <a href="#security-parameters" id="security-parameters">Specifying Security Parameters and Callbacks</a>
@@ -1421,12 +1431,11 @@ Connection -&gt; CloneError&lt;&gt;
 <p id="rfc.section.7.p.1">Once a Connection has been established, it can be used for sending data. Data is sent as Messages, which allow the application to communicate the boundaries of the data being transferred. By default, Send enqueues a complete Message, and takes optional per-Message properties (see <a href="#send-basic" class="xref">Section 7.1</a>). All Send actions are asynchronous, and deliver events (see <a href="#send-events" class="xref">Section 7.3</a>). Sending partial Messages for streaming large data is also supported (see <a href="#send-partial" class="xref">Section 7.5</a>).</p>
 <p id="rfc.section.7.p.2">Messages are sent on a Connection using the Send action:</p>
 <pre>
-messageContext := Connection.Send(messageData, messageContext?, endOfMessage?)
+Connection.Send(messageData, messageContext?, endOfMessage?)
 </pre>
 <p id="rfc.section.7.p.3">where messageData is the data object to send.</p>
-<p id="rfc.section.7.p.4">The optional messageContext parameter supports per-message properties and is described in <a href="#message-props" class="xref">Section 7.4</a>. If provided, the Message Context object returned is identical to the one that was passed.</p>
+<p id="rfc.section.7.p.4">The optional messageContext parameter supports per-message properties and is described in <a href="#message-props" class="xref">Section 7.4</a>.  It can be used to identify send events (see <a href="#send-events" class="xref">Section 7.3</a>) related to a specific message or to inspect meta-data related to the message sent (see <a href="#msg-ctx" class="xref">Section 9</a>).</p>
 <p id="rfc.section.7.p.5">The optional endOfMessage parameter supports partial sending and is described in <a href="#send-partial" class="xref">Section 7.5</a>.</p>
-<p id="rfc.section.7.p.6">The MessageContext returned by Send can be used to identify send events (see <a href="#send-events" class="xref">Section 7.3</a>) related to a specific message or to inspect meta-data related to the message sent.</p>
 <h1 id="rfc.section.7.1">
 <a href="#rfc.section.7.1">7.1.</a> <a href="#send-basic" id="send-basic">Basic Sending</a>
 </h1>
@@ -1764,8 +1773,14 @@ RequestMessageContext := MessageContext.GetOriginalRequest()
 <p id="rfc.section.10.p.1">Message Framers are pieces of code that define simple transformations between application Message data and raw transport protocol data. A Framer can encapsulate or encode outbound Messages, and decapsulate or decode inbound data into Messages.</p>
 <p id="rfc.section.10.p.2">Message Framers allow message boundaries to be preserved when using a Connection object, even when using byte-stream transports. This facility is designed based on the fact that many of the current application protocols evolved over TCP, which does not provide message boundary preservation, and since many of these protocols require message boundaries to function, each application layer protocol has defined its own framing.</p>
 <p id="rfc.section.10.p.3">While many protocols can be represented as Message Framers, for the purposes of the Transport Services interface these are ways for applications or application frameworks to define their own Message parsing to be included within a Connection&#8217;s Protocol Stack. As an example, TLS can serve the purpose of framing data over TCP, but is exposed as a protocol natively supported by the Transport Services interface.</p>
-<p id="rfc.section.10.p.4">Most Message Framers fall into one of two categories: - Header-prefixed record formats, such as a basic Type-Length-Value (TLV) structure - Delimeter-separated formats, such as HTTP/1.1.</p>
-<p id="rfc.section.10.p.5">Note that while Message Framers add the most value when placed above a protocol that otherwise does not preserve message boundaries, they can also be used with datagram- or message-based protocols. In these cases, they add an additional transformation to further encode or encapsulate, and can potentially support packing multiple application-layer Messages into individual transport datagrams.</p>
+<p id="rfc.section.10.p.4">Most Message Framers fall into one of two categories:</p>
+<p></p>
+
+<ul>
+<li>Header-prefixed record formats, such as a basic Type-Length-Value (TLV) structure</li>
+<li>Delimiter-separated formats, such as HTTP/1.1.</li>
+</ul>
+<p id="rfc.section.10.p.6">Note that while Message Framers add the most value when placed above a protocol that otherwise does not preserve message boundaries, they can also be used with datagram- or message-based protocols. In these cases, they add an additional transformation to further encode or encapsulate, and can potentially support packing multiple application-layer Messages into individual transport datagrams.</p>
 <h1 id="rfc.section.10.1">
 <a href="#rfc.section.10.1">10.1.</a> <a href="#defining-message-framers" id="defining-message-framers">Defining Message Framers</a>
 </h1>
@@ -2245,18 +2260,126 @@ Connection -&gt; ConnectionError&lt;&gt;
 </tr>
 </tbody></table>
 <h1 id="rfc.appendix.A">
-<a href="#rfc.appendix.A">Appendix A.</a> <a href="#appendix-non-consensus" id="appendix-non-consensus">Additional Properties</a>
+<a href="#rfc.appendix.A">Appendix A.</a> <a href="#convenience-functions" id="convenience-functions">Convenience Functions</a>
 </h1>
-<p id="rfc.section.A.p.1">The interface specified by this document represents the minimal common interface to an endpoint in the transport services architecture <a href="#I-D.ietf-taps-arch" class="xref">[I-D.ietf-taps-arch]</a>, based upon that architecture and on the minimal set of transport service features elaborated in <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>. However, the interface has been designed with extension points to allow the implementation of features beyond those in the minimal common interface: Protocol Selection Properties, Path Selection Properties, and Message Properties are open sets. Implementations of the interface are free to extend these sets to provide additional expressiveness to applications written on top of them.</p>
-<p id="rfc.section.A.p.2">This appendix enumerates a few additional properties that could be used to enhance transport protocol and/or path selection, or the transmission of messages given a Protocol Stack that implements them. These are not part of the interface, and may be removed from the final document, but are presented here to support discussion within the TAPS working group as to whether they should be added to a future revision of the base specification.</p>
 <h1 id="rfc.appendix.A.1">
-<a href="#rfc.appendix.A.1">A.1.</a> <a href="#experimental-transport-properties" id="experimental-transport-properties">Experimental Transport Properties</a>
+<a href="#rfc.appendix.A.1">A.1.</a> <a href="#preference-conv" id="preference-conv">Adding Preference Properties</a>
 </h1>
-<p id="rfc.section.A.1.p.1">The following Transport Properties might be made available in addition to those specified in <a href="#selection-props" class="xref">Section 5.2</a>, <a href="#connection-props" class="xref">Section 11.1</a>, and <a href="#message-props" class="xref">Section 7.4</a>.</p>
-<h1 id="rfc.appendix.A.1.1">
-<a href="#rfc.appendix.A.1.1">A.1.1.</a> <a href="#cost-preferences" id="cost-preferences">Cost Preferences</a>
+<p id="rfc.section.A.1.p.1">As Selection Properties of type Preference will be added to a TransportProperties object quite frequently, implementations should provide special actions for adding each preference level i.e, <samp>TransportProperties.Add(some_property, avoid)</samp> is equivalent to <samp>TransportProperties.Avoid(some_property)</samp>:</p>
+<pre>
+TransportProperties.Require(property)
+TransportProperties.Prefer(property)
+TransportProperties.Ignore(property)
+TransportProperties.Avoid(property)
+TransportProperties.Prohibit(property)
+TransportProperties.Default(property)
+</pre>
+<h1 id="rfc.appendix.A.2">
+<a href="#rfc.appendix.A.2">A.2.</a> <a href="#property-profiles" id="property-profiles">Transport Property Profiles</a>
 </h1>
-<p id="rfc.section.A.1.1.p.1">[EDITOR&#8217;S NOTE: At IETF 103, opinions were that this property should stay, but it was also said that this is maybe not &#8220;on the right level&#8221;.  If / when moving it to the main text, note that this is meant to be applicable to a Preconnection or a Message.]</p>
+<p id="rfc.section.A.2.p.1">To ease the use of the interface specified by this document, implementations should provide a mechanism to create Transport Property objects (see <a href="#selection-props" class="xref">Section 5.2</a>) that are pre-configured with frequently used sets of properties.  Implementations should at least short-hands to specify the following property profiles:</p>
+<h1 id="rfc.appendix.A.2.1">
+<a href="#rfc.appendix.A.2.1">A.2.1.</a> <a href="#reliable-inorder-stream" id="reliable-inorder-stream">reliable-inorder-stream</a>
+</h1>
+<p id="rfc.section.A.2.1.p.1">This profile provides reliable, in-order transport service with congestion control.  An example of a protocol that provides this service is TCP.  It should consist of the following properties:</p>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<thead><tr>
+<th class="left">Property</th>
+<th class="left">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">reliability</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">preserve-order</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">congestion-control</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">preserve-msg-boundaries</td>
+<td class="left">ignore</td>
+</tr>
+</tbody>
+</table>
+<h1 id="rfc.appendix.A.2.2">
+<a href="#rfc.appendix.A.2.2">A.2.2.</a> <a href="#reliable-message" id="reliable-message">reliable-message</a>
+</h1>
+<p id="rfc.section.A.2.2.p.1">This profile provides message-preserving, reliable, in-order transport service with congestion control.  An example of a protocol that provides this service is SCTP.  It should consist of the following properties:</p>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<thead><tr>
+<th class="left">Property</th>
+<th class="left">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">reliability</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">preserve-order</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">congestion-control</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">preserve-msg-boundaries</td>
+<td class="left">require</td>
+</tr>
+</tbody>
+</table>
+<h1 id="rfc.appendix.A.2.3">
+<a href="#rfc.appendix.A.2.3">A.2.3.</a> <a href="#unreliable-datagram" id="unreliable-datagram">unreliable-datagram</a>
+</h1>
+<p id="rfc.section.A.2.3.p.1">This profile provides unreliable datagram transport service.  An example of a protocol that provides this service is UDP.  It should consist of the following properties:</p>
+<table cellpadding="3" cellspacing="0" class="tt full center">
+<thead><tr>
+<th class="left">Property</th>
+<th class="left">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="left">reliability</td>
+<td class="left">ignore</td>
+</tr>
+<tr>
+<td class="left">preserve-order</td>
+<td class="left">ignore</td>
+</tr>
+<tr>
+<td class="left">congestion-control</td>
+<td class="left">ignore</td>
+</tr>
+<tr>
+<td class="left">preserve-msg-boundaries</td>
+<td class="left">require</td>
+</tr>
+<tr>
+<td class="left">idempotent</td>
+<td class="left">true</td>
+</tr>
+</tbody>
+</table>
+<p id="rfc.section.A.2.3.p.2">Applications that choose this Transport Property Profile for latency reasons should also consider setting the Capacity Profile Property, see <a href="#prop-cap-profile" class="xref">Section 11.1.10</a> accordingly and my benefit from controlling checksum coverage, see <a href="#prop-checksum-control-send" class="xref">Section 5.2.7</a> and <a href="#prop-checksum-control-receive" class="xref">Section 5.2.8</a>.</p>
+<h1 id="rfc.appendix.B">
+<a href="#rfc.appendix.B">Appendix B.</a> <a href="#appendix-non-consensus" id="appendix-non-consensus">Additional Properties</a>
+</h1>
+<p id="rfc.section.B.p.1">The interface specified by this document represents the minimal common interface to an endpoint in the transport services architecture <a href="#I-D.ietf-taps-arch" class="xref">[I-D.ietf-taps-arch]</a>, based upon that architecture and on the minimal set of transport service features elaborated in <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>. However, the interface has been designed with extension points to allow the implementation of features beyond those in the minimal common interface: Protocol Selection Properties, Path Selection Properties, and Message Properties are open sets. Implementations of the interface are free to extend these sets to provide additional expressiveness to applications written on top of them.</p>
+<p id="rfc.section.B.p.2">This appendix enumerates a few additional properties that could be used to enhance transport protocol and/or path selection, or the transmission of messages given a Protocol Stack that implements them. These are not part of the interface, and may be removed from the final document, but are presented here to support discussion within the TAPS working group as to whether they should be added to a future revision of the base specification.</p>
+<h1 id="rfc.appendix.B.1">
+<a href="#rfc.appendix.B.1">B.1.</a> <a href="#experimental-transport-properties" id="experimental-transport-properties">Experimental Transport Properties</a>
+</h1>
+<p id="rfc.section.B.1.p.1">The following Transport Properties might be made available in addition to those specified in <a href="#selection-props" class="xref">Section 5.2</a>, <a href="#connection-props" class="xref">Section 11.1</a>, and <a href="#message-props" class="xref">Section 7.4</a>.</p>
+<h1 id="rfc.appendix.B.1.1">
+<a href="#rfc.appendix.B.1.1">B.1.1.</a> <a href="#cost-preferences" id="cost-preferences">Cost Preferences</a>
+</h1>
+<p id="rfc.section.B.1.1.p.1">[EDITOR&#8217;S NOTE: At IETF 103, opinions were that this property should stay, but it was also said that this is maybe not &#8220;on the right level&#8221;.  If / when moving it to the main text, note that this is meant to be applicable to a Preconnection or a Message.]</p>
 <p></p>
 
 <dl>
@@ -2265,8 +2388,8 @@ Connection -&gt; ConnectionError&lt;&gt;
 <dt>Type:</dt>
 <dd style="margin-left: 8">Enumeration</dd>
 </dl>
-<p id="rfc.section.A.1.1.p.3">This property describes what an application prefers regarding monetary costs, e.g., whether it considers it acceptable to utilize limited data volume. It provides hints to the transport system on how to handle trade-offs between cost and performance or reliability.</p>
-<p id="rfc.section.A.1.1.p.4">Possible values are:</p>
+<p id="rfc.section.B.1.1.p.3">This property describes what an application prefers regarding monetary costs, e.g., whether it considers it acceptable to utilize limited data volume. It provides hints to the transport system on how to handle trade-offs between cost and performance or reliability.</p>
+<p id="rfc.section.B.1.1.p.4">Possible values are:</p>
 <p></p>
 
 <dl>
@@ -2279,16 +2402,16 @@ Connection -&gt; ConnectionError&lt;&gt;
 <dt>Ignore Cost:</dt>
 <dd style="margin-left: 8">Ignore cost, choose transport solely based on other criteria</dd>
 </dl>
-<p id="rfc.section.A.1.1.p.6">The default is &#8220;Balance Cost&#8221;.</p>
-<h1 id="rfc.appendix.B">
-<a href="#rfc.appendix.B">Appendix B.</a> <a href="#appendix-api-sketch" id="appendix-api-sketch">Sample API definition in Go</a>
-</h1>
-<p id="rfc.section.B.p.1">This document defines an abstract interface. To illustrate how this would map concretely into a programming language, an API interface definition in Go is available online at https://github.com/mami-project/postsocket.  Documentation for this API &#8211; an illustration of the documentation an application developer would see for an instance of this interface &#8211; is available online at https://godoc.org/github.com/mami-project/postsocket. This API definition will be kept largely in sync with the development of this abstract interface definition.</p>
+<p id="rfc.section.B.1.1.p.6">The default is &#8220;Balance Cost&#8221;.</p>
 <h1 id="rfc.appendix.C">
-<a href="#rfc.appendix.C">Appendix C.</a> <a href="#relationship-to-the-minimal-set-of-transport-services-for-end-systems" id="relationship-to-the-minimal-set-of-transport-services-for-end-systems">Relationship to the Minimal Set of Transport Services for End Systems</a>
+<a href="#rfc.appendix.C">Appendix C.</a> <a href="#appendix-api-sketch" id="appendix-api-sketch">Sample API definition in Go</a>
+</h1>
+<p id="rfc.section.C.p.1">This document defines an abstract interface. To illustrate how this would map concretely into a programming language, an API interface definition in Go is available online at https://github.com/mami-project/postsocket.  Documentation for this API &#8211; an illustration of the documentation an application developer would see for an instance of this interface &#8211; is available online at https://godoc.org/github.com/mami-project/postsocket. This API definition will be kept largely in sync with the development of this abstract interface definition.</p>
+<h1 id="rfc.appendix.D">
+<a href="#rfc.appendix.D">Appendix D.</a> <a href="#relationship-to-the-minimal-set-of-transport-services-for-end-systems" id="relationship-to-the-minimal-set-of-transport-services-for-end-systems">Relationship to the Minimal Set of Transport Services for End Systems</a>
 </h1>
 <p><a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a> identifies a minimal set of transport services that end systems should offer. These services make all transport features offered by TCP, MPTCP, UDP, UDP-Lite, SCTP and LEDBAT available that 1) require interaction with the application, and 2) do not get in the way of a possible implementation over TCP or, with limitations, UDP. The following text explains how this minimal set is reflected in the present API. For brevity, this uses the list in Section 4.1 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>, updated according to the discussion in Section 5 of <a href="#I-D.ietf-taps-minset" class="xref">[I-D.ietf-taps-minset]</a>.</p>
-<p id="rfc.section.C.p.2">[EDITOR&#8217;S NOTE: This is early text. In the future, this section will contain backward references, which we currently avoid because things are still being moved around and names / categories etc. are changing.]</p>
+<p id="rfc.section.D.p.2">[EDITOR&#8217;S NOTE: This is early text. In the future, this section will contain backward references, which we currently avoid because things are still being moved around and names / categories etc. are changing.]</p>
 <p></p>
 
 <ul>
