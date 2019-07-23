@@ -1,6 +1,67 @@
 [
 
   {
+    "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/345",
+    "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
+    "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/345/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/345/comments",
+    "events_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/345/events",
+    "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/345",
+    "id": 471381546,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0MzAwMDcwMTkz",
+    "number": 345,
+    "title": "Remove the message context returned by send",
+    "user": {
+      "login": "philsbln",
+      "id": 11421499,
+      "node_id": "MDQ6VXNlcjExNDIxNDk5",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11421499?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/philsbln",
+      "html_url": "https://github.com/philsbln",
+      "followers_url": "https://api.github.com/users/philsbln/followers",
+      "following_url": "https://api.github.com/users/philsbln/following{/other_user}",
+      "gists_url": "https://api.github.com/users/philsbln/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/philsbln/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/philsbln/subscriptions",
+      "organizations_url": "https://api.github.com/users/philsbln/orgs",
+      "repos_url": "https://api.github.com/users/philsbln/repos",
+      "events_url": "https://api.github.com/users/philsbln/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/philsbln/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 823781518,
+        "node_id": "MDU6TGFiZWw4MjM3ODE1MTg=",
+        "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/labels/API",
+        "name": "API",
+        "color": "fbca04",
+        "default": false
+      }
+    ],
+    "state": "closed",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2019-07-22T23:03:21Z",
+    "updated_at": "2019-07-23T14:14:20Z",
+    "closed_at": "2019-07-23T14:14:20Z",
+    "author_association": "CONTRIBUTOR",
+    "pull_request": {
+      "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/pulls/345",
+      "html_url": "https://github.com/ietf-tapswg/api-drafts/pull/345",
+      "diff_url": "https://github.com/ietf-tapswg/api-drafts/pull/345.diff",
+      "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/345.patch"
+    },
+    "body": "This closes first half of Issue #336 as discussed today"
+  },
+  {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/344",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
     "labels_url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/344/labels{/name}",
@@ -96,9 +157,9 @@
 
     ],
     "milestone": null,
-    "comments": 1,
+    "comments": 2,
     "created_at": "2019-07-22T18:59:52Z",
-    "updated_at": "2019-07-22T19:09:50Z",
+    "updated_at": "2019-07-22T23:23:04Z",
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "There should be a way to put back pressure or limits on the number of inbound connections for a listener. The two approaches are:\r\n\r\n1. To have a one-to-one callback for listen -> received connect\r\n2. To have a way to set a numeric limit of new inbound connections\r\n\r\nMy preference is (2). (1) has an issue of being very impractical for servers that don't know how many connections they'll receive, and may require them to call `listen` a thousand times without any other activity. (2) is more similar to how calling `listen()` on sockets work."
@@ -2293,7 +2354,10 @@
     "closed_at": "2019-07-03T13:57:44Z",
     "author_association": "NONE",
     "body": "\r\n Section 4.2.1: “Allow different components of a TAPS implementation to pass Transport Properties, e.g., between a language frontend and a policy manager.”\r\n- Question??? : Would it also be OK to include a suggestion that these could also be retrieved from storage, e.g. “Allow different components of a TAPS implementation to pass Transport Properties, e.g., between a language frontend and a policy manager, or to retrieve a list of properties from a file or other storage.”\r\n\r\n Section 4.2.1.:\r\nAre the definitions of “should” actually “SHOULD”, I don’t otherwise understand the meaning of the lower case should. Actually, why is it SHOULD not MUST for the IETF-specified class?\r\n"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/315",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -2394,10 +2458,7 @@
     "closed_at": "2019-07-03T13:57:26Z",
     "author_association": "NONE",
     "body": "In Section 5.2.7 Control checksum coverage on sending\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n\r\n—\r\nIn Section, 5.2.8. Control checksum coverage on receiving\r\n\r\n“The recommended default is to Ignore this option.”\r\n\r\nI argue that this default is much braver than specified in the IETF present in RFC 8085. The default for IPv6 is also that this is required by default. Again, I would argue that applications need to explicitly be designed to accept this.\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/314",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -4964,7 +5025,10 @@
     "closed_at": "2019-05-08T16:53:35Z",
     "author_association": "NONE",
     "body": "This could expressed as a property on outgoing messages. Should it then also be expressed as metadata for received messages?"
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/285",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -5065,10 +5129,7 @@
     "closed_at": "2019-03-25T12:51:01Z",
     "author_association": "CONTRIBUTOR",
     "body": "Connections must, of course, have a group number. (It's just not written anywhere yet. A group number should be generic Connection property, in Section 9.1.)  Otherwise, how could one know which Connections are grouped and which are not? And they may be grouped in different ways - one can have a group of 2 Connections, and another group of 3, and then priorities apply only among the Connections in each respective group.\r\n\r\nSo far, not a big deal, I guess.... now comes the \"this really only existed in Michael's mind\" part:\r\n\r\nThese group numbers should not *only* be readable: on Preconnections, they should be writable as well. This, then, expresses a wish to have certain Connections automatically grouped and some not. The semantics should be: same number = they are regarded as \"grouped\", but there is no guarantee that they really are muxed, i.e. streams of one underlying transport connection (e.g. SCTP Association). Different number = they are NOT grouped and never will be.\r\n\r\nISTM that, with this construct, the only point of the Selection Property \"Multistream Connections in Group\" is to be able to tell this wish for stream muxing early, when only one Preconnection has been created. Else one could create multiple Preconnections and give them the same group number, and that would convey the same wish. But I guess requiring \"you want multi-streaming: you must create multiple Preconnections before calling init\" is a hassle."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/284",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7669,7 +7730,10 @@
     "closed_at": "2019-01-25T12:53:25Z",
     "author_association": "CONTRIBUTOR",
     "body": "Reviewing the arch doc right now which talkes about path and protocol selection properties, however, the API doc now has transport properties, connection properties, and message properties... I think we need to realign the terms here...."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/255",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -7770,10 +7834,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Given messages are part of the basic concept we rely on, I would propose to move the definition of Message to the Basic Objects section and rename \"Data Transfer Objects and Actions\" to just \"Data Transfer Actions\"."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/254",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -10089,7 +10150,10 @@
     "closed_at": "2018-10-10T14:59:54Z",
     "author_association": "CONTRIBUTOR",
     "body": "Discussion on #203 identified that we probably want a Message (and/or Connection) property that forces DF on for IPv4 (and, I guess, ensures that datagram sends on IPv6 below MTU will fail, by disabling sender fragmentation, as well)."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/225",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -10143,10 +10207,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/225.patch"
     },
     "body": "I didn't like something about reliability (let's not throw an error when we can't be UNreliable, only when we can't be reliable). I updated the text on ordering a bit, to say that the Property is ignored for the first Message on a Connection, and rephrased it slightly to talk about the receiver-side transport system and the receiving application - before, the text might have talked about a sender-side behavior.  I added a TODO DISCUSS comment about per-message Niceness."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/224",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12360,7 +12421,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/196.patch"
     },
     "body": "Integrate Gorry's comments from #187 \r\n\r\nThis does not yet address Gorry's two other issues, which cover the background section, or potentially moving the transport implementation earlier in the document."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/195",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -12414,10 +12478,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/195.patch"
     },
     "body": "Suggestion to address #155 and #157 in the API doc."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/194",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15274,7 +15335,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/166.patch"
     },
     "body": "Removes Immediate Acknowledgment and makes it an optional implicit feature of Low Latency profile, renames Instantaneous Capacity Profile to Transmission Profile. Addresses #90; we should open a new issue to discuss whether we want to split Capacity Profile back out."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/165",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -15403,10 +15467,7 @@
     "closed_at": "2018-04-23T11:51:39Z",
     "author_association": "CONTRIBUTOR",
     "body": "This is a fork of Issue #153 – The part of it that does not need discussion.\r\n\r\n - Annotate \"data type\" for each Transport Parameter\r\n - Change \"boolean\" Protocol and Path Selection Parameters to type \"Preference\"\r\n - Remove editing artifacts"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/164",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18586,7 +18647,10 @@
     "closed_at": "2018-04-23T11:53:09Z",
     "author_association": "CONTRIBUTOR",
     "body": "In aligning the implementation with the API for the initial draft, we removed this text since we still need text in the API:\r\n\r\n#### Batching Sends\r\n\r\nSince sending a Message may involve a context switch between the application and the transport system, sending patterns that involve multiple small Messages can incur high overhead if each needs to be enqueued separately. To avoid this, the application should have a way to indicate a batch of Send actions, during which time the implementation will hold off on processing Messages until the batch is complete. This can also help context switches when enqueuing data in the interface driver if the operation can be batched."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/135",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -18679,10 +18743,7 @@
     "closed_at": "2018-03-04T23:46:42Z",
     "author_association": "CONTRIBUTOR",
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/134",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21139,7 +21200,10 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/106.patch"
     },
     "body": ""
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/105",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -21193,10 +21257,7 @@
       "patch_url": "https://github.com/ietf-tapswg/api-drafts/pull/105.patch"
     },
     "body": ""
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/104",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24199,7 +24260,10 @@
     "closed_at": "2018-02-23T19:14:02Z",
     "author_association": "NONE",
     "body": "Do I understand Termination? (section 3.2)\r\n- To me this also includes how the remote endpoint discovers a graceful or premature end to the connection? - which implies the transition, is termination the correct word, or is this \"terminated\". "
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/75",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -24292,10 +24356,7 @@
     "closed_at": "2018-02-23T18:52:27Z",
     "author_association": "NONE",
     "body": "\r\n/protocols in order to /\r\n- remove /in order/ since this isn't quite what was intended.\r\n- This is true of most (all?) uses of this term.\r\n----\r\n/on the other hand/ - appears but isn't actually describing two viewpoints, so the construct should be deleted.\r\n---\r\n/changes on peers./\r\n- do we have to call them /peers/ could we call them /remote endpoints/ or something like that?\r\n---\r\nI support Michael that Figure 1 needs to say /establishment/ clearly.\r\n---\r\nI do not know what is intended by /object/ in this figure. We have a transport entity in NEAT is this the same?, or is it a data structure ot something else? I think anyway we need to introduce this term here.\r\n---\r\n/knobs that apply across multiple transports/\r\n- could that be\r\n/knobs that are applicable to multiple transports/\r\n- or similar?\r\n---\r\n/ defines the set of properties that an application may be notified of during the lifetime of transport objects. These may also provide opportunities for the application to interact with the underlying transport./\r\n- I'm not sure I see it quite like that, could it be said:\r\n/ defines the set of properties about which an application can receive notifications during the lifetime of transport objects. Events can also provide opportunities for the application to interact with the underlying transport./\r\n---\r\n- what does this mean? /interact with the underlying transport/\r\n- I could guess, but I'm not sure Could someone fix this?\r\n---\r\n"
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/74",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -26990,7 +27051,10 @@
     "closed_at": "2018-02-16T21:45:00Z",
     "author_association": "CONTRIBUTOR",
     "body": "Hi,\r\n\r\nThis needs text - the fact that one can change properties in established state is somewhat hidden in the API doc, but it IS reflected in table A2 here:\r\nhttps://taps-api.github.io/drafts/draft-trammell-taps-interface.html#rfc.appendix.A.2\r\n\r\nI can't even find a suitable empty section in the implementation draft. Even the \"maintenance\" section: https://taps-api.github.io/drafts/draft-brunstrom-taps-impl.html#implementing-maintenance-events  seems to be about something else. If that's ok, I'll create a section and write text on how to implement the protocol properties in established state."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/45",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -27135,10 +27199,7 @@
     "closed_at": null,
     "author_association": "CONTRIBUTOR",
     "body": "Post Sockets had an Association concept, which contained all the information about a pair of endpoints, including security parameters, cached security state, cached path state information, and so on. ISTM that we implicitly decided that this was implementation-specific in the Cambridge meeting (though it lived on in the architecture as Association Cache in §4.2).\r\n\r\nIt turns out that the Connectable proposed by @csperkins in #42 shares enough of its properties with the non-cacheable bits of an Association that we might want to make this an explicit object in the API again. \r\n\r\nDiscuss."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/44",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30149,7 +30210,10 @@
     "closed_at": "2018-02-23T18:24:01Z",
     "author_association": "CONTRIBUTOR",
     "body": "Describe the relationship between application preferences, system policies, and implementation defaults for connection management."
-  },
+  }
+
+,
+
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/15",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
@@ -30278,10 +30342,7 @@
     "closed_at": "2018-02-20T16:40:27Z",
     "author_association": "CONTRIBUTOR",
     "body": "Explain how to process application preferences should be treated when they have conflicts, etc. Probably error out immediately to avoid creating impossible connections."
-  }
-
-,
-
+  },
   {
     "url": "https://api.github.com/repos/ietf-tapswg/api-drafts/issues/14",
     "repository_url": "https://api.github.com/repos/ietf-tapswg/api-drafts",
